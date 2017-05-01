@@ -5,7 +5,7 @@ $text-color: black;
 $key-color: #40e0d0;
 $background: #999;
 $icon-size:30px;
-$trans-white:rgba(255,255,255,0.8);
+$trans-white:rgba(255,255,255,0.9);
 @mixin transition($time) {
   -webkit-transition: $time ease-in-out;
   -moz-transition: $time ease-in-out;
@@ -73,6 +73,7 @@ nav {
 		list-style: none;
 		li {
 			margin-bottom:30px;
+      text-align: right;
       a {
         color: $text-color;
         @include transition (.5s);
@@ -296,11 +297,9 @@ footer {
 }
 /* mobile */
 @media only screen and (max-width: 420px) {
-  h1 {
-    font-size: $standard;
-  }
   h2 {
-    font-size: 16px;
+    font-size: 18px;
+    font-weight: normal;
   }
   nav {
     ul {
