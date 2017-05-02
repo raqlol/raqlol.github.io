@@ -276,10 +276,14 @@ footer {
 /* tablet */
 @media only screen and (max-width: 768px) {
   #slider {
-    height: 420px;
+    height: 500px;
     ul{
       li{
       height: 500px;
+        img {
+          height: 100%;
+          width: auto;
+        }
         #box {
           top:60px;
           max-width: 700px;
@@ -290,7 +294,7 @@ footer {
   }
   #portfolio{
     #project {
-      width: 44%;
+      width: 42%;
       background: $trans-white;
       h1{
         z-index: 100;
@@ -323,10 +327,7 @@ footer {
     ul{
       li{
       height: 300px;
-        img {
-          height: 100%;
-          width: auto;
-        }
+
         #box {
           top:30px;
           max-width: 400px;
