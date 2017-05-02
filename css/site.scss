@@ -245,7 +245,7 @@ section {
 /* floating content */
 #float {
   @include transition (2s);
-  margin-top: 200px;
+  margin-top: 800px;
 }
 .floatToTop {
   margin-top:0 !important;
@@ -266,7 +266,7 @@ footer {
   }
 }
 /* laptop */
-@media only screen and (max-width: 1366px) {
+@media only screen and (max-width: 1190px) {
   h1 {
     font-size: 30px;
   }
