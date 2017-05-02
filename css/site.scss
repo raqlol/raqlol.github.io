@@ -243,6 +243,15 @@ section {
   text-align: left;
   vertical-align: top;
 }
+/* floating content */
+#float {
+  @include transition (1s);
+  margin-top: 100px;
+}
+.floatToTop {
+  margin-top:0;
+}
+
 /* footer */
 footer {
   background: $background;
