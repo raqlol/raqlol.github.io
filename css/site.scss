@@ -246,7 +246,7 @@ section {
 /* floating content */
 #float {
   @include transition (1s);
-  margin-top: 100px;
+  margin-top: 200px;
 }
 .floatToTop {
   margin-top:0 !important;
@@ -318,11 +318,15 @@ footer {
     }
   }
   #slider {
-    height: 250px;
+    height: 300px;
     padding: 0;
     ul{
       li{
-      height: 250px;
+      height: 300px;
+        img {
+          height: 100%;
+          width: auto;
+        }
         #box {
           top:30px;
           max-width: 400px;
@@ -346,5 +350,8 @@ footer {
   }
   #text-col {
     width: auto;
+  }
+  #float {
+    margin-top: 50px;
   }
 }
