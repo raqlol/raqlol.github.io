@@ -79,7 +79,7 @@ function slide() {
 // float up
 window.onscroll = function() {float()};
 function float() {
-    if (document.body.scrollTop > 730 || document.documentElement.scrollTop > 730) {
+    if (document.body.scrollTop > 500 || document.documentElement.scrollTop > 500) {
         document.getElementById("float").className = "floatToTop";
     }
 }
