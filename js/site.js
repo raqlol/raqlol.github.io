@@ -81,3 +81,5 @@ function float() {
     if (document.body.scrollTop > 730 || document.documentElement.scrollTop > 730) {
         document.getElementById("float").className = "floatToTop";
     }
+}
+float()
