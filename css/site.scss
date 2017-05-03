@@ -6,6 +6,10 @@ $key-color: #40e0d0;
 $background: #999;
 $icon-size:30px;
 $trans-white:rgba(255,255,255,0.9);
+$img-cover: cover url('/images/banner-ct.png');
+@mixin img-cover($name) {
+  background: cover url('/images/banner-'$name'.png')
+}
 @mixin transition($time) {
   -webkit-transition: $time ease-in-out;
   -moz-transition: $time ease-in-out;
@@ -57,8 +61,7 @@ button {
   }
 }
 .cooper {
-  background: url('/images/banner-ct.png');
-  background-size: cover;
+  @include img-cover (banner-ct);
 }
 /* nav */
 nav {
