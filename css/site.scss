@@ -57,7 +57,8 @@ button {
   }
 }
 .cooper {
-  background: url('/images/banner-ct.png') cover;
+  background: url('/images/banner-ct.png');
+  background-size: cover;
 }
 /* nav */
 nav {
