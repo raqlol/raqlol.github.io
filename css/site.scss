@@ -242,7 +242,8 @@ section {
   text-align: left;
   vertical-align: top;
 }
-/* floating content */
+/* content that floats up */
+/* can be used on content below the slider by adding the float id */
 #float {
   @include transition (2s);
   margin-top: 800px;
