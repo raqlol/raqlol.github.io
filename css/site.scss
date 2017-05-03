@@ -56,6 +56,9 @@ button {
     background: black;
   }
 }
+.cooper {
+  background: url('images/banner-ct.png') cover;
+}
 /* nav */
 nav {
 	position:fixed;
@@ -186,9 +189,7 @@ section {
       img {
       	width: 100%;
       }
-      .cooper {
-        background: url('images/banner-ct.png') cover;
-      }
+
       #box {
         background:$trans-white;
         position: absolute;
