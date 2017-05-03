@@ -8,7 +8,8 @@ $icon-size:30px;
 $trans-white:rgba(255,255,255,0.9);
 $img-cover: cover url('/images/banner-ct.png');
 @mixin img-cover($name) {
-  background: cover url('/images/banner-'$name'.png')
+  background: url($name);
+  background-size: cover;
 }
 @mixin transition($time) {
   -webkit-transition: $time ease-in-out;
@@ -61,7 +62,7 @@ button {
   }
 }
 .cooper {
-  @include img-cover (banner-ct);
+  @include img-cover('images/bannerct.png');
 }
 /* nav */
 nav {
