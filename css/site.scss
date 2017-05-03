@@ -6,7 +6,6 @@ $key-color: #40e0d0;
 $background: #999;
 $icon-size:30px;
 $trans-white:rgba(255,255,255,0.9);
-$img-cover: cover url('/images/banner-ct.png');
 @mixin img-cover($name) {
   background: url($name);
   background-size: cover;
@@ -62,7 +61,16 @@ button {
   }
 }
 .cooper {
-  @include img-cover('images/bannerct.png');
+  @include img-cover('/images/banner-ct.png');
+}
+.callie {
+  @include img-cover('/images/banner-cc.png');
+}
+.danzante {
+  @include img-cover('/images/banner-dz.png');
+}
+.weather {
+  @include img-cover('/images/banner-sw.png');
 }
 /* nav */
 nav {
