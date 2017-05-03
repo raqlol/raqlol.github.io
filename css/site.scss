@@ -176,6 +176,9 @@ section {
       overflow: hidden;
       @include transition (1s);
       z-index: -1;
+      a {
+        color: $text-color;
+      }
       img {
       	width: 100%;
       }

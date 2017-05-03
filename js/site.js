@@ -80,7 +80,7 @@ function slide() {
 // allows content below the slider to appear to float up as the user scrolls down
 window.onscroll = function() {float()};
 function float() {
-    if (document.body.scrollTop > 400 || document.documentElement.scrollTop > 400) {
+    if (document.body.scrollTop > 300 || document.documentElement.scrollTop > 300) {
         document.getElementById("float").className = "floatToTop";
     }
 }
