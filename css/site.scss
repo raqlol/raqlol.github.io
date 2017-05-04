@@ -70,6 +70,15 @@ button {
 .danzante {
   @include img-cover('/images/banner-dz.png');
 }
+.fx {
+  @include img-cover('/images/banner-fx.png');
+}
+.glass {
+  @include img-cover('/images/banner-gt.png');
+}
+.pmbv {
+  @include img-cover('/images/banner-pm.png');
+}
 .sfmap {
   @include img-cover('/images/icon-sfmovie-site.jpg');
 }
