@@ -202,7 +202,6 @@ section {
       img {
       	width: 100%;
       }
-
       #box {
         background:$trans-white;
         position: absolute;
@@ -231,16 +230,22 @@ section {
     margin: $standard;
     width: 20%;
     display: inline-block;
-    background:black;
     height: 300px;
     overflow: hidden;
+    &:hover {
+      background:black;
+    }
     h1 {
+      visibility: hidden;
       transform: translateY(-100%);
       position: absolute;
       top:50%;
       width: 100%;
       color: $key-color;
       font-size: 32px;
+      &:hover {
+        visibility: visible;
+      }
     }
     img {
       position: relative;
