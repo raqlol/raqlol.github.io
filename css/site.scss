@@ -236,15 +236,15 @@ section {
       background:black;
       @include transition(.5s);
       h1 {
-        position: absolute;
-        top:50%;
-        width: 100%;
-        color: $key-color;
-        font-size: 32px;
         z-index: 100;
       }
     }
     h1 {
+      position: absolute;
+      top:50%;
+      width: 100%;
+      color: $key-color;
+      font-size: 32px;
       z-index: -1;
     }
   }
