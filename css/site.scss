@@ -234,27 +234,18 @@ section {
     overflow: hidden;
     &:hover {
       background:black;
+      @include transition(.5s);
+      h1 {
+        transform: translateY(-100%);
+        position: absolute;
+        top:50%;
+        width: 100%;
+        color: $key-color;
+        font-size: 32px;
+      }
     }
     h1 {
       visibility: hidden;
-      transform: translateY(-100%);
-      position: absolute;
-      top:50%;
-      width: 100%;
-      color: $key-color;
-      font-size: 32px;
-      &:hover {
-        visibility: visible;
-      }
-    }
-    img {
-      position: relative;
-      z-index: 10;
-      padding-bottom: $standard;
-      &:hover {
-        opacity: 0;
-        @include transition(.5s);
-      }
     }
   }
 }
