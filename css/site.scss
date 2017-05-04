@@ -70,6 +70,12 @@ button {
 .danzante {
   @include img-cover('/images/banner-dz.png');
 }
+.slots {
+  @include img-cover('/images/banner-slot.png');
+}
+.tom {
+  @include img-cover('/images/banner-tg.png');
+}
 .weather {
   @include img-cover('/images/banner-sw.png');
 }
