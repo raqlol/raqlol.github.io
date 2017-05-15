@@ -238,7 +238,7 @@ section {
   z-index: -10 !important;
 }
 /* portfolio */
-#portfolio {
+#portfolio, #blog {
   margin: $standard;
   text-align: center;
   #project{
@@ -266,7 +266,7 @@ section {
     }
   }
 }
-#img-col {
+.img-col {
   display: inline-block;
   width: 60%;
   padding-right: $standard;
@@ -275,7 +275,7 @@ section {
     padding-bottom: $standard;
   }
 }
-#text-col {
+.text-col {
   display: inline-block;
   width: 30%;
   text-align: left;
@@ -328,6 +328,10 @@ footer {
     }
   }
 }
+ul#categories {
+list-style: none !important;
+display:inline-block;
+}
 
 /* tablet */
 @media only screen and (max-width: 768px) {
@@ -379,12 +383,12 @@ footer {
       width: auto;
     }
   }
-  #img-col {
+  .img-col {
     display: block;
     width: auto;
     padding: 0;
   }
-  #text-col {
+  .text-col {
     width: auto;
   }
   #float {
