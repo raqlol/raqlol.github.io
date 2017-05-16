@@ -29,6 +29,15 @@ body {
   border: 0;
 	font-family: Gotham, sans-serif;
 }
+a {
+  color: $text-color;
+  font-weight: bold;
+  font-style: italic;
+  @include transition (.5s);
+  &:hover {
+    color: $key-color;
+  }
+}
 h1 {
   font-size: 72px;
   text-transform: uppercase;
@@ -40,6 +49,7 @@ h2 {
 }
 h3 {
 	font-weight: lighter;
+  text-transform: uppercase;
 	font-size: $standard;
 }
 a {
@@ -94,13 +104,15 @@ button {
 /* nav */
 nav {
 	position:fixed;
-	background: black;
+	background:#F2F2F2;
 	width:100%;
   z-index: 1000;
   top:0;
 	a {
 		margin:$standard;
-		color: white;
+		color: $text-color;
+    font-weight: normal;
+    font-style: normal;
 	}
 	ul {
 		position: fixed;
@@ -110,13 +122,6 @@ nav {
 		li {
 			margin-bottom:30px;
       text-align: right;
-      a {
-        color: $text-color;
-        @include transition (.5s);
-        &:hover {
-          color: $key-color;
-        }
-      }
 			img {
 			    height: $icon-size;
 			}
@@ -271,6 +276,7 @@ section {
   width: 60%;
   padding-right: $standard;
   vertical-align: middle;
+  text-align: left;
   img {
     padding-bottom: $standard;
   }
