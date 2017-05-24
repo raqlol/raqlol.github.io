@@ -54,11 +54,21 @@
   </nav>
   <section>
     <div id="blog">
-      <h1>Blog</h1>
+      <h3>Raq Blog</h3>
       <div class="img-col" id="ourHolder">
-           <h1>Github Pages</h1>
+        <h1>Creating a Blog</h1>
+        <h3>Using Github Pages and Jekyll</h3>
+        <p>My first entry was on Github Pages and setting up a site hosted from a Github repository. Now, I'll be reviewing the process of setting up a blog using Pages and <a href="https://help.github.com/articles/using-jekyll-as-a-static-site-generator-with-github-pages/" target="_blank"> Jekyll</a>. Jekyll is a static site generator that is integrated into Github and allows you to make posts using markdown instead of HTML. </p>
+        <p>This is perfect for <a href="http://www.Manatee.Foundation" target="_blank">Manatee.Foundation</a> because many of our contributors are already familiar with markdown. Manatee Foundation already has a basic layout and stylesheets so the process I'll be going through will go into adding your own nav and footer instead of using a premade Jekyll theme.</p>
+        <p>First I set up a new repository for a <a href="https://pages.github.com/">Project Site</a>, this process is very similar to what is outlined in the last entry except that at used a theme. This will make the next steps easier. </p>
+        <p>Starting with an existing theme made the customization a lot easier because it provided me a framework for adding/substituting my styles. The <a href="https://help.github.com/articles/customizing-css-and-html-in-your-jekyll-theme/">Customize CSS and HTML Guide</a> had everything I needed, the instructions are excellent, I'll just be adding a few notes on my own experience. I did have some issues on step 3, but this was related to my IDE and how it compiles Sass. My work around was adding the code through the site's interface instead of on the command line. The rest worked exactly as described in their documentation. </p>
+        <p>Because we'll be creating a blog, I hopped over to Jekyll's documentation on <a href="https://jekyllrb.com/docs/posts/">writing posts</a>. Their <a href="https://jekyllrb.com/docs/structure/">directory sturcture</a> is worth checking out, but not neccessary to dive into for this example. The important point is that you'll need to create the folder <strong>_posts</strong> in your repository. All of your posts will go in this folder and must follow the naming fomat 20XX-0M-0D-title.md. The content of your post is written in markdown with the exception of the first few lines, which are <a href="https://jekyllrb.com/docs/frontmatter/">YAML Front Matter.</a> These must appear at the begining of the file and are enclosed with <strong>---</strong>. The site contains lots of intersting variable, we'll be using layout, title, date and category.</p>
+        <p>You're actual p
+        <p>May 23, 2017</p>
+        <hr>
+        <h1>Github Pages</h1>
            <h3>The first post!</h3>
-           <p>I had heard about <a href="https://pages.github.com/" target="_blank">Github Pages</a> during an event at Noisebridge. Github Pages allows you to make a site that is hosted directly from your repository. This made a lot of sense for me since I was looking for an easy option to showcase what I was working on. I have a JSFiddle account for prototyping and showing off features, but for polished work, it should be hosted somewhere.</p>
+           <p>I had first heard about <a href="https://pages.github.com/" target="_blank">Github Pages</a> during an event at Noisebridge. Github Pages allows you to make a site that is hosted directly from your repository. This made a lot of sense for me since I was looking for an easy option to showcase what I was working on. I have a JSFiddle account for prototyping and showing off features, but for polished work, it should be hosted somewhere.</p>
            <h3>Why Github Pages is awesome</h3>
            <ol>
              <li>It's free!</li>
@@ -72,6 +82,7 @@
            <p>Next I needed to setup for the custom domain. Check out the <a href="https://help.github.com/articles/quick-start-setting-up-a-custom-domain/" target="_blank">quick start guide</a>. I had purchased my domain years ago so I jumped to step 2. For step 3 I used the <a href="https://help.github.com/articles/setting-up-an-apex-domain-and-www-subdomain/" target="_blank">apex and subdomain instructions</a>. I would recommend this options, unless you have a custom subdomain. This is the only section I could forsee someone having issues with, since you'll need to do these things through your DNS provider. I'm using AWS, so I was pretty comfortable changing the A record and CNAME, but I could see this step being a bit of a nail biter if you haven't done it before. After completing this step it took about 30 minutes for my site to go live, but these things can take up to a day. </p>
            <h3>And you're done! Enjoy your new site!</h3>
            <p>For my next post, I'll be recapping the setup of <a href="http://www.Manatee.Foundation" target="_blank">Manatee.Foundation</a>, where we'll be using a similar setup to my site but with the addition of<a href="https://help.github.com/articles/using-jekyll-as-a-static-site-generator-with-github-pages/" target="_blank"> Jekyll</a>, which allows for easy blogging using markdown.</p>
+           <p>May 15, 2017</p>
          </div>
       </div>
     </div>
