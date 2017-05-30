@@ -89,6 +89,9 @@ button {
 .pmbv {
   @include img-cover('/images/banner-pm.png');
 }
+.sdc {
+  @include img-cover('/images/comps-sdc-floor.jpg');
+}
 .sfmap {
   @include img-cover('/images/icon-sfmovie-site.jpg');
 }
