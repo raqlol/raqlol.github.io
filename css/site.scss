@@ -199,8 +199,7 @@ nav ul.open-menu{
 /*main content */
 section {
 	position: relative;
-  top:62px;
-  background: white;
+  top:120px;
   img {
     width: 100%;
   }
@@ -253,14 +252,15 @@ section {
   text-align: center;
   #project{
     position: relative;
-    margin: $standard;
+    margin: 40px;
     width: 20%;
     display: inline-block;
     height: 300px;
     overflow: hidden;
+    background-color: $key-color;
     &:hover {
       background:black;
-      @include transition(.5s);
+      @include transition(.75s);
       h1 {
         z-index: 100;
       }
