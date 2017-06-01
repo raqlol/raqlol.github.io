@@ -38,6 +38,11 @@ a {
     color: $key-color;
   }
 }
+hr {
+  margin: 0;
+  border-top: white 1px solid;
+  border-bottom: black 1px solid;
+}
 h1 {
   font-size: 72px;
   text-transform: uppercase;
