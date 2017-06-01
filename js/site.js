@@ -19,5 +19,5 @@ function determinesState () {
 // allows content below the slider to appear to float up as the user scrolls down
 window.onscroll = function() {float()};
 function float() {
-  document.getElementById("float").className = "floatToTop";
+  document.getElementsByClassName("float").className = "floatToTop";
 }
