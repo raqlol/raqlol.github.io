@@ -50,7 +50,9 @@ h2 {
 h3 {
 	font-weight: lighter;
   text-transform: uppercase;
+  color: $key-color;
 	font-size: $standard;
+  padding: $standard;
 }
 a {
 	text-decoration: none;
@@ -107,7 +109,7 @@ button {
 /* nav */
 nav {
 	position:fixed;
-	background:#F2F2F2;
+	background:#FFFFFF;
 	width:100%;
   z-index: 1000;
   top:0;
@@ -185,7 +187,7 @@ nav {
 	top:8px;
 }
 #triangle-menu.open-menu{
-  border-top: 900px solid $background;
+  border-top: 900px solid #d1d1d1;
 }
 nav ul.open-menu{
 	max-height:inherit;
