@@ -42,6 +42,8 @@ h1 {
   font-size: 72px;
   text-transform: uppercase;
   color: $key-color;
+  font-weight: normal;
+  letter-spacing: 5px;
 }
 h2 {
 	font-weight: lighter;
@@ -269,9 +271,9 @@ section {
       position: absolute;
       top:50%;
       transform: translateY(-100%);
-      width: 100%;
+      width: 90%;
+      margin-left: 5%;
       color: $key-color;
-      font-size: 32px;
       z-index: -1;
     }
   }
