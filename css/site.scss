@@ -281,6 +281,13 @@ section {
     }
   }
 }
+.twitter-col {
+  display: inline-block;
+  width: 30%;
+  text-align: left;
+  vertical-align: top;
+  margin-right: $standard;
+}
 .img-col {
   display: inline-block;
   width: 60%;
@@ -296,6 +303,12 @@ section {
   width: 30%;
   text-align: left;
   vertical-align: middle;
+}
+.twitter-col {
+  display: inline-block;
+  width: 30%;
+  text-align: left;
+  vertical-align: top;
 }
 /* content that floats up */
 /* can be used on content below the slider by adding the float id */
@@ -405,6 +418,9 @@ display:inline-block;
   }
   .text-col {
     width: auto;
+  }
+  .twitter-col {
+    display: none;
   }
   #float {
     margin-top: 50px;
