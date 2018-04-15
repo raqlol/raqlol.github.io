@@ -28,6 +28,14 @@ body {
   margin: 0;
   border: 0;
 	font-family: Gotham, sans-serif;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-items: stretch;
+  justify-content: space-between;
+}
+section#portfolio {
+  display: flex;
 }
 a {
   color: $text-color;
@@ -195,6 +203,9 @@ nav {
 #triangle-menu.open-menu{
   border-top: 900px solid #d1d1d1;
 }
+nav ul {
+  top:40px;
+}
 nav ul.open-menu{
 	max-height:inherit;
 	position:fixed;
@@ -255,10 +266,13 @@ section {
 /* portfolio */
 #portfolio, #blog {
   text-align: center;
-  #project{
+  .project{
+    max-width: 100%;
+    flex-grow: 0;
+    flex-shrink: 1;
+    flex-basis: 300px;
     position: relative;
     margin: 40px;
-    width: 20%;
     display: inline-block;
     height: 300px;
     overflow: hidden;
@@ -352,7 +366,7 @@ footer {
     }
   }
   #portfolio {
-    #project{
+    .project{
       width: 40%;
     }
   }
@@ -405,7 +419,7 @@ display:inline-block;
     }
   }
   #portfolio{
-    #project {
+    .project {
       margin: 10px;
       display: block;
       width: auto;
