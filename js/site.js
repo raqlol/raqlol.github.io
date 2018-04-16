@@ -1,6 +1,7 @@
 // menu
 var menuIcon = document.getElementById("menu-icon");
 menuIcon.addEventListener("click", determinesState);
+menuIcon.addEventListener("focus", determinesState);
 function determinesState () {
   this.classList.toggle('open');
   var dropdown = document.getElementById("dropdown")
