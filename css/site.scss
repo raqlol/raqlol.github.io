@@ -284,7 +284,7 @@ section {
       }
     }
     &:hover:before {
-      content: attr(data-line);
+      content: attr(data-title);
     }
     h1 {
       position: absolute;
