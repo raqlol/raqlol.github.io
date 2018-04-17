@@ -1,11 +1,10 @@
 // menu
-var menuIcon = document.getElementById("menu-icon");
-menuIcon.addEventListener("click", determinesState);
-menuIcon.addEventListener("focus", determinesState);
+const menuIcon = document.getElementById("menu-icon");
+const dropdown = document.getElementById("dropdown");
+const triangle = document.getElementById("triangle-menu");
+
 function determinesState () {
   this.classList.toggle('open');
-  var dropdown = document.getElementById("dropdown")
-  var triangle = document.getElementById("triangle-menu")
   var opened = dropdown.classList.contains('open-menu');
   if (opened) {
     dropdown.classList.remove('open-menu');
@@ -16,7 +15,9 @@ function determinesState () {
     triangle.classList.add('open-menu');
   }
 }
-// float up
+
+menuIcon.addEventListener("click", determinesState);
+
 // allows content below the slider to appear to float up as the user scrolls down
 window.onscroll = function() {float()};
 function float() {

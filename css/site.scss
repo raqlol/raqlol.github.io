@@ -70,7 +70,7 @@ h3 {
 a {
 	text-decoration: none;
 }
-button {
+section button {
   margin: $standard auto;
   border:black 3px solid;
   padding: 10px;
@@ -274,13 +274,17 @@ section {
     margin: $standard;
     height: 300px;
     overflow: hidden;
-    background-color: $key-color;
+    background-color: #000;
     &:hover {
       background:black;
+      background-position: center;
       @include transition(.75s);
       h1 {
         z-index: 100;
       }
+    }
+    &:hover:before {
+      content: attr(data-line);
     }
     h1 {
       position: absolute;
