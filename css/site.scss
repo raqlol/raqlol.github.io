@@ -275,9 +275,14 @@ section {
     height: 300px;
     overflow: hidden;
     background-color: #000;
+    font-size: 40px;
+    color: white;
+    line-height: 50px;
+    letter-spacing: 3px;
     &:hover {
-      background:black;
+      background:rgba(0, 0, 0, 0.5);
       background-position: center;
+
       @include transition(.75s);
       h1 {
         z-index: 100;
