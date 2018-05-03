@@ -38,6 +38,7 @@ body {
   justify-content: space-between;
   background-color: $key-color;
   text-align: center;
+  color: $text-color;
 }
 section#portfolio {
   display: flex;
@@ -58,6 +59,7 @@ h1 {
   font-weight: normal;
   letter-spacing: 5px;
   font-family: 'Playfair Display SC', serif;
+  font-size: 40px;
 }
 
 h3 {
@@ -219,7 +221,11 @@ nav ul.open-menu{
 /*main content */
 section {
 	position: relative;
-  margin-top:120px;
+  width: 100%;
+  display: flex;
+  flex-wrap: nowrap;
+  flex-direction: column;
+  justify-content: center;
   img {
     width: 100%;
   }
@@ -363,7 +369,7 @@ footer {
 /* laptop */
 @media only screen and (max-width: 1440px) {
   h1 {
-    font-size: 30px;
+    font-size: 40px;
   }
   #slider {
     padding-bottom: 45%;
