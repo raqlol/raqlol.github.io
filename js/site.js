@@ -16,8 +16,6 @@ function determinesState () {
   }
 }
 
-menuIcon.addEventListener("click", determinesState);
-
 // allows content below the slider to appear to float up as the user scrolls down
 window.onscroll = function() {float()};
 function float() {
