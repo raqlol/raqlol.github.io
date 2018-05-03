@@ -21,3 +21,13 @@ window.onscroll = function() {float()};
 function float() {
   document.getElementsByClassName("float").className = "floatToTop";
 }
+const slider = document.getElementsByClassName("slider")
+function slider () {
+
+  for (var i=0; i <slider.length; i++) {
+    var next = i + 1;
+    slider.classList.add("fade");
+    slider.classList.remove("fade");
+  }
+
+}

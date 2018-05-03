@@ -106,6 +106,15 @@ section {
     width: 100%;
   }
 }
+.slider {
+  transition: opacity 4s ease-in-out;
+  -moz-transition: opacity 4s ease-in-out;
+  -webkit-transition: opacity 4s ease-in-out;
+  opacity: 1;
+}
+.fade {
+  opacity: 0;
+}
 /* laptop */
 @media only screen and (max-width: 1440px) {
 
