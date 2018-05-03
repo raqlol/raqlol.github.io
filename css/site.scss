@@ -37,6 +37,7 @@ body {
   align-items: stretch;
   justify-content: space-between;
   background-color: $key-color;
+  text-align: center;
 }
 section#portfolio {
   display: flex;
@@ -49,24 +50,16 @@ a {
   font-style: italic;
   @include transition (.5s);
   &:hover {
-    color: $key-color;
+    opacity: .7;
   }
 }
 h1 {
   text-transform: uppercase;
-  color: $key-color;
   font-weight: normal;
   letter-spacing: 5px;
   font-family: 'Playfair Display SC', serif;
-
-
 }
-h2 {
-	font-weight: lighter;
-	font-size: 34px;
-  font-family: 'Playfair Display SC', serif;
 
-}
 h3 {
 	font-weight: lighter;
   text-transform: uppercase;
