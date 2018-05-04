@@ -27,4 +27,4 @@ const fadeSlider = document.getElementsByClassName("slider")
     fadeSlider[i].classList.add("fade");
     fadeSlider[next].classList.remove("fade");
   }
-}
+});
