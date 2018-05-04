@@ -15,17 +15,16 @@ function determinesState () {
     triangle.classList.add('open-menu');
   }
 }
-
-// allows content below the slider to appear to float up as the user scrolls down
 window.onscroll = function() {float()};
 function float() {
   document.getElementsByClassName("float").className = "floatToTop";
 }
-const slider = document.getElementsByClassName("slider")
+
+const fadeSlider = document.getElementsByClassName("slider")
 (function () {
   for (var i=0; i <slider.length; i++) {
     var next = i + 1;
-    slider.classList.add("fade");
-    slider.classList.remove("fade");
+    fadeSlider[i].classList.add("fade");
+    fadeSlider[next].classList.remove("fade");
   }
 }
