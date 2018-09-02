@@ -64,7 +64,7 @@
     <link rel='dns-prefetch' href='//s.w.org' />
     <link rel="alternate" type="application/rss+xml" title="KongHQ &raquo; Feed" href="https://konghq.com/feed/" />
     <link rel="alternate" type="application/rss+xml" title="KongHQ &raquo; Comments Feed" href="https://konghq.com/comments/feed/" />
-    <link rel='stylesheet' id='assets-css'  href='https://2tjosk2rxzc21medji3nfn1g-wpengine.netdna-ssl.com/wp-content/themes/konghq/assets/css/styles.min.css?ver=38e45012f77cca1e4ef5315e4731d046' type='text/css' media='all' />
+    <link rel='stylesheet' id='assets-css'  href='styles/main.css' type='text/css' media='all' />
     <script type='text/javascript' src='https://2tjosk2rxzc21medji3nfn1g-wpengine.netdna-ssl.com/wp-content/themes/konghq/assets/js/vendor/jquery.min.js?ver=1'></script>
     <link rel='https://api.w.org/' href='https://konghq.com/wp-json/' />
     <link rel='shortlink' href='https://konghq.com/' />
@@ -73,36 +73,206 @@
   </head>
   <body class="home page-template page-template-templates page-template-home page-template-templateshome-php page page-id-4 page-home" data-spy="scroll" data-target="#scroll-sidebar">
     <header class="navbar navbar-inverse navbar-toggleable-lg kong-navbar flex-row align-items-center">
-      <div class="container d-flex">
-        <a href="/" class="navbar-brand col col-xl-auto">
-          <img src="https://2tjosk2rxzc21medji3nfn1g-wpengine.netdna-ssl.com/wp-content/themes/konghq/assets/img/Kogo.svg" alt="Kong Logo">
-        </a>
+  <div class="container d-flex">
+    <a href="/" class="navbar-brand col col-xl-auto">
+      <img src="https://2tjosk2rxzc21medji3nfn1g-wpengine.netdna-ssl.com/wp-content/themes/konghq/assets/img/Kogo.svg" alt="Kong Logo">
+    </a>
 
-        <nav id="ctaNav" class="col-auto justify-content-md-end kong-navbar_nav hidden-sm-down">
-          <ul class="navbar-nav flex-row justify-content-end">
-              <li class="kong-navbar_nav_link kong-navbar_nav_link--cta"><a class="nav-link" href="/request-demo">Products</a></li>
-              <li class="kong-navbar_nav_link kong-navbar_nav_link--cta"><a class="nav-link " href="/request-demo">Plugins hub</a></li>
-              <li class="kong-navbar_nav_link kong-navbar_nav_link--cta"><a class="nav-link" href="/request-demo">Resources</a></li>
-              <li class="kong-navbar_nav_link kong-navbar_nav_link--cta"><a class="nav-link" href="/request-demo">Partners</a></li>
-              <li class="kong-navbar_nav_link kong-navbar_nav_link--cta active"><a class="nav-link" href="/request-demo">Company</a></li>
-              <li class="kong-navbar_nav_link kong-navbar_nav_link--cta"><a class="nav-link" href="/request-demo">Blog</a></li>
-              <li class="kong-navbar_nav_link kong-navbar_nav_link--cta"><a class="nav-link btn btn-outline-secondary" href="/request-demo">Request Demo</a></li>
-            <li class="kong-navbar_nav_link kong-navbar_nav_link--cta"><a class="nav-link btn btn-primary" href="/installations">Installation</a></li>
-          </ul>
-        </nav>
-      </div>
-    </header>
-    <div class="container d-flex">
-        <a href="/" class="navbar-brand col col-xl-auto">Company</a>
-      <nav id="ctaNav" class="navbar flex-row align-items-center justify-content-center py-0 kong-subnav">
-        <ul class="navbar-nav flex-row justify-content-end">
-            <li class="kong-navbar_nav_link kong-navbar_nav_link--cta"><a class="nav-link" href="/request-demo">About</a></li>
-            <li class="kong-navbar_nav_link kong-navbar_nav_link--cta"><a class="nav-link " href="/request-demo">Investors</a></li>
-            <li class="kong-navbar_nav_link kong-navbar_nav_link--cta active"><a class="nav-link" href="/request-demo">Jobs</a></li>
-            <li class="kong-navbar_nav_link kong-navbar_nav_link--cta"><a class="nav-link" href="/request-demo">Contact</a></li>
-        </ul>
-      </nav>
+    <nav class="collapse navbar-collapse col justify-content-md-end kong-navbar_nav">
+      <ul class="navbar-nav">
+        <li class="navbar-item kong-navbar-dropdown">
+          <a class="nav-link ">Products</a>
+          <div class="list-group" style="width: 400px; left: -150px;">
+            <a href="/kong-community-edition" class="list-group-item list-group-item-action">
+              <h5 class="mb-1">Kong Community Edition <span class="kong-github-latest-release badge">0.14.1</span></h5>
+              <p class="mb-0">The blazingly fast open source microservice API gateway.</p>
+            </a>
+            <a href="/kong-enterprise-edition" class="list-group-item list-group-item-action">
+              <h5 class="mb-1">Kong Enterprise Edition</h5><br>
+              <p class="mb-0">The microservice API platform for large organizations.</p>
+            </a>
+            <a href="/cloud" class="list-group-item list-group-item-action">
+              <h5 class="mb-1">Kong Cloud</h5>&nbsp;
+              <p class="mb-0">Kong Enterprise innovation delivered at cloud speed.</p>
+            </a>
+            <a href="/subscriptions" class="list-group-item list-group-item-action highlight">
+              <h5 class="mb-1">Subscriptions</h5>&nbsp;
+              <p class="mb-0">Compare Kong editions and features.</p>
+            </a>
+          </div>
+        </li>
+        <li class="navbar-item"><a class="nav-link " href="/plugins/">Plugins Hub</a></li>
+        <li class="navbar-item kong-navbar-dropdown kong-navbar-dropdown--columns">
+          <a class="nav-link ">Resources</a>
+          <div class="list-group">
+            <div class="list-group-item flex-row flex-nowrap">
+              <div class="kong-navbar-dropdown_column">
+                <h5 class="mb-2">Documentation</h5>
+                <a href="https://getkong.org/docs/">Kong Community Edition</a>
+                <a href="https://getkong.org/docs/enterprise">Kong Enterprise Edition</a>
+                <a href="https://getkong.org/docs/enterprise/latest/vitals/">Kong Analytics</a>
+                <a href="https://getkong.org/docs/enterprise/latest/developer-portal/overview/">Kong Dev Portal</a>
+              </div>
+              <div class="kong-navbar-dropdown_column">
+                <h5 class="mb-2">Support</h5>
+                <a href="https://support.mashape.com/hc/en-us">Enterprise Support Portal</a>
+                <h5 class="mb-2 spacer">Community</h5>
+                <div class="flex-row kong-nav-community-links-container">
+                  <a href="https://github.com/Kong/">GitHub</a> <span class="bullet">•</span> <a href="https://discuss.konghq.com/">Kong Forum</a>
+                </div>
+                <h5 class="mb-2 spacer">Learn</h5>
+                <div class="flex-row kong-nav-community-links-container">
+                  <a href="/webinars/">Webinars</a>
+                  <span class="bullet">•</span>
+                  <a href="/ebooks/">Ebooks</a>
+                  <span class="bullet">•</span>
+                  <a href="/meetups">Meetups</a>
+                </div>
+              </div>
+            </div> <!-- list-group-item -->
+          </div> <!-- list-group -->
+        </li>
+        <li class="navbar-item"><a class="nav-link " href="/partners">Partners</a></li>
+        <li class="navbar-item kong-navbar-dropdown kong-navbar-dropdown-small">
+          <a class="nav-link active">Company</a>
+          <div class="list-group" style="width: 100px; left: -50px;">
+            <a href="/about-kong-inc" class="list-group-item list-group-item-action">About</a>
+            <a href="/investors" class="list-group-item list-group-item-action">Investors</a>
+            <a href="/jobs" class="list-group-item list-group-item-action">Jobs</a>
+            <a href="/contact" class="list-group-item list-group-item-action">Contact</a>
+          </div>
+        </li>
+        <li class="navbar-item"><a class="nav-link " href="/blog">Blog</a></li>
+      </ul>
+    </nav>
+
+    <nav id="ctaNav" class="col-auto justify-content-md-end kong-navbar_nav hidden-sm-down">
+      <ul class="navbar-nav flex-row justify-content-end">
+        <li class="kong-navbar_nav_link kong-navbar_nav_link--cta"><a class="nav-link btn btn-outline-secondary" href="/request-demo">Request Demo</a></li>
+        <li class="kong-navbar_nav_link kong-navbar_nav_link--cta"><a class="nav-link btn btn-primary" href="/installations">Installation</a></li>
+      </ul>
+    </nav>
+
+    <button class="navbar-toggler align-self-center" type="button" data-toggle="kong-expand" data-target="#pagesNav" aria-controls="pagesNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+  </div>
+
+</header>
+    <nav id="pagesNav" class="fixed-top hidden-xl-up kong-navbar-collapse">
+  <div class="kong-navbar-collapse_section row no-gutters justify-content-between">
+    <h5 class="col-12">
+      <a class="nav-link">Products</a>
+    </h5>
+
+    <div class="col-md-6">
+      <h6>Kong Community Edition</h6>
+      <a class="nav-link" href="/kong-community-edition">Overview</a>
+      <a class="nav-link" href="/api-gateway">API Gateway</a>
+      <a class="nav-link" href="/faqs">FAQs</a>
     </div>
+
+    <div class="col-md-6">
+      <h6>Kong Enterprise Edition</h6>
+      <div class="row">
+        <div class="col-4">
+          <a class="nav-link" href="/kong-enterprise-edition">Overview</a>
+          <a class="nav-link" href="/api-admin-gui">Admin GUI</a>
+          <a class="nav-link" href="/api-security">Security</a>
+          <a class="nav-link" href="/api-dev-portal">Dev Portal</a>
+        </div>
+        <div class="col-4">
+           <a class="nav-link" href="/api-analytics">Analytics</a>
+          <a class="nav-link" href="/api-high-availability">High Availability</a>
+          <a class="nav-link" href="/api-customer-success">Support</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-md-6">
+      <h6>Kong Cloud</h6>
+      <div class="row">
+        <div class="col-4">
+          <a class="nav-link" href="/kong-cloud">Overview</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="kong-navbar-collapse_section">
+    <h5>
+      <a class="nav-link" href="/plugins/">Plugins Hub</a>
+    </h5>
+  </div>
+
+  <div class="kong-navbar-collapse_section row no-gutters justify-content-between">
+    <h5 class="col-12">
+      <a class="nav-link">Resources</a>
+    </h5>
+
+    <div class="col-md-6">
+      <h6>Documentation</h6>
+      <a class="nav-link" href="https://getkong.org/docs/">Kong Community Edition</a>
+      <a class="nav-link" href="https://getkong.org/docs/enterprise">Kong Enterprise Edition</a>
+      <a class="nav-link" href="https://getkong.org/docs/enterprise/latest/vitals/">Kong Analytics</a>
+      <a class="nav-link" href="https://getkong.org/docs/enterprise/latest/developer-portal/introduction/">Kong Dev Portal</a>
+    </div>
+
+    <div class="col-md-6">
+      <h6>Support</h6>
+      <a class="nav-link" href="https://support.mashape.com/hc/en-us">Enterprise Support Portal</a>
+
+      <h6 class="short-top">Community</h6>
+      <div class="flex-row">
+        <a class="nav-link d-inline-flex" href="https://github.com/Kong">GitHub</a> <span class="bullet">•</span> <a class="nav-link d-inline-flex" href="https://discuss.konghq.com/">Kong Forum</a>
+      </div>
+    </div>
+
+    <div class="col-md-6">
+      <h6 class="shot-top">Learn</h6>
+      <a class="nav-link" href="/webinars">Webinars</a>
+      <a class="nav-link" href="/ebooks">Ebooks</a>
+      <a class="nav-link" href="/meetups">Meetups</a>
+    </div>
+  </div>
+
+  <div class="kong-navbar-collapse_section">
+    <h5>
+      <a class="nav-link" href="/partners">Partners</a>
+    </h5>
+  </div>
+
+  <div class="kong-navbar-collapse_section">
+    <h5>
+      <a class="nav-link">Company</a>
+    </h5>
+    <a class="nav-link" href="/about-kong-inc">About</a>
+    <a class="nav-link" href="/investors">Investors</a>
+    <a class="nav-link" href="/jobs">Jobs</a>
+    <a class="nav-link" href="/contact">Contact</a>
+  </div>
+
+  <div class="kong-navbar-collapse_section">
+    <h5>
+      <a class="nav-link" href="/blog">Blog</a>
+    </h5>
+  </div>
+
+  <div class="hidden-md-up kong-navbar-collapse_section kong-navbar-collapse_section--buttons">
+    <a class="btn" href="request-demo">Request Demo</a>
+    <a href="/install" class="btn btn-primary">Installation</a>
+  </div>
+</nav>
+    <nav class="navbar flex-row align-items-center justify-content-center py-0 kong-subnav ">
+    <div class="container d-flex align-items-center justify-content-center">
+      <div class="col-auto pl-0 hidden-sm-down kong-subnav_title">
+        Company      </div>
+      <ul id="menu-company" class="nav col pr-0 justify-content-center justify-content-md-end"><li id="menu-item-237" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-237 navbar-item"><a href="https://konghq.com/about-kong-inc/" class="nav-link">About Kong Inc.</a></li>
+    <li id="menu-item-239" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-239 navbar-item"><a href="https://konghq.com/investors/" class="nav-link">Investors</a></li>
+    <li id="menu-item-240" class="menu-item menu-item-type-post_type menu-item-object-page current-menu-item page_item page-item-23 current_page_item menu-item-240 navbar-item"><a href="https://konghq.com/jobs/" class="nav-link">Jobs</a></li>
+    <li id="menu-item-238" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-238 navbar-item"><a href="https://konghq.com/contact/" class="nav-link">Contact</a></li>
+    </ul>    </div>
+    </nav>
     <main class="kong-main">
       <!-- rename hero -->
       <!-- check for dup ids -->
@@ -111,6 +281,7 @@
           <div class="row justify-content-center">
             <div class="col-sm-12 col-md-10 text-center">
               <h1 class="hero">Are you ready to join the API revolution?</h1>
+              <p>Our teams work on the bleeding edge of API innovation to provide our with</p>
               <a href="/installations" class="btn btn-lg btn-success" alt="Install Kong">See Open Positions</a>
               <p>Not ready to apply? <a href="#" class="green">Keep in touch</a></p>
             </div>
@@ -118,63 +289,24 @@
         </div>
       </section>
       <!-- carousel -->
-      <div class="announcements dark justify-content-center">
-        <div class="container col-md-8">
-          <div class="row justify-content-center">
-        <div id="announcement_carousel" class="carousel slide" data-ride="carousel">
-          <!-- Wrapper for slides -->
-          <div class="carousel-inner">
-            <div class="carousel-item active">
-              <div class="col-md-3 text-right hidden-sm-down"><img src="https://2tjosk2rxzc21medji3nfn1g-wpengine.netdna-ssl.com/wp-content/uploads/2017/08/icn-announcement-EE.svg"/></div>
-              <div class="col px-2x px-md-1x">
-                <h5>New</h5>
-                <p>Kong Enterprise Edition <span> Featuring RBAC, Workspaces, Prometheus Plugin, and More!</span> <a href="https://konghq.com/blog/announcing-kong-enterprise-0-33/" class="green">Learn More</a></p>
-              </div>
-            </div><!-- /item -->
-            <div class="carousel-item ">
-              <div class="col-md-3 text-right hidden-sm-down"><img src="https://2tjosk2rxzc21medji3nfn1g-wpengine.netdna-ssl.com/wp-content/uploads/2017/08/icn-download.svg"/></div>
-              <div class="col px-2x px-md-1x">
-                <h5>Install Kong</h5>
-                <p>Kong Community Edition <span></span> <a href="https://konghq.com/installations/" class="green">Learn More</a></p>
-              </div>
-            </div><!-- /item -->
-            <div class="carousel-item ">
-              <div class="col-md-3 text-right hidden-sm-down"><img src="https://2tjosk2rxzc21medji3nfn1g-wpengine.netdna-ssl.com/wp-content/uploads/2017/08/icn-webinars.svg"/></div>
-              <div class="col px-2x px-md-1x">
-                <h5>Webinar</h5>
-                <p>Demystifying Service Mesh <span>New Pattern or New Technology?</span> <a href="https://konghq.com/webinars/demystifying-service-mesh-new-pattern-or-new-technology/" class="green">Learn More</a></p>
-              </div>
-            </div><!-- /item -->
-            <div class="carousel-item ">
-              <div class="col-md-3 text-right hidden-sm-down"><img src="https://2tjosk2rxzc21medji3nfn1g-wpengine.netdna-ssl.com/wp-content/uploads/2017/12/icn-kong-nation.svg"/></div>
-              <div class="col px-2x px-md-1x">
-                <h5>Discussion Forum</h5>
-                <p>Join Kong Nation <span></span> <a href="https://konghq.com/blog/join-kong-nation/" class="green">Learn More</a></p>
-              </div>
-            </div><!-- /item -->
-            </div>
-          </div>
-          </div><!--/slider row-->
-          </div><!--/container-->
-      </div><!--/anouncements -->
+      <div class="carousel">
+
+      </div>
       <section class="kong-unleashed pt-0x pb-4x pb-md-4x">
         <div class="container unleashed-intro py-4x">
           <div class="row justify-content-md-center text-center">
             <div class="col col-md-8">
-              <h1 class="hero mb-0x"><a href="/kong-enterprise-edition/" class="no-decoration">Unleash Kong</a></h1>
-              <h3>Extend microservices with configurable Kong plugins.</h3>
+              <h3>We are a group of makers, thinkers, and doers focused on helping today’s developers build tomorrow’s technology </h3>
             </div><!--/col-->
           </div><!--/row-->
         </div><!--/container-->
         <div class="row justify-content-center pt-2x pt-md-4x pb-1x">
           <div class="col-sm-12 col-md-6 pb-2x px-1x px-md-1x">
-            <h4 class="mb-1x text-center blue">API Gateway Pattern</h4>
             <p class="mb-2x px-2x sm text-center">Our teams work on the bleeding edge of API innovation to provide our users with a central nervous system for data and services.</p>
             <p class="mb-2x px-2x sm text-center">We believe in the power of Open Source and everything it stands for. That’s why developers around the world enthusiastically contribute on top of our open-source platform.</p>
 
           </div>
           <div class="col-sm-12 col-md-6 px-1x px-md-1x">
-            <h4 class="mb-1x text-center blue">Sidecar Pattern</h4>
             <p class="mb-2x px-2x sm text-center">We put design at the heart of everything we do, and we’re relentlessly focused on creating beautiful experiences for our customers. That’s why technology companies, major banks, e-commerce innovators, and government agencies put Kong in front of their most important web applications.</p>
           </div>
         </div>
@@ -223,6 +355,5 @@
     <script type='text/javascript' src='https://2tjosk2rxzc21medji3nfn1g-wpengine.netdna-ssl.com/wp-content/themes/konghq/assets/js/site.min.js?ver=7a5b70669d68abd500ba490bac35d110'></script>
     <script type='text/javascript' src='https://2tjosk2rxzc21medji3nfn1g-wpengine.netdna-ssl.com/wp-content/themes/konghq/assets/js/vendor/bootstrap.min.js'></script>
     <script type='text/javascript' src='https://2tjosk2rxzc21medji3nfn1g-wpengine.netdna-ssl.com/wp-content/themes/konghq/assets/js/vendor/highlight.min.js'></script>
-    <script type='text/javascript' src='https://2tjosk2rxzc21medji3nfn1g-wpengine.netdna-ssl.com/wp-includes/js/wp-embed.min.js?ver=4.9.8'></script>
   </body>
 </html>
