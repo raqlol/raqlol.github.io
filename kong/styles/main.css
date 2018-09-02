@@ -1,16 +1,17 @@
 @charset "UTF-8";
 .carousel {
   background-image:url("https://www.noisebridge.net/images/1/1c/Header_Banner.jpg");
-  height: 100px;
+  height: 400px;
   width:100%;
   padding:0;
   margin:0;
   background-repeat:repeat;
-  background-size:auto 100px;
+  background-size:auto 400px;
   -webkit-animation: scroll 15s ease-in-out 1;
   -webkit-animation-fill-mode: forwards;
-  animation: scroll 15s ease-in-out 1;
+  animation: scroll 15s ease-in-out;
   animation-fill-mode: forwards;
+  animation-iteration-count: infinite;
 }
 
 @keyframes scroll {
