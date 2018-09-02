@@ -1,6 +1,6 @@
 @charset "UTF-8";
 .carousel {
-  background-image:url("img/carousel.jpg");
+  background-image:url("/kong/img/carousel.jpg");
   height: 400px;
   width:100%;
   padding:0;
