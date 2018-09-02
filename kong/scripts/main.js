@@ -5,8 +5,11 @@ function counter(element) {
   let increment = 1;
   console.log(displayNum)
   console.log(endNum)
+  console.log(element)
   while (displayNum < endNum) {
     element.innerHTML = displayNum;
-    displayNum + increment
+    displayNum += increment
+    console.log(displayNum)
   }
+  console.log("done")
 }
