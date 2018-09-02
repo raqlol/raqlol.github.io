@@ -1,1129 +1,485 @@
-
 <!doctype html>
 <html lang="en-US" prefix="og: http://ogp.me/ns#">
-<head>
-  <meta name=“google-site-verification” content=“G3G1dYYF6C3SjOfOx6dOoU1GtMaXhWmgiYDRVu6100g” />
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="profile" href="http://gmpg.org/xfn/11">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="profile" href="http://gmpg.org/xfn/11">
+    <link rel="icon" type="image/x-icon" href="https://2tjosk2rxzc21medji3nfn1g-wpengine.netdna-ssl.com/wp-content/themes/konghq/assets/img/favicon.ico"/>
+    <link rel="apple-touch-icon" sizes="180x180" href="https://2tjosk2rxzc21medji3nfn1g-wpengine.netdna-ssl.com/wp-content/themes/konghq/assets/img/favicon-180.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="https://2tjosk2rxzc21medji3nfn1g-wpengine.netdna-ssl.com/wp-content/themes/konghq/assets/img/favicon-152.png">
+    <link rel="apple-touch-icon" sizes="167x167" href="https://2tjosk2rxzc21medji3nfn1g-wpengine.netdna-ssl.com/wp-content/themes/konghq/assets/img/favicon-167.png">
+    <meta charset="utf-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <!-- Start of Async Drift Code -->
+    <script>
+      !function() {
+        var t;
+        if (t = window.driftt = window.drift = window.driftt || [], !t.init) return t.invoked ? void (window.console && console.error && console.error("Drift snippet included twice.")) : (t.invoked = !0,
+        t.methods = [ "identify", "config", "track", "reset", "debug", "show", "ping", "page", "hide", "off", "on" ],
+        t.factory = function(e) {
+          return function() {
+            var n;
+            return n = Array.prototype.slice.call(arguments), n.unshift(e), t.push(n), t;
+          };
+        }, t.methods.forEach(function(e) {
+          t[e] = t.factory(e);
+        }), t.load = function(t) {
+          var e, n, o, i;
+          e = 3e5, i = Math.ceil(new Date() / e) * e, o = document.createElement("script"),
+          o.type = "text/javascript", o.async = !0, o.crossorigin = "anonymous", o.src = "https://js.driftt.com/include/" + i + "/" + t + ".js",
+          n = document.getElementsByTagName("script")[0], n.parentNode.insertBefore(o, n);
+        });
+      }();
+      drift.SNIPPET_VERSION = '0.3.1';
+      drift.load('696bu34787uz');
+    </script>
+    <!-- End of Async Drift Code -->
 
-  <link rel="icon" type="image/x-icon" href="https://2tjosk2rxzc21medji3nfn1g-wpengine.netdna-ssl.com/wp-content/themes/konghq/assets/img/favicon.ico"/>
-  <link rel="apple-touch-icon" sizes="180x180" href="https://2tjosk2rxzc21medji3nfn1g-wpengine.netdna-ssl.com/wp-content/themes/konghq/assets/img/favicon-180.png">
-  <link rel="apple-touch-icon" sizes="152x152" href="https://2tjosk2rxzc21medji3nfn1g-wpengine.netdna-ssl.com/wp-content/themes/konghq/assets/img/favicon-152.png">
-  <link rel="apple-touch-icon" sizes="167x167" href="https://2tjosk2rxzc21medji3nfn1g-wpengine.netdna-ssl.com/wp-content/themes/konghq/assets/img/favicon-167.png">
+    <!-- New Relic -->
+    <script type="text/javascript">
+      window.NREUM||(NREUM={}),__nr_require=function(t,n,e){function r(e){if(!n[e]){var o=n[e]={exports:{}};t[e][0].call(o.exports,function(n){var o=t[e][1][n];return r(o||n)},o,o.exports)}return n[e].exports}if("function"==typeof __nr_require)return __nr_require;for(var o=0;o<e.length;o++)r(e[o]);return r}({1:[function(t,n,e){function r(t){try{s.console&&console.log(t)}catch(n){}}var o,i=t("ee"),a=t(15),s={};try{o=localStorage.getItem("__nr_flags").split(","),console&&"function"==typeof console.log&&(s.console=!0,o.indexOf("dev")!==-1&&(s.dev=!0),o.indexOf("nr_dev")!==-1&&(s.nrDev=!0))}catch(c){}s.nrDev&&i.on("internal-error",function(t){r(t.stack)}),s.dev&&i.on("fn-err",function(t,n,e){r(e.stack)}),s.dev&&(r("NR AGENT IN DEVELOPMENT MODE"),r("flags: "+a(s,function(t,n){return t}).join(", ")))},{}],2:[function(t,n,e){function r(t,n,e,r,o){try{d?d-=1:i("err",[o||new UncaughtException(t,n,e)])}catch(s){try{i("ierr",[s,c.now(),!0])}catch(u){}}return"function"==typeof f&&f.apply(this,a(arguments))}function UncaughtException(t,n,e){this.message=t||"Uncaught error with no additional information",this.sourceURL=n,this.line=e}function o(t){i("err",[t,c.now()])}var i=t("handle"),a=t(16),s=t("ee"),c=t("loader"),f=window.onerror,u=!1,d=0;c.features.err=!0,t(1),window.onerror=r;try{throw new Error}catch(l){"stack"in l&&(t(8),t(7),"addEventListener"in window&&t(5),c.xhrWrappable&&t(9),u=!0)}s.on("fn-start",function(t,n,e){u&&(d+=1)}),s.on("fn-err",function(t,n,e){u&&(this.thrown=!0,o(e))}),s.on("fn-end",function(){u&&!this.thrown&&d>0&&(d-=1)}),s.on("internal-error",function(t){i("ierr",[t,c.now(),!0])})},{}],3:[function(t,n,e){t("loader").features.ins=!0},{}],4:[function(t,n,e){function r(t){}if(window.performance&&window.performance.timing&&window.performance.getEntriesByType){var o=t("ee"),i=t("handle"),a=t(8),s=t(7),c="learResourceTimings",f="addEventListener",u="resourcetimingbufferfull",d="bstResource",l="resource",p="-start",h="-end",m="fn"+p,w="fn"+h,v="bstTimer",y="pushState",g=t("loader");g.features.stn=!0,t(6);var b=NREUM.o.EV;o.on(m,function(t,n){var e=t[0];e instanceof b&&(this.bstStart=g.now())}),o.on(w,function(t,n){var e=t[0];e instanceof b&&i("bst",[e,n,this.bstStart,g.now()])}),a.on(m,function(t,n,e){this.bstStart=g.now(),this.bstType=e}),a.on(w,function(t,n){i(v,[n,this.bstStart,g.now(),this.bstType])}),s.on(m,function(){this.bstStart=g.now()}),s.on(w,function(t,n){i(v,[n,this.bstStart,g.now(),"requestAnimationFrame"])}),o.on(y+p,function(t){this.time=g.now(),this.startPath=location.pathname+location.hash}),o.on(y+h,function(t){i("bstHist",[location.pathname+location.hash,this.startPath,this.time])}),f in window.performance&&(window.performance["c"+c]?window.performance[f](u,function(t){i(d,[window.performance.getEntriesByType(l)]),window.performance["c"+c]()},!1):window.performance[f]("webkit"+u,function(t){i(d,[window.performance.getEntriesByType(l)]),window.performance["webkitC"+c]()},!1)),document[f]("scroll",r,{passive:!0}),document[f]("keypress",r,!1),document[f]("click",r,!1)}},{}],5:[function(t,n,e){function r(t){for(var n=t;n&&!n.hasOwnProperty(u);)n=Object.getPrototypeOf(n);n&&o(n)}function o(t){s.inPlace(t,[u,d],"-",i)}function i(t,n){return t[1]}var a=t("ee").get("events"),s=t(18)(a,!0),c=t("gos"),f=XMLHttpRequest,u="addEventListener",d="removeEventListener";n.exports=a,"getPrototypeOf"in Object?(r(document),r(window),r(f.prototype)):f.prototype.hasOwnProperty(u)&&(o(window),o(f.prototype)),a.on(u+"-start",function(t,n){var e=t[1],r=c(e,"nr@wrapped",function(){function t(){if("function"==typeof e.handleEvent)return e.handleEvent.apply(e,arguments)}var n={object:t,"function":e}[typeof e];return n?s(n,"fn-",null,n.name||"anonymous"):e});this.wrapped=t[1]=r}),a.on(d+"-start",function(t){t[1]=this.wrapped||t[1]})},{}],6:[function(t,n,e){var r=t("ee").get("history"),o=t(18)(r);n.exports=r,o.inPlace(window.history,["pushState","replaceState"],"-")},{}],7:[function(t,n,e){var r=t("ee").get("raf"),o=t(18)(r),i="equestAnimationFrame";n.exports=r,o.inPlace(window,["r"+i,"mozR"+i,"webkitR"+i,"msR"+i],"raf-"),r.on("raf-start",function(t){t[0]=o(t[0],"fn-")})},{}],8:[function(t,n,e){function r(t,n,e){t[0]=a(t[0],"fn-",null,e)}function o(t,n,e){this.method=e,this.timerDuration=isNaN(t[1])?0:+t[1],t[0]=a(t[0],"fn-",this,e)}var i=t("ee").get("timer"),a=t(18)(i),s="setTimeout",c="setInterval",f="clearTimeout",u="-start",d="-";n.exports=i,a.inPlace(window,[s,"setImmediate"],s+d),a.inPlace(window,[c],c+d),a.inPlace(window,[f,"clearImmediate"],f+d),i.on(c+u,r),i.on(s+u,o)},{}],9:[function(t,n,e){function r(t,n){d.inPlace(n,["onreadystatechange"],"fn-",s)}function o(){var t=this,n=u.context(t);t.readyState>3&&!n.resolved&&(n.resolved=!0,u.emit("xhr-resolved",[],t)),d.inPlace(t,y,"fn-",s)}function i(t){g.push(t),h&&(x?x.then(a):w?w(a):(E=-E,O.data=E))}function a(){for(var t=0;t<g.length;t++)r([],g[t]);g.length&&(g=[])}function s(t,n){return n}function c(t,n){for(var e in t)n[e]=t[e];return n}t(5);var f=t("ee"),u=f.get("xhr"),d=t(18)(u),l=NREUM.o,p=l.XHR,h=l.MO,m=l.PR,w=l.SI,v="readystatechange",y=["onload","onerror","onabort","onloadstart","onloadend","onprogress","ontimeout"],g=[];n.exports=u;var b=window.XMLHttpRequest=function(t){var n=new p(t);try{u.emit("new-xhr",[n],n),n.addEventListener(v,o,!1)}catch(e){try{u.emit("internal-error",[e])}catch(r){}}return n};if(c(p,b),b.prototype=p.prototype,d.inPlace(b.prototype,["open","send"],"-xhr-",s),u.on("send-xhr-start",function(t,n){r(t,n),i(n)}),u.on("open-xhr-start",r),h){var x=m&&m.resolve();if(!w&&!m){var E=1,O=document.createTextNode(E);new h(a).observe(O,{characterData:!0})}}else f.on("fn-end",function(t){t[0]&&t[0].type===v||a()})},{}],10:[function(t,n,e){function r(t){var n=this.params,e=this.metrics;if(!this.ended){this.ended=!0;for(var r=0;r<d;r++)t.removeEventListener(u[r],this.listener,!1);if(!n.aborted){if(e.duration=a.now()-this.startTime,4===t.readyState){n.status=t.status;var i=o(t,this.lastSize);if(i&&(e.rxSize=i),this.sameOrigin){var c=t.getResponseHeader("X-NewRelic-App-Data");c&&(n.cat=c.split(", ").pop())}}else n.status=0;e.cbTime=this.cbTime,f.emit("xhr-done",[t],t),s("xhr",[n,e,this.startTime])}}}function o(t,n){var e=t.responseType;if("json"===e&&null!==n)return n;var r="arraybuffer"===e||"blob"===e||"json"===e?t.response:t.responseText;return h(r)}function i(t,n){var e=c(n),r=t.params;r.host=e.hostname+":"+e.port,r.pathname=e.pathname,t.sameOrigin=e.sameOrigin}var a=t("loader");if(a.xhrWrappable){var s=t("handle"),c=t(11),f=t("ee"),u=["load","error","abort","timeout"],d=u.length,l=t("id"),p=t(14),h=t(13),m=window.XMLHttpRequest;a.features.xhr=!0,t(9),f.on("new-xhr",function(t){var n=this;n.totalCbs=0,n.called=0,n.cbTime=0,n.end=r,n.ended=!1,n.xhrGuids={},n.lastSize=null,p&&(p>34||p<10)||window.opera||t.addEventListener("progress",function(t){n.lastSize=t.loaded},!1)}),f.on("open-xhr-start",function(t){this.params={method:t[0]},i(this,t[1]),this.metrics={}}),f.on("open-xhr-end",function(t,n){"loader_config"in NREUM&&"xpid"in NREUM.loader_config&&this.sameOrigin&&n.setRequestHeader("X-NewRelic-ID",NREUM.loader_config.xpid)}),f.on("send-xhr-start",function(t,n){var e=this.metrics,r=t[0],o=this;if(e&&r){var i=h(r);i&&(e.txSize=i)}this.startTime=a.now(),this.listener=function(t){try{"abort"===t.type&&(o.params.aborted=!0),("load"!==t.type||o.called===o.totalCbs&&(o.onloadCalled||"function"!=typeof n.onload))&&o.end(n)}catch(e){try{f.emit("internal-error",[e])}catch(r){}}};for(var s=0;s<d;s++)n.addEventListener(u[s],this.listener,!1)}),f.on("xhr-cb-time",function(t,n,e){this.cbTime+=t,n?this.onloadCalled=!0:this.called+=1,this.called!==this.totalCbs||!this.onloadCalled&&"function"==typeof e.onload||this.end(e)}),f.on("xhr-load-added",function(t,n){var e=""+l(t)+!!n;this.xhrGuids&&!this.xhrGuids[e]&&(this.xhrGuids[e]=!0,this.totalCbs+=1)}),f.on("xhr-load-removed",function(t,n){var e=""+l(t)+!!n;this.xhrGuids&&this.xhrGuids[e]&&(delete this.xhrGuids[e],this.totalCbs-=1)}),f.on("addEventListener-end",function(t,n){n instanceof m&&"load"===t[0]&&f.emit("xhr-load-added",[t[1],t[2]],n)}),f.on("removeEventListener-end",function(t,n){n instanceof m&&"load"===t[0]&&f.emit("xhr-load-removed",[t[1],t[2]],n)}),f.on("fn-start",function(t,n,e){n instanceof m&&("onload"===e&&(this.onload=!0),("load"===(t[0]&&t[0].type)||this.onload)&&(this.xhrCbStart=a.now()))}),f.on("fn-end",function(t,n){this.xhrCbStart&&f.emit("xhr-cb-time",[a.now()-this.xhrCbStart,this.onload,n],n)})}},{}],11:[function(t,n,e){n.exports=function(t){var n=document.createElement("a"),e=window.location,r={};n.href=t,r.port=n.port;var o=n.href.split("://");!r.port&&o[1]&&(r.port=o[1].split("/")[0].split("@").pop().split(":")[1]),r.port&&"0"!==r.port||(r.port="https"===o[0]?"443":"80"),r.hostname=n.hostname||e.hostname,r.pathname=n.pathname,r.protocol=o[0],"/"!==r.pathname.charAt(0)&&(r.pathname="/"+r.pathname);var i=!n.protocol||":"===n.protocol||n.protocol===e.protocol,a=n.hostname===document.domain&&n.port===e.port;return r.sameOrigin=i&&(!n.hostname||a),r}},{}],12:[function(t,n,e){function r(){}function o(t,n,e){return function(){return i(t,[f.now()].concat(s(arguments)),n?null:this,e),n?void 0:this}}var i=t("handle"),a=t(15),s=t(16),c=t("ee").get("tracer"),f=t("loader"),u=NREUM;"undefined"==typeof window.newrelic&&(newrelic=u);var d=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],l="api-",p=l+"ixn-";a(d,function(t,n){u[n]=o(l+n,!0,"api")}),u.addPageAction=o(l+"addPageAction",!0),u.setCurrentRouteName=o(l+"routeName",!0),n.exports=newrelic,u.interaction=function(){return(new r).get()};var h=r.prototype={createTracer:function(t,n){var e={},r=this,o="function"==typeof n;return i(p+"tracer",[f.now(),t,e],r),function(){if(c.emit((o?"":"no-")+"fn-start",[f.now(),r,o],e),o)try{return n.apply(this,arguments)}finally{c.emit("fn-end",[f.now()],e)}}}};a("setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(t,n){h[n]=o(p+n)}),newrelic.noticeError=function(t){"string"==typeof t&&(t=new Error(t)),i("err",[t,f.now()])}},{}],13:[function(t,n,e){n.exports=function(t){if("string"==typeof t&&t.length)return t.length;if("object"==typeof t){if("undefined"!=typeof ArrayBuffer&&t instanceof ArrayBuffer&&t.byteLength)return t.byteLength;if("undefined"!=typeof Blob&&t instanceof Blob&&t.size)return t.size;if(!("undefined"!=typeof FormData&&t instanceof FormData))try{return JSON.stringify(t).length}catch(n){return}}}},{}],14:[function(t,n,e){var r=0,o=navigator.userAgent.match(/Firefox[\/\s](\d+\.\d+)/);o&&(r=+o[1]),n.exports=r},{}],15:[function(t,n,e){function r(t,n){var e=[],r="",i=0;for(r in t)o.call(t,r)&&(e[i]=n(r,t[r]),i+=1);return e}var o=Object.prototype.hasOwnProperty;n.exports=r},{}],16:[function(t,n,e){function r(t,n,e){n||(n=0),"undefined"==typeof e&&(e=t?t.length:0);for(var r=-1,o=e-n||0,i=Array(o<0?0:o);++r<o;)i[r]=t[n+r];return i}n.exports=r},{}],17:[function(t,n,e){n.exports={exists:"undefined"!=typeof window.performance&&window.performance.timing&&"undefined"!=typeof window.performance.timing.navigationStart}},{}],18:[function(t,n,e){function r(t){return!(t&&t instanceof Function&&t.apply&&!t[a])}var o=t("ee"),i=t(16),a="nr@original",s=Object.prototype.hasOwnProperty,c=!1;n.exports=function(t,n){function e(t,n,e,o){function nrWrapper(){var r,a,s,c;try{a=this,r=i(arguments),s="function"==typeof e?e(r,a):e||{}}catch(f){l([f,"",[r,a,o],s])}u(n+"start",[r,a,o],s);try{return c=t.apply(a,r)}catch(d){throw u(n+"err",[r,a,d],s),d}finally{u(n+"end",[r,a,c],s)}}return r(t)?t:(n||(n=""),nrWrapper[a]=t,d(t,nrWrapper),nrWrapper)}function f(t,n,o,i){o||(o="");var a,s,c,f="-"===o.charAt(0);for(c=0;c<n.length;c++)s=n[c],a=t[s],r(a)||(t[s]=e(a,f?s+o:o,i,s))}function u(e,r,o){if(!c||n){var i=c;c=!0;try{t.emit(e,r,o,n)}catch(a){l([a,e,r,o])}c=i}}function d(t,n){if(Object.defineProperty&&Object.keys)try{var e=Object.keys(t);return e.forEach(function(e){Object.defineProperty(n,e,{get:function(){return t[e]},set:function(n){return t[e]=n,n}})}),n}catch(r){l([r])}for(var o in t)s.call(t,o)&&(n[o]=t[o]);return n}function l(n){try{t.emit("internal-error",n)}catch(e){}}return t||(t=o),e.inPlace=f,e.flag=a,e}},{}],ee:[function(t,n,e){function r(){}function o(t){function n(t){return t&&t instanceof r?t:t?c(t,s,i):i()}function e(e,r,o,i){if(!l.aborted||i){t&&t(e,r,o);for(var a=n(o),s=h(e),c=s.length,f=0;f<c;f++)s[f].apply(a,r);var d=u[y[e]];return d&&d.push([g,e,r,a]),a}}function p(t,n){v[t]=h(t).concat(n)}function h(t){return v[t]||[]}function m(t){return d[t]=d[t]||o(e)}function w(t,n){f(t,function(t,e){n=n||"feature",y[e]=n,n in u||(u[n]=[])})}var v={},y={},g={on:p,emit:e,get:m,listeners:h,context:n,buffer:w,abort:a,aborted:!1};return g}function i(){return new r}function a(){(u.api||u.feature)&&(l.aborted=!0,u=l.backlog={})}var s="nr@context",c=t("gos"),f=t(15),u={},d={},l=n.exports=o();l.backlog=u},{}],gos:[function(t,n,e){function r(t,n,e){if(o.call(t,n))return t[n];var r=e();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(t,n,{value:r,writable:!0,enumerable:!1}),r}catch(i){}return t[n]=r,r}var o=Object.prototype.hasOwnProperty;n.exports=r},{}],handle:[function(t,n,e){function r(t,n,e,r){o.buffer([t],r),o.emit(t,n,e)}var o=t("ee").get("handle");n.exports=r,r.ee=o},{}],id:[function(t,n,e){function r(t){var n=typeof t;return!t||"object"!==n&&"function"!==n?-1:t===window?0:a(t,i,function(){return o++})}var o=1,i="nr@id",a=t("gos");n.exports=r},{}],loader:[function(t,n,e){function r(){if(!x++){var t=b.info=NREUM.info,n=l.getElementsByTagName("script")[0];if(setTimeout(u.abort,3e4),!(t&&t.licenseKey&&t.applicationID&&n))return u.abort();f(y,function(n,e){t[n]||(t[n]=e)}),c("mark",["onload",a()+b.offset],null,"api");var e=l.createElement("script");e.src="https://"+t.agent,n.parentNode.insertBefore(e,n)}}function o(){"complete"===l.readyState&&i()}function i(){c("mark",["domContent",a()+b.offset],null,"api")}function a(){return E.exists&&performance.now?Math.round(performance.now()):(s=Math.max((new Date).getTime(),s))-b.offset}var s=(new Date).getTime(),c=t("handle"),f=t(15),u=t("ee"),d=window,l=d.document,p="addEventListener",h="attachEvent",m=d.XMLHttpRequest,w=m&&m.prototype;NREUM.o={ST:setTimeout,SI:d.setImmediate,CT:clearTimeout,XHR:m,REQ:d.Request,EV:d.Event,PR:d.Promise,MO:d.MutationObserver};var v=""+location,y={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-1044.min.js"},g=m&&w&&w[p]&&!/CriOS/.test(navigator.userAgent),b=n.exports={offset:s,now:a,origin:v,features:{},xhrWrappable:g};t(12),l[p]?(l[p]("DOMContentLoaded",i,!1),d[p]("load",r,!1)):(l[h]("onreadystatechange",o),d[h]("onload",r)),c("mark",["firstbyte",s],null,"api");var x=0,E=t(17)},{}]},{},["loader",2,10,4,3]);
+      ;NREUM.info={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",licenseKey:"13e44ec848",applicationID:"79621645",sa:1}
+    </script>
+    <title>Kong: Next-Generation API platform for Microservices</title>
+    <!-- This site is optimized with the Yoast SEO Premium plugin v5.4.2 - https://yoast.com/wordpress/plugins/seo/ -->
+    <meta name="description" content="Kong is the world&#039;s most popular open source microservice API gateway. Use Kong to secure, manage and orchestrate microservice APIs."/>
+    <link rel="canonical" href="https://konghq.com/" />
+    <meta property="og:locale" content="en_US" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Kong: Next-Generation API platform for Microservices" />
+    <meta property="og:description" content="Kong is the world&#039;s most popular open source microservice API gateway. Use Kong to secure, manage and orchestrate microservice APIs." />
+    <meta property="og:url" content="https://konghq.com/" />
+    <meta property="og:site_name" content="KongHQ" />
+    <meta property="og:image" content="https://konghq.com/wp-content/uploads/2018/03/diagram-kong.jpg" />
+    <meta property="og:image:secure_url" content="https://konghq.com/wp-content/uploads/2018/03/diagram-kong.jpg" />
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:description" content="Kong is the world&#039;s most popular open source microservice API gateway. Use Kong to secure, manage and orchestrate microservice APIs." />
+    <meta name="twitter:title" content="Kong: Next-Generation API platform for Microservices" />
+    <meta name="twitter:image" content="https://konghq.com/wp-content/uploads/2018/03/diagram-kong.jpg" />
+    <script type='application/ld+json'>{"@context":"http:\/\/schema.org","@type":"WebSite","@id":"#website","url":"https:\/\/konghq.com\/","name":"KongHQ","alternateName":"Kong","potentialAction":{"@type":"SearchAction","target":"https:\/\/konghq.com\/?s={search_term_string}","query-input":"required name=search_term_string"}}</script>
+    <script type='application/ld+json'>{"@context":"http:\/\/schema.org","@type":"Organization","url":"https:\/\/konghq.com\/","sameAs":[],"@id":"#organization","name":"Kong Inc.","logo":"https:\/\/konghq.com\/wp-content\/uploads\/2017\/09\/kong-logo.png"}</script>
+    <!-- / Yoast SEO Premium plugin. -->
 
-
-  <meta charset="utf-8"/>
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
-
-  <!-- Start of Async Drift Code -->
-  <script>
-    !function() {
-      var t;
-      if (t = window.driftt = window.drift = window.driftt || [], !t.init) return t.invoked ? void (window.console && console.error && console.error("Drift snippet included twice.")) : (t.invoked = !0,
-      t.methods = [ "identify", "config", "track", "reset", "debug", "show", "ping", "page", "hide", "off", "on" ],
-      t.factory = function(e) {
-        return function() {
-          var n;
-          return n = Array.prototype.slice.call(arguments), n.unshift(e), t.push(n), t;
-        };
-      }, t.methods.forEach(function(e) {
-        t[e] = t.factory(e);
-      }), t.load = function(t) {
-        var e, n, o, i;
-        e = 3e5, i = Math.ceil(new Date() / e) * e, o = document.createElement("script"),
-        o.type = "text/javascript", o.async = !0, o.crossorigin = "anonymous", o.src = "https://js.driftt.com/include/" + i + "/" + t + ".js",
-        n = document.getElementsByTagName("script")[0], n.parentNode.insertBefore(o, n);
-      });
-    }();
-    drift.SNIPPET_VERSION = '0.3.1';
-    drift.load('696bu34787uz');
-  </script>
-  <!-- End of Async Drift Code -->
-
-  <!-- New Relic -->
-  <script type="text/javascript">
-    window.NREUM||(NREUM={}),__nr_require=function(t,n,e){function r(e){if(!n[e]){var o=n[e]={exports:{}};t[e][0].call(o.exports,function(n){var o=t[e][1][n];return r(o||n)},o,o.exports)}return n[e].exports}if("function"==typeof __nr_require)return __nr_require;for(var o=0;o<e.length;o++)r(e[o]);return r}({1:[function(t,n,e){function r(t){try{s.console&&console.log(t)}catch(n){}}var o,i=t("ee"),a=t(15),s={};try{o=localStorage.getItem("__nr_flags").split(","),console&&"function"==typeof console.log&&(s.console=!0,o.indexOf("dev")!==-1&&(s.dev=!0),o.indexOf("nr_dev")!==-1&&(s.nrDev=!0))}catch(c){}s.nrDev&&i.on("internal-error",function(t){r(t.stack)}),s.dev&&i.on("fn-err",function(t,n,e){r(e.stack)}),s.dev&&(r("NR AGENT IN DEVELOPMENT MODE"),r("flags: "+a(s,function(t,n){return t}).join(", ")))},{}],2:[function(t,n,e){function r(t,n,e,r,o){try{d?d-=1:i("err",[o||new UncaughtException(t,n,e)])}catch(s){try{i("ierr",[s,c.now(),!0])}catch(u){}}return"function"==typeof f&&f.apply(this,a(arguments))}function UncaughtException(t,n,e){this.message=t||"Uncaught error with no additional information",this.sourceURL=n,this.line=e}function o(t){i("err",[t,c.now()])}var i=t("handle"),a=t(16),s=t("ee"),c=t("loader"),f=window.onerror,u=!1,d=0;c.features.err=!0,t(1),window.onerror=r;try{throw new Error}catch(l){"stack"in l&&(t(8),t(7),"addEventListener"in window&&t(5),c.xhrWrappable&&t(9),u=!0)}s.on("fn-start",function(t,n,e){u&&(d+=1)}),s.on("fn-err",function(t,n,e){u&&(this.thrown=!0,o(e))}),s.on("fn-end",function(){u&&!this.thrown&&d>0&&(d-=1)}),s.on("internal-error",function(t){i("ierr",[t,c.now(),!0])})},{}],3:[function(t,n,e){t("loader").features.ins=!0},{}],4:[function(t,n,e){function r(t){}if(window.performance&&window.performance.timing&&window.performance.getEntriesByType){var o=t("ee"),i=t("handle"),a=t(8),s=t(7),c="learResourceTimings",f="addEventListener",u="resourcetimingbufferfull",d="bstResource",l="resource",p="-start",h="-end",m="fn"+p,w="fn"+h,v="bstTimer",y="pushState",g=t("loader");g.features.stn=!0,t(6);var b=NREUM.o.EV;o.on(m,function(t,n){var e=t[0];e instanceof b&&(this.bstStart=g.now())}),o.on(w,function(t,n){var e=t[0];e instanceof b&&i("bst",[e,n,this.bstStart,g.now()])}),a.on(m,function(t,n,e){this.bstStart=g.now(),this.bstType=e}),a.on(w,function(t,n){i(v,[n,this.bstStart,g.now(),this.bstType])}),s.on(m,function(){this.bstStart=g.now()}),s.on(w,function(t,n){i(v,[n,this.bstStart,g.now(),"requestAnimationFrame"])}),o.on(y+p,function(t){this.time=g.now(),this.startPath=location.pathname+location.hash}),o.on(y+h,function(t){i("bstHist",[location.pathname+location.hash,this.startPath,this.time])}),f in window.performance&&(window.performance["c"+c]?window.performance[f](u,function(t){i(d,[window.performance.getEntriesByType(l)]),window.performance["c"+c]()},!1):window.performance[f]("webkit"+u,function(t){i(d,[window.performance.getEntriesByType(l)]),window.performance["webkitC"+c]()},!1)),document[f]("scroll",r,{passive:!0}),document[f]("keypress",r,!1),document[f]("click",r,!1)}},{}],5:[function(t,n,e){function r(t){for(var n=t;n&&!n.hasOwnProperty(u);)n=Object.getPrototypeOf(n);n&&o(n)}function o(t){s.inPlace(t,[u,d],"-",i)}function i(t,n){return t[1]}var a=t("ee").get("events"),s=t(18)(a,!0),c=t("gos"),f=XMLHttpRequest,u="addEventListener",d="removeEventListener";n.exports=a,"getPrototypeOf"in Object?(r(document),r(window),r(f.prototype)):f.prototype.hasOwnProperty(u)&&(o(window),o(f.prototype)),a.on(u+"-start",function(t,n){var e=t[1],r=c(e,"nr@wrapped",function(){function t(){if("function"==typeof e.handleEvent)return e.handleEvent.apply(e,arguments)}var n={object:t,"function":e}[typeof e];return n?s(n,"fn-",null,n.name||"anonymous"):e});this.wrapped=t[1]=r}),a.on(d+"-start",function(t){t[1]=this.wrapped||t[1]})},{}],6:[function(t,n,e){var r=t("ee").get("history"),o=t(18)(r);n.exports=r,o.inPlace(window.history,["pushState","replaceState"],"-")},{}],7:[function(t,n,e){var r=t("ee").get("raf"),o=t(18)(r),i="equestAnimationFrame";n.exports=r,o.inPlace(window,["r"+i,"mozR"+i,"webkitR"+i,"msR"+i],"raf-"),r.on("raf-start",function(t){t[0]=o(t[0],"fn-")})},{}],8:[function(t,n,e){function r(t,n,e){t[0]=a(t[0],"fn-",null,e)}function o(t,n,e){this.method=e,this.timerDuration=isNaN(t[1])?0:+t[1],t[0]=a(t[0],"fn-",this,e)}var i=t("ee").get("timer"),a=t(18)(i),s="setTimeout",c="setInterval",f="clearTimeout",u="-start",d="-";n.exports=i,a.inPlace(window,[s,"setImmediate"],s+d),a.inPlace(window,[c],c+d),a.inPlace(window,[f,"clearImmediate"],f+d),i.on(c+u,r),i.on(s+u,o)},{}],9:[function(t,n,e){function r(t,n){d.inPlace(n,["onreadystatechange"],"fn-",s)}function o(){var t=this,n=u.context(t);t.readyState>3&&!n.resolved&&(n.resolved=!0,u.emit("xhr-resolved",[],t)),d.inPlace(t,y,"fn-",s)}function i(t){g.push(t),h&&(x?x.then(a):w?w(a):(E=-E,O.data=E))}function a(){for(var t=0;t<g.length;t++)r([],g[t]);g.length&&(g=[])}function s(t,n){return n}function c(t,n){for(var e in t)n[e]=t[e];return n}t(5);var f=t("ee"),u=f.get("xhr"),d=t(18)(u),l=NREUM.o,p=l.XHR,h=l.MO,m=l.PR,w=l.SI,v="readystatechange",y=["onload","onerror","onabort","onloadstart","onloadend","onprogress","ontimeout"],g=[];n.exports=u;var b=window.XMLHttpRequest=function(t){var n=new p(t);try{u.emit("new-xhr",[n],n),n.addEventListener(v,o,!1)}catch(e){try{u.emit("internal-error",[e])}catch(r){}}return n};if(c(p,b),b.prototype=p.prototype,d.inPlace(b.prototype,["open","send"],"-xhr-",s),u.on("send-xhr-start",function(t,n){r(t,n),i(n)}),u.on("open-xhr-start",r),h){var x=m&&m.resolve();if(!w&&!m){var E=1,O=document.createTextNode(E);new h(a).observe(O,{characterData:!0})}}else f.on("fn-end",function(t){t[0]&&t[0].type===v||a()})},{}],10:[function(t,n,e){function r(t){var n=this.params,e=this.metrics;if(!this.ended){this.ended=!0;for(var r=0;r<d;r++)t.removeEventListener(u[r],this.listener,!1);if(!n.aborted){if(e.duration=a.now()-this.startTime,4===t.readyState){n.status=t.status;var i=o(t,this.lastSize);if(i&&(e.rxSize=i),this.sameOrigin){var c=t.getResponseHeader("X-NewRelic-App-Data");c&&(n.cat=c.split(", ").pop())}}else n.status=0;e.cbTime=this.cbTime,f.emit("xhr-done",[t],t),s("xhr",[n,e,this.startTime])}}}function o(t,n){var e=t.responseType;if("json"===e&&null!==n)return n;var r="arraybuffer"===e||"blob"===e||"json"===e?t.response:t.responseText;return h(r)}function i(t,n){var e=c(n),r=t.params;r.host=e.hostname+":"+e.port,r.pathname=e.pathname,t.sameOrigin=e.sameOrigin}var a=t("loader");if(a.xhrWrappable){var s=t("handle"),c=t(11),f=t("ee"),u=["load","error","abort","timeout"],d=u.length,l=t("id"),p=t(14),h=t(13),m=window.XMLHttpRequest;a.features.xhr=!0,t(9),f.on("new-xhr",function(t){var n=this;n.totalCbs=0,n.called=0,n.cbTime=0,n.end=r,n.ended=!1,n.xhrGuids={},n.lastSize=null,p&&(p>34||p<10)||window.opera||t.addEventListener("progress",function(t){n.lastSize=t.loaded},!1)}),f.on("open-xhr-start",function(t){this.params={method:t[0]},i(this,t[1]),this.metrics={}}),f.on("open-xhr-end",function(t,n){"loader_config"in NREUM&&"xpid"in NREUM.loader_config&&this.sameOrigin&&n.setRequestHeader("X-NewRelic-ID",NREUM.loader_config.xpid)}),f.on("send-xhr-start",function(t,n){var e=this.metrics,r=t[0],o=this;if(e&&r){var i=h(r);i&&(e.txSize=i)}this.startTime=a.now(),this.listener=function(t){try{"abort"===t.type&&(o.params.aborted=!0),("load"!==t.type||o.called===o.totalCbs&&(o.onloadCalled||"function"!=typeof n.onload))&&o.end(n)}catch(e){try{f.emit("internal-error",[e])}catch(r){}}};for(var s=0;s<d;s++)n.addEventListener(u[s],this.listener,!1)}),f.on("xhr-cb-time",function(t,n,e){this.cbTime+=t,n?this.onloadCalled=!0:this.called+=1,this.called!==this.totalCbs||!this.onloadCalled&&"function"==typeof e.onload||this.end(e)}),f.on("xhr-load-added",function(t,n){var e=""+l(t)+!!n;this.xhrGuids&&!this.xhrGuids[e]&&(this.xhrGuids[e]=!0,this.totalCbs+=1)}),f.on("xhr-load-removed",function(t,n){var e=""+l(t)+!!n;this.xhrGuids&&this.xhrGuids[e]&&(delete this.xhrGuids[e],this.totalCbs-=1)}),f.on("addEventListener-end",function(t,n){n instanceof m&&"load"===t[0]&&f.emit("xhr-load-added",[t[1],t[2]],n)}),f.on("removeEventListener-end",function(t,n){n instanceof m&&"load"===t[0]&&f.emit("xhr-load-removed",[t[1],t[2]],n)}),f.on("fn-start",function(t,n,e){n instanceof m&&("onload"===e&&(this.onload=!0),("load"===(t[0]&&t[0].type)||this.onload)&&(this.xhrCbStart=a.now()))}),f.on("fn-end",function(t,n){this.xhrCbStart&&f.emit("xhr-cb-time",[a.now()-this.xhrCbStart,this.onload,n],n)})}},{}],11:[function(t,n,e){n.exports=function(t){var n=document.createElement("a"),e=window.location,r={};n.href=t,r.port=n.port;var o=n.href.split("://");!r.port&&o[1]&&(r.port=o[1].split("/")[0].split("@").pop().split(":")[1]),r.port&&"0"!==r.port||(r.port="https"===o[0]?"443":"80"),r.hostname=n.hostname||e.hostname,r.pathname=n.pathname,r.protocol=o[0],"/"!==r.pathname.charAt(0)&&(r.pathname="/"+r.pathname);var i=!n.protocol||":"===n.protocol||n.protocol===e.protocol,a=n.hostname===document.domain&&n.port===e.port;return r.sameOrigin=i&&(!n.hostname||a),r}},{}],12:[function(t,n,e){function r(){}function o(t,n,e){return function(){return i(t,[f.now()].concat(s(arguments)),n?null:this,e),n?void 0:this}}var i=t("handle"),a=t(15),s=t(16),c=t("ee").get("tracer"),f=t("loader"),u=NREUM;"undefined"==typeof window.newrelic&&(newrelic=u);var d=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],l="api-",p=l+"ixn-";a(d,function(t,n){u[n]=o(l+n,!0,"api")}),u.addPageAction=o(l+"addPageAction",!0),u.setCurrentRouteName=o(l+"routeName",!0),n.exports=newrelic,u.interaction=function(){return(new r).get()};var h=r.prototype={createTracer:function(t,n){var e={},r=this,o="function"==typeof n;return i(p+"tracer",[f.now(),t,e],r),function(){if(c.emit((o?"":"no-")+"fn-start",[f.now(),r,o],e),o)try{return n.apply(this,arguments)}finally{c.emit("fn-end",[f.now()],e)}}}};a("setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(t,n){h[n]=o(p+n)}),newrelic.noticeError=function(t){"string"==typeof t&&(t=new Error(t)),i("err",[t,f.now()])}},{}],13:[function(t,n,e){n.exports=function(t){if("string"==typeof t&&t.length)return t.length;if("object"==typeof t){if("undefined"!=typeof ArrayBuffer&&t instanceof ArrayBuffer&&t.byteLength)return t.byteLength;if("undefined"!=typeof Blob&&t instanceof Blob&&t.size)return t.size;if(!("undefined"!=typeof FormData&&t instanceof FormData))try{return JSON.stringify(t).length}catch(n){return}}}},{}],14:[function(t,n,e){var r=0,o=navigator.userAgent.match(/Firefox[\/\s](\d+\.\d+)/);o&&(r=+o[1]),n.exports=r},{}],15:[function(t,n,e){function r(t,n){var e=[],r="",i=0;for(r in t)o.call(t,r)&&(e[i]=n(r,t[r]),i+=1);return e}var o=Object.prototype.hasOwnProperty;n.exports=r},{}],16:[function(t,n,e){function r(t,n,e){n||(n=0),"undefined"==typeof e&&(e=t?t.length:0);for(var r=-1,o=e-n||0,i=Array(o<0?0:o);++r<o;)i[r]=t[n+r];return i}n.exports=r},{}],17:[function(t,n,e){n.exports={exists:"undefined"!=typeof window.performance&&window.performance.timing&&"undefined"!=typeof window.performance.timing.navigationStart}},{}],18:[function(t,n,e){function r(t){return!(t&&t instanceof Function&&t.apply&&!t[a])}var o=t("ee"),i=t(16),a="nr@original",s=Object.prototype.hasOwnProperty,c=!1;n.exports=function(t,n){function e(t,n,e,o){function nrWrapper(){var r,a,s,c;try{a=this,r=i(arguments),s="function"==typeof e?e(r,a):e||{}}catch(f){l([f,"",[r,a,o],s])}u(n+"start",[r,a,o],s);try{return c=t.apply(a,r)}catch(d){throw u(n+"err",[r,a,d],s),d}finally{u(n+"end",[r,a,c],s)}}return r(t)?t:(n||(n=""),nrWrapper[a]=t,d(t,nrWrapper),nrWrapper)}function f(t,n,o,i){o||(o="");var a,s,c,f="-"===o.charAt(0);for(c=0;c<n.length;c++)s=n[c],a=t[s],r(a)||(t[s]=e(a,f?s+o:o,i,s))}function u(e,r,o){if(!c||n){var i=c;c=!0;try{t.emit(e,r,o,n)}catch(a){l([a,e,r,o])}c=i}}function d(t,n){if(Object.defineProperty&&Object.keys)try{var e=Object.keys(t);return e.forEach(function(e){Object.defineProperty(n,e,{get:function(){return t[e]},set:function(n){return t[e]=n,n}})}),n}catch(r){l([r])}for(var o in t)s.call(t,o)&&(n[o]=t[o]);return n}function l(n){try{t.emit("internal-error",n)}catch(e){}}return t||(t=o),e.inPlace=f,e.flag=a,e}},{}],ee:[function(t,n,e){function r(){}function o(t){function n(t){return t&&t instanceof r?t:t?c(t,s,i):i()}function e(e,r,o,i){if(!l.aborted||i){t&&t(e,r,o);for(var a=n(o),s=h(e),c=s.length,f=0;f<c;f++)s[f].apply(a,r);var d=u[y[e]];return d&&d.push([g,e,r,a]),a}}function p(t,n){v[t]=h(t).concat(n)}function h(t){return v[t]||[]}function m(t){return d[t]=d[t]||o(e)}function w(t,n){f(t,function(t,e){n=n||"feature",y[e]=n,n in u||(u[n]=[])})}var v={},y={},g={on:p,emit:e,get:m,listeners:h,context:n,buffer:w,abort:a,aborted:!1};return g}function i(){return new r}function a(){(u.api||u.feature)&&(l.aborted=!0,u=l.backlog={})}var s="nr@context",c=t("gos"),f=t(15),u={},d={},l=n.exports=o();l.backlog=u},{}],gos:[function(t,n,e){function r(t,n,e){if(o.call(t,n))return t[n];var r=e();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(t,n,{value:r,writable:!0,enumerable:!1}),r}catch(i){}return t[n]=r,r}var o=Object.prototype.hasOwnProperty;n.exports=r},{}],handle:[function(t,n,e){function r(t,n,e,r){o.buffer([t],r),o.emit(t,n,e)}var o=t("ee").get("handle");n.exports=r,r.ee=o},{}],id:[function(t,n,e){function r(t){var n=typeof t;return!t||"object"!==n&&"function"!==n?-1:t===window?0:a(t,i,function(){return o++})}var o=1,i="nr@id",a=t("gos");n.exports=r},{}],loader:[function(t,n,e){function r(){if(!x++){var t=b.info=NREUM.info,n=l.getElementsByTagName("script")[0];if(setTimeout(u.abort,3e4),!(t&&t.licenseKey&&t.applicationID&&n))return u.abort();f(y,function(n,e){t[n]||(t[n]=e)}),c("mark",["onload",a()+b.offset],null,"api");var e=l.createElement("script");e.src="https://"+t.agent,n.parentNode.insertBefore(e,n)}}function o(){"complete"===l.readyState&&i()}function i(){c("mark",["domContent",a()+b.offset],null,"api")}function a(){return E.exists&&performance.now?Math.round(performance.now()):(s=Math.max((new Date).getTime(),s))-b.offset}var s=(new Date).getTime(),c=t("handle"),f=t(15),u=t("ee"),d=window,l=d.document,p="addEventListener",h="attachEvent",m=d.XMLHttpRequest,w=m&&m.prototype;NREUM.o={ST:setTimeout,SI:d.setImmediate,CT:clearTimeout,XHR:m,REQ:d.Request,EV:d.Event,PR:d.Promise,MO:d.MutationObserver};var v=""+location,y={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-1044.min.js"},g=m&&w&&w[p]&&!/CriOS/.test(navigator.userAgent),b=n.exports={offset:s,now:a,origin:v,features:{},xhrWrappable:g};t(12),l[p]?(l[p]("DOMContentLoaded",i,!1),d[p]("load",r,!1)):(l[h]("onreadystatechange",o),d[h]("onload",r)),c("mark",["firstbyte",s],null,"api");var x=0,E=t(17)},{}]},{},["loader",2,10,4,3]);
-    ;NREUM.info={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",licenseKey:"13e44ec848",applicationID:"79621645",sa:1}
-  </script>
-
-  <!-- Google Tag Manager -->
-  <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-  j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-  'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-  })(window,document,'script','dataLayer','GTM-NL48VKT');</script>
-  <!-- End Google Tag Manager -->
-
-  <!-- Bing -->
-  <meta name="msvalidate.01" content="8D11E327701B821FCFF0788B2F8D9920" />
-
-  <title>Kong: Next-Generation API platform for Microservices</title>
-
-<!-- This site is optimized with the Yoast SEO Premium plugin v5.4.2 - https://yoast.com/wordpress/plugins/seo/ -->
-<meta name="description" content="Kong is the world&#039;s most popular open source microservice API gateway. Use Kong to secure, manage and orchestrate microservice APIs."/>
-<link rel="canonical" href="https://konghq.com/" />
-<meta property="og:locale" content="en_US" />
-<meta property="og:type" content="website" />
-<meta property="og:title" content="Kong: Next-Generation API platform for Microservices" />
-<meta property="og:description" content="Kong is the world&#039;s most popular open source microservice API gateway. Use Kong to secure, manage and orchestrate microservice APIs." />
-<meta property="og:url" content="https://konghq.com/" />
-<meta property="og:site_name" content="KongHQ" />
-<meta property="og:image" content="https://konghq.com/wp-content/uploads/2018/03/diagram-kong.jpg" />
-<meta property="og:image:secure_url" content="https://konghq.com/wp-content/uploads/2018/03/diagram-kong.jpg" />
-<meta name="twitter:card" content="summary" />
-<meta name="twitter:description" content="Kong is the world&#039;s most popular open source microservice API gateway. Use Kong to secure, manage and orchestrate microservice APIs." />
-<meta name="twitter:title" content="Kong: Next-Generation API platform for Microservices" />
-<meta name="twitter:image" content="https://konghq.com/wp-content/uploads/2018/03/diagram-kong.jpg" />
-<script type='application/ld+json'>{"@context":"http:\/\/schema.org","@type":"WebSite","@id":"#website","url":"https:\/\/konghq.com\/","name":"KongHQ","alternateName":"Kong","potentialAction":{"@type":"SearchAction","target":"https:\/\/konghq.com\/?s={search_term_string}","query-input":"required name=search_term_string"}}</script>
-<script type='application/ld+json'>{"@context":"http:\/\/schema.org","@type":"Organization","url":"https:\/\/konghq.com\/","sameAs":[],"@id":"#organization","name":"Kong Inc.","logo":"https:\/\/konghq.com\/wp-content\/uploads\/2017\/09\/kong-logo.png"}</script>
-<!-- / Yoast SEO Premium plugin. -->
-
-<link rel='dns-prefetch' href='//s.w.org' />
-<link rel="alternate" type="application/rss+xml" title="KongHQ &raquo; Feed" href="https://konghq.com/feed/" />
-<link rel="alternate" type="application/rss+xml" title="KongHQ &raquo; Comments Feed" href="https://konghq.com/comments/feed/" />
-<link rel='stylesheet' id='assets-css'  href='https://2tjosk2rxzc21medji3nfn1g-wpengine.netdna-ssl.com/wp-content/themes/konghq/assets/css/styles.min.css?ver=38e45012f77cca1e4ef5315e4731d046' type='text/css' media='all' />
-<script type='text/javascript' src='https://2tjosk2rxzc21medji3nfn1g-wpengine.netdna-ssl.com/wp-content/themes/konghq/assets/js/vendor/jquery.min.js?ver=1'></script>
-<link rel='https://api.w.org/' href='https://konghq.com/wp-json/' />
-<link rel='shortlink' href='https://konghq.com/' />
-<link rel="alternate" type="application/json+oembed" href="https://konghq.com/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fkonghq.com%2F" />
-<link rel="alternate" type="text/xml+oembed" href="https://konghq.com/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fkonghq.com%2F&#038;format=xml" />
-</head>
-
-<body class="home page-template page-template-templates page-template-home page-template-templateshome-php page page-id-4 page-home" data-spy="scroll" data-target="#scroll-sidebar">
-
-  <!-- Google Tag Manager (noscript) -->
-  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-NL48VKT"
-  height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-  <!-- End Google Tag Manager (noscript) -->
-
-  <div class="cookie-policy-container px-2x py-2x">
-  <p>
-    In order to give you better service we use cookies. By continuing to use our website, you agree to the use of cookies as described in our <a href=" https://konghq.com/cookie-policy/">Cookie Policy</a>
-  </p>
-  <button id="accept-cookies" class="cookie-policy-btn btn py-2 px-3">Agree</button>
-</div>
-
-
-  <div class="announcement-banner bg-summit align-items-center d-flex py-2">
-    <a href="https://konghq.com/kong-summit">
-
-      <div class="bg-summit-mask">
-        <img class="glow" src="https://2tjosk2rxzc21medji3nfn1g-wpengine.netdna-ssl.com/wp-content/themes/konghq/assets/img/home/kong-summit/glow.svg" alt="kong-summit-glow" />
+    <link rel='dns-prefetch' href='//s.w.org' />
+    <link rel="alternate" type="application/rss+xml" title="KongHQ &raquo; Feed" href="https://konghq.com/feed/" />
+    <link rel="alternate" type="application/rss+xml" title="KongHQ &raquo; Comments Feed" href="https://konghq.com/comments/feed/" />
+    <link rel='stylesheet' id='assets-css'  href='https://2tjosk2rxzc21medji3nfn1g-wpengine.netdna-ssl.com/wp-content/themes/konghq/assets/css/styles.min.css?ver=38e45012f77cca1e4ef5315e4731d046' type='text/css' media='all' />
+    <script type='text/javascript' src='https://2tjosk2rxzc21medji3nfn1g-wpengine.netdna-ssl.com/wp-content/themes/konghq/assets/js/vendor/jquery.min.js?ver=1'></script>
+    <link rel='https://api.w.org/' href='https://konghq.com/wp-json/' />
+    <link rel='shortlink' href='https://konghq.com/' />
+    <link rel="alternate" type="application/json+oembed" href="https://konghq.com/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fkonghq.com%2F" />
+    <link rel="alternate" type="text/xml+oembed" href="https://konghq.com/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fkonghq.com%2F&#038;format=xml" />
+  </head>
+  <body class="home page-template page-template-templates page-template-home page-template-templateshome-php page page-id-4 page-home" data-spy="scroll" data-target="#scroll-sidebar">
+    <header class="navbar navbar-inverse navbar-toggleable-lg kong-navbar flex-row align-items-center">
+      <div class="container d-flex">
+        <a href="/" class="navbar-brand col col-xl-auto">
+          <img src="https://2tjosk2rxzc21medji3nfn1g-wpengine.netdna-ssl.com/wp-content/themes/konghq/assets/img/Kogo.svg" alt="Kong Logo">
+        </a>
+        <nav class="col justify-content-md-end kong-navbar_nav">
+          <ul class="navbar-nav">
+            <li class="navbar-item kong-navbar-dropdown">
+              <a class="nav-link ">Secondary Nav items</a>
+              <div class="list-group" style="width: 400px; left: -150px;">
+                <a href="/kong-community-edition" class="list-group-item list-group-item-action">
+                  <h5 class="mb-1">Kong Community Edition <span class="kong-github-latest-release badge">0.14.1</span></h5>
+                  <p class="mb-0">The blazingly fast open source microservice API gateway.</p>
+                </a>
+                <a href="/kong-enterprise-edition" class="list-group-item list-group-item-action">
+                  <h5 class="mb-1">Kong Enterprise Edition</h5><br>
+                  <p class="mb-0">The microservice API platform for large organizations.</p>
+                </a>
+                <a href="/cloud" class="list-group-item list-group-item-action">
+                  <h5 class="mb-1">Kong Cloud</h5>&nbsp;
+                  <p class="mb-0">Kong Enterprise innovation delivered at cloud speed.</p>
+                </a>
+                <a href="/subscriptions" class="list-group-item list-group-item-action highlight">
+                  <h5 class="mb-1">Subscriptions</h5>&nbsp;
+                  <p class="mb-0">Compare Kong editions and features.</p>
+                </a>
+              </div>
+            </li>
+            <li class="navbar-item"><a class="nav-link " href="/plugins/">Plugins Hub</a></li>
+            <li class="navbar-item kong-navbar-dropdown kong-navbar-dropdown--columns">
+              <a class="nav-link ">Resources</a>
+              <div class="list-group">
+                <div class="list-group-item flex-row flex-nowrap">
+                  <div class="kong-navbar-dropdown_column">
+                    <h5 class="mb-2">Documentation</h5>
+                    <a href="https://getkong.org/docs/">Kong Community Edition</a>
+                    <a href="https://getkong.org/docs/enterprise">Kong Enterprise Edition</a>
+                    <a href="https://getkong.org/docs/enterprise/latest/vitals/">Kong Analytics</a>
+                    <a href="https://getkong.org/docs/enterprise/latest/developer-portal/overview/">Kong Dev Portal</a>
+                  </div>
+                  <div class="kong-navbar-dropdown_column">
+                    <h5 class="mb-2">Support</h5>
+                    <a href="https://support.mashape.com/hc/en-us">Enterprise Support Portal</a>
+                    <h5 class="mb-2 spacer">Community</h5>
+                    <div class="flex-row kong-nav-community-links-container">
+                      <a href="https://github.com/Kong/">GitHub</a> <span class="bullet">&#8226;</span> <a href="https://discuss.konghq.com/">Kong Forum</a>
+                    </div>
+                    <h5 class="mb-2 spacer">Learn</h5>
+                    <div class="flex-row kong-nav-community-links-container">
+                      <a href="/webinars/">Webinars</a>
+                      <span class="bullet">&#8226;</span>
+                      <a href="/ebooks/">Ebooks</a>
+                      <span class="bullet">&#8226;</span>
+                      <a href="/meetups">Meetups</a>
+                    </div>
+                  </div>
+                </div> <!-- list-group-item -->
+              </div> <!-- list-group -->
+            </li>
+            <li class="navbar-item"><a class="nav-link " href="/partners">Partners</a></li>
+            <li class="navbar-item kong-navbar-dropdown kong-navbar-dropdown-small">
+              <a class="nav-link ">Company</a>
+              <div class="list-group" style="width: 100px; left: -50px;">
+                <a href="/about-kong-inc" class="list-group-item list-group-item-action">About</a>
+                <a href="/investors" class="list-group-item list-group-item-action">Investors</a>
+                <a href="/jobs" class="list-group-item list-group-item-action">Jobs</a>
+                <a href="/contact" class="list-group-item list-group-item-action">Contact</a>
+              </div>
+            </li>
+            <li class="navbar-item"><a class="nav-link " href="/blog">Blog</a></li>
+          </ul>
+        </nav>
+        <nav id="ctaNav" class="col-auto justify-content-md-end kong-navbar_nav hidden-sm-down">
+          <ul class="navbar-nav flex-row justify-content-end">
+            <li class="kong-navbar_nav_link kong-navbar_nav_link--cta"><a class="nav-link btn btn-outline-secondary" href="/request-demo">Request Demo</a></li>
+            <li class="kong-navbar_nav_link kong-navbar_nav_link--cta"><a class="nav-link btn btn-primary" href="/installations">Installation</a></li>
+          </ul>
+        </nav>
       </div>
+    </header>
+    <nav id="pagesNav" class="fixed-top hidden-xl-up kong-navbar-collapse">
+      <div class="kong-navbar-collapse_section row no-gutters justify-content-between">
+        <h5 class="col-12">
+          <a class="nav-link">Products</a>
+        </h5>
+
+        <div class="col-md-6">
+          <h6>Kong Community Edition</h6>
+          <a class="nav-link" href="/kong-community-edition">Overview</a>
+          <a class="nav-link" href="/api-gateway">API Gateway</a>
+          <a class="nav-link" href="/faqs">FAQs</a>
+        </div>
+
+        <div class="col-md-6">
+          <h6>Kong Enterprise Edition</h6>
+          <div class="row">
+            <div class="col-4">
+              <a class="nav-link" href="/kong-enterprise-edition">Overview</a>
+              <a class="nav-link" href="/api-admin-gui">Admin GUI</a>
+              <a class="nav-link" href="/api-security">Security</a>
+              <a class="nav-link" href="/api-dev-portal">Dev Portal</a>
+            </div>
+            <div class="col-4">
+               <a class="nav-link" href="/api-analytics">Analytics</a>
+              <a class="nav-link" href="/api-high-availability">High Availability</a>
+              <a class="nav-link" href="/api-customer-success">Support</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-6">
+          <h6>Kong Cloud</h6>
+          <div class="row">
+            <div class="col-4">
+              <a class="nav-link" href="/kong-cloud">Overview</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="kong-navbar-collapse_section">
+        <h5>
+          <a class="nav-link" href="/plugins/">Plugins Hub</a>
+        </h5>
+      </div>
+
+      <div class="kong-navbar-collapse_section row no-gutters justify-content-between">
+        <h5 class="col-12">
+          <a class="nav-link">Resources</a>
+        </h5>
+
+        <div class="col-md-6">
+          <h6>Documentation</h6>
+          <a class="nav-link" href="https://getkong.org/docs/">Kong Community Edition</a>
+          <a class="nav-link" href="https://getkong.org/docs/enterprise">Kong Enterprise Edition</a>
+          <a class="nav-link" href="https://getkong.org/docs/enterprise/latest/vitals/">Kong Analytics</a>
+          <a class="nav-link" href="https://getkong.org/docs/enterprise/latest/developer-portal/introduction/">Kong Dev Portal</a>
+        </div>
+
+        <div class="col-md-6">
+          <h6>Support</h6>
+          <a class="nav-link" href="https://support.mashape.com/hc/en-us">Enterprise Support Portal</a>
+
+          <h6 class="short-top">Community</h6>
+          <div class="flex-row">
+            <a class="nav-link d-inline-flex" href="https://github.com/Kong">GitHub</a> <span class="bullet">&#8226;</span> <a class="nav-link d-inline-flex" href="https://discuss.konghq.com/">Kong Forum</a>
+          </div>
+        </div>
+
+        <div class="col-md-6">
+          <h6 class="shot-top">Learn</h6>
+          <a class="nav-link" href="/webinars">Webinars</a>
+          <a class="nav-link" href="/ebooks">Ebooks</a>
+          <a class="nav-link" href="/meetups">Meetups</a>
+        </div>
+      </div>
+
+      <div class="kong-navbar-collapse_section">
+        <h5>
+          <a class="nav-link" href="/partners">Partners</a>
+        </h5>
+      </div>
+
+      <div class="kong-navbar-collapse_section">
+        <h5>
+          <a class="nav-link">Company</a>
+        </h5>
+        <a class="nav-link" href="/about-kong-inc">About</a>
+        <a class="nav-link" href="/investors">Investors</a>
+        <a class="nav-link" href="/jobs">Jobs</a>
+        <a class="nav-link" href="/contact">Contact</a>
+      </div>
+
+      <div class="kong-navbar-collapse_section">
+        <h5>
+          <a class="nav-link" href="/blog">Blog</a>
+        </h5>
+      </div>
+
+      <div class="hidden-md-up kong-navbar-collapse_section kong-navbar-collapse_section--buttons">
+        <a class="btn" href="request-demo">Request Demo</a>
+        <a href="/install" class="btn btn-primary">Installation</a>
+      </div>
+    </nav>
+    <main class="kong-main">
+      <section class="kong-masthead">
+        <div class="container">
+          <div class="row justify-content-center">
+            <div class="col-sm-12 col-md-10 text-center">
+              <h1 class="hero"><span>Next-Generation API Platform</span><br>for Modern Architectures</h1>
+            </div>
+          </div>
+        </div><!--/container-->
+      </section>
+    <div class="announcements dark justify-content-center">
+      <div class="container col-md-8">
+        <div class="row justify-content-center">
+      <div id="announcement_carousel" class="carousel slide" data-ride="carousel">
+        <!-- Wrapper for slides -->
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <div class="col-md-3 text-right hidden-sm-down"><img src="https://2tjosk2rxzc21medji3nfn1g-wpengine.netdna-ssl.com/wp-content/uploads/2017/08/icn-announcement-EE.svg"/></div>
+            <div class="col px-2x px-md-1x">
+              <h5>New</h5>
+              <p>Kong Enterprise Edition <span> Featuring RBAC, Workspaces, Prometheus Plugin, and More!</span> <a href="https://konghq.com/blog/announcing-kong-enterprise-0-33/" class="green">Learn More</a></p>
+            </div>
+          </div><!-- /item -->
+          <div class="carousel-item ">
+            <div class="col-md-3 text-right hidden-sm-down"><img src="https://2tjosk2rxzc21medji3nfn1g-wpengine.netdna-ssl.com/wp-content/uploads/2017/08/icn-download.svg"/></div>
+            <div class="col px-2x px-md-1x">
+              <h5>Install Kong</h5>
+              <p>Kong Community Edition <span></span> <a href="https://konghq.com/installations/" class="green">Learn More</a></p>
+            </div>
+          </div><!-- /item -->
+          <div class="carousel-item ">
+            <div class="col-md-3 text-right hidden-sm-down"><img src="https://2tjosk2rxzc21medji3nfn1g-wpengine.netdna-ssl.com/wp-content/uploads/2017/08/icn-webinars.svg"/></div>
+            <div class="col px-2x px-md-1x">
+              <h5>Webinar</h5>
+              <p>Demystifying Service Mesh <span>New Pattern or New Technology?</span> <a href="https://konghq.com/webinars/demystifying-service-mesh-new-pattern-or-new-technology/" class="green">Learn More</a></p>
+            </div>
+          </div><!-- /item -->
+          <div class="carousel-item ">
+            <div class="col-md-3 text-right hidden-sm-down"><img src="https://2tjosk2rxzc21medji3nfn1g-wpengine.netdna-ssl.com/wp-content/uploads/2017/12/icn-kong-nation.svg"/></div>
+            <div class="col px-2x px-md-1x">
+              <h5>Discussion Forum</h5>
+              <p>Join Kong Nation <span></span> <a href="https://konghq.com/blog/join-kong-nation/" class="green">Learn More</a></p>
+            </div>
+          </div><!-- /item -->
+          </div>
+        </div>
+        </div><!--/slider row-->
+        </div><!--/container-->
+    </div><!--/anouncements -->
+    <section class="kong-unleashed pt-0x pb-4x pb-md-4x">
+      <div class="container unleashed-intro py-4x">
+        <div class="row justify-content-md-center text-center">
+          <div class="col col-md-8">
+            <h1 class="hero mb-0x"><a href="/kong-enterprise-edition/" class="no-decoration">Unleash Kong</a></h1>
+            <h3>Extend microservices with configurable Kong plugins.</h3>
+          </div><!--/col-->
+        </div><!--/row-->
+      </div><!--/container-->
+      <div class="plugins-banner pb-2x pb-md-4x">
+        <div class="row no-gutters justify-content-md-center align-items-center text-center">
+          <div class="col">
+            <div class="scrolling-icons plugins-left"></div><!--/left icons-->
+            <div class="kongIcon py-2x">
+              <a href="/plugins" alt="Plugins Hub">
+                <img src="https://2tjosk2rxzc21medji3nfn1g-wpengine.netdna-ssl.com/wp-content/themes/konghq/assets/img/home/kong-glow.svg" alt="Kong" />
+              </a>
+            </div><!--/kong icon -->
+            <div class="scrolling-icons plugins-right"></div><!--/right icons-->
+          </div>
+        </div>
+        <div class="row justify-content-center">
+          <div class="col-1 text-center">
+            <svg width="11" height="103" viewBox="0 0 11 103" version="1.1">
+              <g fill="none" fill-rule="evenodd" stroke="none" stroke-width="1">
+                <circle cx="5.7110236" cy="5" r="5" fill="#1747A9"/>
+                <circle cx="5.7110236" cy="98" r="4" stroke="#1747A9" stroke-width="2" class="dot outline"/>
+                <path stroke="#1747A9" stroke-width="2" d="M5.7110236 9v84.3629835" stroke-linecap="square" id="line" />
+                <circle r="5" fill="#1747A9" class="dot-solid">
+                  <animateMotion dur="2s" repeatCount="indefinite" calcMode="linear">
+                    <mpath xlink:href="#line"></mpath>
+                  </animateMotion>
+                </circle>
+              </g>
+            </svg>
+          </div>
+        </div>
+      </div><!--/plugins-->
+
+      <div class="container col-lg-8 mb-4x">
+        <div class="row justify-content-center mb-2x">
+                <div class="col-xs-12 col-sm-3 py-2x py-md-0x text-center">
+            <img class="mb-1x" src="https://2tjosk2rxzc21medji3nfn1g-wpengine.netdna-ssl.com/wp-content/uploads/2017/08/icn-iot.svg" alt="IoT" />
+            <p class="lrg">IoT</p>
+            <p>Powering connectivity to IoT, mobile, and other devices.</p>
+          </div><!--/col-->
+                <div class="col-xs-12 col-sm-3 py-2x py-md-0x text-center">
+            <img class="mb-1x" src="https://2tjosk2rxzc21medji3nfn1g-wpengine.netdna-ssl.com/wp-content/uploads/2017/08/icn-microservices.svg" alt="Microservice APIs" />
+            <p class="lrg">Microservice APIs</p>
+            <p>Connect and orches­trate micro­services through APIs.</p>
+          </div><!--/col-->
+                <div class="col-xs-12 col-sm-3 py-2x py-md-0x text-center">
+            <img class="mb-1x" src="https://2tjosk2rxzc21medji3nfn1g-wpengine.netdna-ssl.com/wp-content/uploads/2017/08/icn-developers.svg" alt="Developers" />
+            <p class="lrg">Developers</p>
+            <p>Securely publish APIs to thousands of developers.</p>
+          </div><!--/col-->
+              </div><!--/row-->
+      </div><!--/container-->
 
       <div class="container">
+        <div class="row justify-content-center no-gutters">
+          <div class="col col-md-6 text-center">
+            <p class="sm heading-divide text-uppercase">Used at scale by</p>
+          </div>
+        </div>
+        <div class="row justify-content-center no-gutters">
+          <div class="col-12 col-md-8 d-flex flex-wrap flex-row justify-content-center align-items-center text-center logos">
+            <div class="col-6 col-md-3 py-2 pb-1">
+              <img src="https://2tjosk2rxzc21medji3nfn1g-wpengine.netdna-ssl.com/wp-content/themes/konghq/assets/img/customers/logo-nokia.svg" alt="nokia" />
+            </div>
+            <div class="col-6 col-md-3 py-2 pb-1">
+              <img src="https://2tjosk2rxzc21medji3nfn1g-wpengine.netdna-ssl.com/wp-content/themes/konghq/assets/img/customers/logo-ibm.svg" alt="ibm" />
+            </div>
+            <div class="col-6 col-md-3 py-2 pb-1">
+              <img src="https://2tjosk2rxzc21medji3nfn1g-wpengine.netdna-ssl.com/wp-content/themes/konghq/assets/img/customers/logo-intel.svg" alt="intel" />
+            </div>
+            <div class="col-6 col-md-3 py-2 pb-1">
+              <img src="https://2tjosk2rxzc21medji3nfn1g-wpengine.netdna-ssl.com/wp-content/themes/konghq/assets/img/customers/logo-harvard.svg" alt="harvard" />
+            </div>
+            <div class="col-6 col-md-3 py-2 pb-1">
+              <img src="https://2tjosk2rxzc21medji3nfn1g-wpengine.netdna-ssl.com/wp-content/themes/konghq/assets/img/customers/logo-pokemon.svg" alt="pokemon" />
+            </div>
+            <div class="col-6 col-md-3 py-2 pb-1">
+              <img src="https://2tjosk2rxzc21medji3nfn1g-wpengine.netdna-ssl.com/wp-content/themes/konghq/assets/img/customers/logo-invision.svg" alt="invision" />
+            </div>
+            <div class="col-6 col-md-3 py-2 pb-1">
+              <img src="https://2tjosk2rxzc21medji3nfn1g-wpengine.netdna-ssl.com/wp-content/themes/konghq/assets/img/customers/logo-nyt.svg" alt="nyt" />
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </section><!--/kong unleashed-->
+    <section class="bg-gray py-4x">
+      <div class="container">
         <div class="row justify-content-center">
-          <div class="col-sm-12 text-center">
-            <p class="lrg mb-0">
-              Kong Summit - Sept 18-19. <span class='hidden-sm-down'>Join the Microservices and API Revolution!</span>                <a href="https://konghq.com/kong-summit" class="link_text" alt="Kong Summit - Sept 18-19. <span class='hidden-sm-down'>Join the Microservices and API Revolution!</span>">REGISTER NOW</a>
-                          </p>
-          </div>
-        </div>
-      </div>
-
-
-    </a>
-  </div>
-
-
-<header class="navbar navbar-inverse navbar-toggleable-lg kong-navbar flex-row align-items-center">
-  <div class="container d-flex">
-    <a href="/" class="navbar-brand col col-xl-auto">
-      <img src="https://2tjosk2rxzc21medji3nfn1g-wpengine.netdna-ssl.com/wp-content/themes/konghq/assets/img/Kogo.svg" alt="Kong Logo">
-    </a>
-
-    <nav class="collapse navbar-collapse col justify-content-md-end kong-navbar_nav">
-      <ul class="navbar-nav">
-        <li class="navbar-item kong-navbar-dropdown">
-          <a class="nav-link ">Products</a>
-          <div class="list-group" style="width: 400px; left: -150px;">
-            <a href="/kong-community-edition" class="list-group-item list-group-item-action">
-              <h5 class="mb-1">Kong Community Edition <span class="kong-github-latest-release badge">0.14.1</span></h5>
-              <p class="mb-0">The blazingly fast open source microservice API gateway.</p>
-            </a>
-            <a href="/kong-enterprise-edition" class="list-group-item list-group-item-action">
-              <h5 class="mb-1">Kong Enterprise Edition</h5><br>
-              <p class="mb-0">The microservice API platform for large organizations.</p>
-            </a>
-            <a href="/cloud" class="list-group-item list-group-item-action">
-              <h5 class="mb-1">Kong Cloud</h5>&nbsp;
-              <p class="mb-0">Kong Enterprise innovation delivered at cloud speed.</p>
-            </a>
-            <a href="/subscriptions" class="list-group-item list-group-item-action highlight">
-              <h5 class="mb-1">Subscriptions</h5>&nbsp;
-              <p class="mb-0">Compare Kong editions and features.</p>
-            </a>
-          </div>
-        </li>
-        <li class="navbar-item"><a class="nav-link " href="/plugins/">Plugins Hub</a></li>
-        <li class="navbar-item kong-navbar-dropdown kong-navbar-dropdown--columns">
-          <a class="nav-link ">Resources</a>
-          <div class="list-group">
-            <div class="list-group-item flex-row flex-nowrap">
-              <div class="kong-navbar-dropdown_column">
-                <h5 class="mb-2">Documentation</h5>
-                <a href="https://getkong.org/docs/">Kong Community Edition</a>
-                <a href="https://getkong.org/docs/enterprise">Kong Enterprise Edition</a>
-                <a href="https://getkong.org/docs/enterprise/latest/vitals/">Kong Analytics</a>
-                <a href="https://getkong.org/docs/enterprise/latest/developer-portal/overview/">Kong Dev Portal</a>
+          <div class="col col-md-8 text-center">
+            <h2>The Microservice API Gateway</h2>
+            <p class="lrg">Quickly build API-centric applications. Leverage the latest microservice and container design patterns. And tie it all together with the Kong microservice API gateway.</p>
+          </div><!--/col-->
+        </div><!--/row-->
+        <div class="row mt-md-4x">
+                <div class="col-xs-12 col-md-4 pt-2x">
+            <div class="row">
+              <div class="col-3 text-right">
+                <img src="https://2tjosk2rxzc21medji3nfn1g-wpengine.netdna-ssl.com/wp-content/uploads/2017/08/icon-extensible.svg" alt="Radically Extensible"/>
               </div>
-              <div class="kong-navbar-dropdown_column">
-                <h5 class="mb-2">Support</h5>
-                <a href="https://support.mashape.com/hc/en-us">Enterprise Support Portal</a>
-                <h5 class="mb-2 spacer">Community</h5>
-                <div class="flex-row kong-nav-community-links-container">
-                  <a href="https://github.com/Kong/">GitHub</a> <span class="bullet">&#8226;</span> <a href="https://discuss.konghq.com/">Kong Forum</a>
-                </div>
-                <h5 class="mb-2 spacer">Learn</h5>
-                <div class="flex-row kong-nav-community-links-container">
-                  <a href="/webinars/">Webinars</a>
-                  <span class="bullet">&#8226;</span>
-                  <a href="/ebooks/">Ebooks</a>
-                  <span class="bullet">&#8226;</span>
-                  <a href="/meetups">Meetups</a>
-                </div>
+              <div class="col-9">
+                <h4>Radically Extensible</h4>
+                <p class="sm">Ready-to-deploy plugins add powerful functionality to your APIs and applications.</p>
               </div>
-            </div> <!-- list-group-item -->
-          </div> <!-- list-group -->
-        </li>
-        <li class="navbar-item"><a class="nav-link " href="/partners">Partners</a></li>
-        <li class="navbar-item kong-navbar-dropdown kong-navbar-dropdown-small">
-          <a class="nav-link ">Company</a>
-          <div class="list-group" style="width: 100px; left: -50px;">
-            <a href="/about-kong-inc" class="list-group-item list-group-item-action">About</a>
-            <a href="/investors" class="list-group-item list-group-item-action">Investors</a>
-            <a href="/jobs" class="list-group-item list-group-item-action">Jobs</a>
-            <a href="/contact" class="list-group-item list-group-item-action">Contact</a>
-          </div>
-        </li>
-        <li class="navbar-item"><a class="nav-link " href="/blog">Blog</a></li>
-      </ul>
-    </nav>
-
-    <nav id="ctaNav" class="col-auto justify-content-md-end kong-navbar_nav hidden-sm-down">
-      <ul class="navbar-nav flex-row justify-content-end">
-        <li class="kong-navbar_nav_link kong-navbar_nav_link--cta"><a class="nav-link btn btn-outline-secondary" href="/request-demo">Request Demo</a></li>
-        <li class="kong-navbar_nav_link kong-navbar_nav_link--cta"><a class="nav-link btn btn-primary" href="/installations">Installation</a></li>
-      </ul>
-    </nav>
-
-    <button class="navbar-toggler align-self-center" type="button" data-toggle="kong-expand" data-target="#pagesNav" aria-controls="pagesNav" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-  </div>
-
-</header>
-
-<nav id="pagesNav" class="fixed-top hidden-xl-up kong-navbar-collapse">
-  <div class="kong-navbar-collapse_section row no-gutters justify-content-between">
-    <h5 class="col-12">
-      <a class="nav-link">Products</a>
-    </h5>
-
-    <div class="col-md-6">
-      <h6>Kong Community Edition</h6>
-      <a class="nav-link" href="/kong-community-edition">Overview</a>
-      <a class="nav-link" href="/api-gateway">API Gateway</a>
-      <a class="nav-link" href="/faqs">FAQs</a>
-    </div>
-
-    <div class="col-md-6">
-      <h6>Kong Enterprise Edition</h6>
-      <div class="row">
-        <div class="col-4">
-          <a class="nav-link" href="/kong-enterprise-edition">Overview</a>
-          <a class="nav-link" href="/api-admin-gui">Admin GUI</a>
-          <a class="nav-link" href="/api-security">Security</a>
-          <a class="nav-link" href="/api-dev-portal">Dev Portal</a>
-        </div>
-        <div class="col-4">
-           <a class="nav-link" href="/api-analytics">Analytics</a>
-          <a class="nav-link" href="/api-high-availability">High Availability</a>
-          <a class="nav-link" href="/api-customer-success">Support</a>
-        </div>
-      </div>
-    </div>
-
-    <div class="col-md-6">
-      <h6>Kong Cloud</h6>
-      <div class="row">
-        <div class="col-4">
-          <a class="nav-link" href="/kong-cloud">Overview</a>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <div class="kong-navbar-collapse_section">
-    <h5>
-      <a class="nav-link" href="/plugins/">Plugins Hub</a>
-    </h5>
-  </div>
-
-  <div class="kong-navbar-collapse_section row no-gutters justify-content-between">
-    <h5 class="col-12">
-      <a class="nav-link">Resources</a>
-    </h5>
-
-    <div class="col-md-6">
-      <h6>Documentation</h6>
-      <a class="nav-link" href="https://getkong.org/docs/">Kong Community Edition</a>
-      <a class="nav-link" href="https://getkong.org/docs/enterprise">Kong Enterprise Edition</a>
-      <a class="nav-link" href="https://getkong.org/docs/enterprise/latest/vitals/">Kong Analytics</a>
-      <a class="nav-link" href="https://getkong.org/docs/enterprise/latest/developer-portal/introduction/">Kong Dev Portal</a>
-    </div>
-
-    <div class="col-md-6">
-      <h6>Support</h6>
-      <a class="nav-link" href="https://support.mashape.com/hc/en-us">Enterprise Support Portal</a>
-
-      <h6 class="short-top">Community</h6>
-      <div class="flex-row">
-        <a class="nav-link d-inline-flex" href="https://github.com/Kong">GitHub</a> <span class="bullet">&#8226;</span> <a class="nav-link d-inline-flex" href="https://discuss.konghq.com/">Kong Forum</a>
-      </div>
-    </div>
-
-    <div class="col-md-6">
-      <h6 class="shot-top">Learn</h6>
-      <a class="nav-link" href="/webinars">Webinars</a>
-      <a class="nav-link" href="/ebooks">Ebooks</a>
-      <a class="nav-link" href="/meetups">Meetups</a>
-    </div>
-  </div>
-
-  <div class="kong-navbar-collapse_section">
-    <h5>
-      <a class="nav-link" href="/partners">Partners</a>
-    </h5>
-  </div>
-
-  <div class="kong-navbar-collapse_section">
-    <h5>
-      <a class="nav-link">Company</a>
-    </h5>
-    <a class="nav-link" href="/about-kong-inc">About</a>
-    <a class="nav-link" href="/investors">Investors</a>
-    <a class="nav-link" href="/jobs">Jobs</a>
-    <a class="nav-link" href="/contact">Contact</a>
-  </div>
-
-  <div class="kong-navbar-collapse_section">
-    <h5>
-      <a class="nav-link" href="/blog">Blog</a>
-    </h5>
-  </div>
-
-  <div class="hidden-md-up kong-navbar-collapse_section kong-navbar-collapse_section--buttons">
-    <a class="btn" href="request-demo">Request Demo</a>
-    <a href="/install" class="btn btn-primary">Installation</a>
-  </div>
-</nav>
-
-
-
-  <main class="kong-main">
-
-<section class="kong-masthead">
-  <div class="container">
-    <div class="row justify-content-center">
-      <div class="col-sm-12 col-md-10 text-center">
-        <h1 class="hero"><span>Next-Generation API Platform</span><br>for Modern Architectures</h1>
-      </div>
-    </div>
-    <div class="row text-center">
-      <div class="col">
-        <a href="/installations" class="btn btn-lg btn-success" alt="Install Kong">Install Kong</a> <a href="/request-demo" class="btn btn-lg btn-transparent ml-1x" alt="Request a Demo">Request Demo</a>
-      </div><!--/col-->
-    </div><!--/row-->
-  </div><!--/container-->
-</section>
-
-<section class="kong-summit bg-summit">
-    <div class="bg-summit-mask">
-      <img class="glow" src="https://2tjosk2rxzc21medji3nfn1g-wpengine.netdna-ssl.com/wp-content/themes/konghq/assets/img/home/kong-summit/glow.svg" alt="kong-summit-glow" />
-    </div>
-    <div class="container">
-      <div class="row justify-content-center">
-        <div class="col-sm-12 col-md-10 text-center">
-          <h3 class="text-white mb-4 fw-500">Try Kong Enterprise Today</h3>
-        </div>
-      </div>
-      <div class="row text-center">
-        <div class="col">
-          <a href="/free-trial" class="btn btn-white btn-lg py-2 px-4 fw-500" alt="Try Now">Start Free Trial</a>
-        </div><!--/col-->
-      </div><!--/row-->
-    </div><!--/container-->
-</section>
-
-<div class="announcements dark justify-content-center">
-  <div class="container col-md-8">
-    <div class="row justify-content-center">
-
-<div id="announcement_carousel" class="carousel slide" data-ride="carousel">
-  <!-- Indicators -->
-  <ol class="carousel-indicators">
-        <li data-target="#announcement_carousel" data-slide-to="0" class="active"></li>
-        <li data-target="#announcement_carousel" data-slide-to="1" class=""></li>
-        <li data-target="#announcement_carousel" data-slide-to="2" class=""></li>
-        <li data-target="#announcement_carousel" data-slide-to="3" class=""></li>
-      </ol>
-  <!-- Wrapper for slides -->
-  <div class="carousel-inner">
-        <div class="carousel-item active">
-      <div class="col-md-3 text-right hidden-sm-down"><img src="https://2tjosk2rxzc21medji3nfn1g-wpengine.netdna-ssl.com/wp-content/uploads/2017/08/icn-announcement-EE.svg"/></div>
-      <div class="col px-2x px-md-1x">
-        <h5>New</h5>
-        <p>Kong Enterprise Edition <span> Featuring RBAC, Workspaces, Prometheus Plugin, and More!</span> <a href="https://konghq.com/blog/announcing-kong-enterprise-0-33/" class="green">Learn More</a></p>
-      </div>
-    </div><!-- /item -->
-        <div class="carousel-item ">
-      <div class="col-md-3 text-right hidden-sm-down"><img src="https://2tjosk2rxzc21medji3nfn1g-wpengine.netdna-ssl.com/wp-content/uploads/2017/08/icn-download.svg"/></div>
-      <div class="col px-2x px-md-1x">
-        <h5>Install Kong</h5>
-        <p>Kong Community Edition <span></span> <a href="https://konghq.com/installations/" class="green">Learn More</a></p>
-      </div>
-    </div><!-- /item -->
-        <div class="carousel-item ">
-      <div class="col-md-3 text-right hidden-sm-down"><img src="https://2tjosk2rxzc21medji3nfn1g-wpengine.netdna-ssl.com/wp-content/uploads/2017/08/icn-webinars.svg"/></div>
-      <div class="col px-2x px-md-1x">
-        <h5>Webinar</h5>
-        <p>Demystifying Service Mesh <span>New Pattern or New Technology?</span> <a href="https://konghq.com/webinars/demystifying-service-mesh-new-pattern-or-new-technology/" class="green">Learn More</a></p>
-      </div>
-    </div><!-- /item -->
-        <div class="carousel-item ">
-      <div class="col-md-3 text-right hidden-sm-down"><img src="https://2tjosk2rxzc21medji3nfn1g-wpengine.netdna-ssl.com/wp-content/uploads/2017/12/icn-kong-nation.svg"/></div>
-      <div class="col px-2x px-md-1x">
-        <h5>Discussion Forum</h5>
-        <p>Join Kong Nation <span></span> <a href="https://konghq.com/blog/join-kong-nation/" class="green">Learn More</a></p>
-      </div>
-    </div><!-- /item -->
-      </div>
-</div>
-
-    </div><!--/slider row-->
-  </div><!--/container-->
-</div><!--/anouncements -->
-
-<section class="kong-unleashed pt-0x pb-4x pb-md-4x">
-  <div class="container unleashed-intro py-4x">
-    <div class="row justify-content-md-center text-center">
-      <div class="col col-md-8">
-        <h1 class="hero mb-0x"><a href="/kong-enterprise-edition/" class="no-decoration">Unleash Kong</a></h1>
-        <h3>Extend microservices with configurable Kong plugins.</h3>
-      </div><!--/col-->
-    </div><!--/row-->
-  </div><!--/container-->
-
-  <div class="plugins-banner pb-2x pb-md-4x">
-    <div class="row no-gutters justify-content-md-center align-items-center text-center">
-      <div class="col">
-        <div class="scrolling-icons plugins-left"></div><!--/left icons-->
-        <div class="kongIcon py-2x">
-          <a href="/plugins" alt="Plugins Hub">
-            <img src="https://2tjosk2rxzc21medji3nfn1g-wpengine.netdna-ssl.com/wp-content/themes/konghq/assets/img/home/kong-glow.svg" alt="Kong" />
-          </a>
-        </div><!--/kong icon -->
-        <div class="scrolling-icons plugins-right"></div><!--/right icons-->
-      </div>
-    </div>
-    <div class="row justify-content-center">
-      <div class="col-1 text-center">
-        <svg width="11" height="103" viewBox="0 0 11 103" version="1.1">
-          <g fill="none" fill-rule="evenodd" stroke="none" stroke-width="1">
-            <circle cx="5.7110236" cy="5" r="5" fill="#1747A9"/>
-            <circle cx="5.7110236" cy="98" r="4" stroke="#1747A9" stroke-width="2" class="dot outline"/>
-            <path stroke="#1747A9" stroke-width="2" d="M5.7110236 9v84.3629835" stroke-linecap="square" id="line" />
-            <circle r="5" fill="#1747A9" class="dot-solid">
-              <animateMotion dur="2s" repeatCount="indefinite" calcMode="linear">
-                <mpath xlink:href="#line"></mpath>
-              </animateMotion>
-            </circle>
-          </g>
-        </svg>
-      </div>
-    </div>
-  </div><!--/plugins-->
-
-  <div class="container col-lg-8 mb-4x">
-    <div class="row justify-content-center mb-2x">
-            <div class="col-xs-12 col-sm-3 py-2x py-md-0x text-center">
-        <img class="mb-1x" src="https://2tjosk2rxzc21medji3nfn1g-wpengine.netdna-ssl.com/wp-content/uploads/2017/08/icn-iot.svg" alt="IoT" />
-        <p class="lrg">IoT</p>
-        <p>Powering connectivity to IoT, mobile, and other devices.</p>
-      </div><!--/col-->
-            <div class="col-xs-12 col-sm-3 py-2x py-md-0x text-center">
-        <img class="mb-1x" src="https://2tjosk2rxzc21medji3nfn1g-wpengine.netdna-ssl.com/wp-content/uploads/2017/08/icn-microservices.svg" alt="Microservice APIs" />
-        <p class="lrg">Microservice APIs</p>
-        <p>Connect and orches­trate micro­services through APIs.</p>
-      </div><!--/col-->
-            <div class="col-xs-12 col-sm-3 py-2x py-md-0x text-center">
-        <img class="mb-1x" src="https://2tjosk2rxzc21medji3nfn1g-wpengine.netdna-ssl.com/wp-content/uploads/2017/08/icn-developers.svg" alt="Developers" />
-        <p class="lrg">Developers</p>
-        <p>Securely publish APIs to thousands of developers.</p>
-      </div><!--/col-->
-          </div><!--/row-->
-  </div><!--/container-->
-
-  <div class="container">
-    <div class="row justify-content-center no-gutters">
-      <div class="col col-md-6 text-center">
-        <p class="sm heading-divide text-uppercase">Used at scale by</p>
-      </div>
-    </div>
-    <div class="row justify-content-center no-gutters">
-      <div class="col-12 col-md-8 d-flex flex-wrap flex-row justify-content-center align-items-center text-center logos">
-        <div class="col-6 col-md-3 py-2 pb-1">
-          <img src="https://2tjosk2rxzc21medji3nfn1g-wpengine.netdna-ssl.com/wp-content/themes/konghq/assets/img/customers/logo-nokia.svg" alt="nokia" />
-        </div>
-        <div class="col-6 col-md-3 py-2 pb-1">
-          <img src="https://2tjosk2rxzc21medji3nfn1g-wpengine.netdna-ssl.com/wp-content/themes/konghq/assets/img/customers/logo-ibm.svg" alt="ibm" />
-        </div>
-        <div class="col-6 col-md-3 py-2 pb-1">
-          <img src="https://2tjosk2rxzc21medji3nfn1g-wpengine.netdna-ssl.com/wp-content/themes/konghq/assets/img/customers/logo-intel.svg" alt="intel" />
-        </div>
-        <div class="col-6 col-md-3 py-2 pb-1">
-          <img src="https://2tjosk2rxzc21medji3nfn1g-wpengine.netdna-ssl.com/wp-content/themes/konghq/assets/img/customers/logo-harvard.svg" alt="harvard" />
-        </div>
-        <div class="col-6 col-md-3 py-2 pb-1">
-          <img src="https://2tjosk2rxzc21medji3nfn1g-wpengine.netdna-ssl.com/wp-content/themes/konghq/assets/img/customers/logo-pokemon.svg" alt="pokemon" />
-        </div>
-        <div class="col-6 col-md-3 py-2 pb-1">
-          <img src="https://2tjosk2rxzc21medji3nfn1g-wpengine.netdna-ssl.com/wp-content/themes/konghq/assets/img/customers/logo-invision.svg" alt="invision" />
-        </div>
-        <div class="col-6 col-md-3 py-2 pb-1">
-          <img src="https://2tjosk2rxzc21medji3nfn1g-wpengine.netdna-ssl.com/wp-content/themes/konghq/assets/img/customers/logo-nyt.svg" alt="nyt" />
-        </div>
-      </div>
-    </div>
-  </div>
-
-</section><!--/kong unleashed-->
-
-<section class="bg-gray py-4x">
-  <div class="container">
-    <div class="row justify-content-center">
-      <div class="col col-md-8 text-center">
-        <h2>The Microservice API Gateway</h2>
-        <p class="lrg">Quickly build API-centric applications. Leverage the latest microservice and container design patterns. And tie it all together with the Kong microservice API gateway.</p>
-      </div><!--/col-->
-    </div><!--/row-->
-    <div class="row mt-md-4x">
-            <div class="col-xs-12 col-md-4 pt-2x">
-        <div class="row">
-          <div class="col-3 text-right">
-            <img src="https://2tjosk2rxzc21medji3nfn1g-wpengine.netdna-ssl.com/wp-content/uploads/2017/08/icon-extensible.svg" alt="Radically Extensible"/>
-          </div>
-          <div class="col-9">
-            <h4>Radically Extensible</h4>
-            <p class="sm">Ready-to-deploy plugins add powerful functionality to your APIs and applications.</p>
-          </div>
-        </div>
-      </div><!--/col-->
-            <div class="col-xs-12 col-md-4 pt-2x">
-        <div class="row">
-          <div class="col-3 text-right">
-            <img src="https://2tjosk2rxzc21medji3nfn1g-wpengine.netdna-ssl.com/wp-content/uploads/2017/08/icon-fast.svg" alt="Blazingly Fast"/>
-          </div>
-          <div class="col-9">
-            <h4>Blazingly Fast</h4>
-            <p class="sm">Kong accelerates applications, achieving sub-millisecond latency for virtually all requests.</p>
-          </div>
-        </div>
-      </div><!--/col-->
-            <div class="col-xs-12 col-md-4 pt-2x">
-        <div class="row">
-          <div class="col-3 text-right">
-            <img src="https://2tjosk2rxzc21medji3nfn1g-wpengine.netdna-ssl.com/wp-content/uploads/2017/08/icon-open-source.svg" alt="Open Source"/>
-          </div>
-          <div class="col-9">
-            <h4>Open Source</h4>
-            <p class="sm">Open and developer-friendly, tens of thousands have embraced the Kong microservice API gateway.</p>
-          </div>
-        </div>
-      </div><!--/col-->
-            <div class="col-xs-12 col-md-4 pt-2x">
-        <div class="row">
-          <div class="col-3 text-right">
-            <img src="https://2tjosk2rxzc21medji3nfn1g-wpengine.netdna-ssl.com/wp-content/uploads/2017/08/icn-platform-agnostic.svg" alt="Platform Agnostic"/>
-          </div>
-          <div class="col-9">
-            <h4>Platform Agnostic</h4>
-            <p class="sm">Containers to clouds. Single instance to global clusters. Kong supports your setup.</p>
-          </div>
-        </div>
-      </div><!--/col-->
-            <div class="col-xs-12 col-md-4 pt-2x">
-        <div class="row">
-          <div class="col-3 text-right">
-            <img src="https://2tjosk2rxzc21medji3nfn1g-wpengine.netdna-ssl.com/wp-content/uploads/2017/08/icon-cloud-native.svg" alt="Cloud Native"/>
-          </div>
-          <div class="col-9">
-            <h4>Cloud Native</h4>
-            <p class="sm">Achieve flexibility at scale, with microservices, containers, and orchestration.</p>
-          </div>
-        </div>
-      </div><!--/col-->
-            <div class="col-xs-12 col-md-4 pt-2x">
-        <div class="row">
-          <div class="col-3 text-right">
-            <img src="https://2tjosk2rxzc21medji3nfn1g-wpengine.netdna-ssl.com/wp-content/uploads/2017/08/icon-restful.svg" alt="RESTful Interface"/>
-          </div>
-          <div class="col-9">
-            <h4>RESTful Interface</h4>
-            <p class="sm">Built on top of NGINX, Kong operates through a simple and easy-to-use RESTful API.</p>
-          </div>
-        </div>
-      </div><!--/col-->
-          </div><!--/row-->
-  </div><!--/container-->
-</section>
-
-<section class="bg-dkBlue dark kong-stats py-4x">
-  <div class="container">
-    <div class="row justify-content-center text-center">
-      <div class="col">
-        <h1 class="hero">Driven by Developers, Adopted by Enterprises</h1>
-      </div>
-    </div>
-    <div class="row align-items-center">
-      <div class="col-sm-12 col-md-6 col-lg-4 offset-lg-1">
-        <div class="row text-center">
-          <div class="col">
-            <svg id="kong-stats" width="337px" height="347px" viewBox="0 0 337 347" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-    <g id="KongHQ.com" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-        <g id="#home" transform="translate(-271.000000, -4492.000000)">
-            <g id="00-enterprise" transform="translate(0.000000, 4291.000000)">
-                <g id="05-stats" transform="translate(271.000000, 202.000000)">
-                    <g id="github" class="stat" transform="translate(112.000000, 135.000000)" fill="#FFFFFF">
-                        <text id="Github-Stars" opacity="0.799999952" font-family="Roboto-Regular, Roboto" font-size="17" font-weight="normal" line-spacing="24">
-                            <tspan x="14.9284668" y="67">Github Stars</tspan>
-                        </text>
-                        <text id="+11K" font-family="Roboto-Light, Roboto" font-size="55" font-weight="300" line-spacing="47" letter-spacing="-2">
-                            <tspan x="0" y="51">+16K</tspan>
-                        </text>
-                    </g>
-                    <g id="downloads" class="stat" transform="translate(133.000000, 135.000000)" fill="#FFFFFF">
-                        <text id="Downoads" opacity="0.799999952" font-family="Roboto-Regular, Roboto" font-size="17" font-weight="normal" line-spacing="24">
-                            <tspan x="0.353271484" y="67">Downloads</tspan>
-                        </text>
-                        <text id="3M" font-family="Roboto-Light, Roboto" font-size="55" font-weight="300" line-spacing="47" letter-spacing="-2">
-                            <tspan x="2" y="51">20M</tspan>
-                        </text>
-                    </g>
-                    <g id="instances" class="stat" transform="translate(98.000000, 135.000000)" fill="#FFFFFF">
-                        <text id="Running-Instances" opacity="0.799999952" font-family="Roboto-Regular, Roboto" font-size="17" font-weight="normal" line-spacing="24">
-                            <tspan x="5.76513672" y="67">Running Instances</tspan>
-                        </text>
-                        <text id="+200K" font-family="Roboto-Light, Roboto" font-size="55" font-weight="300" line-spacing="47" letter-spacing="-2">
-                            <tspan x="0.5" y="51">+400K</tspan>
-                        </text>
-                    </g>
-                    <g id="graphic">
-                        <polyline id="Stroke-1" stroke="#088BE8" points="155 93 131.584142 93 103 121.308498 103 130"></polyline>
-                        <path d="M248.70627,224.13386 L225.46461,224.13386" id="Stroke-1" stroke="#088BE8" transform="translate(237.085440, 224.133860) rotate(-225.000000) translate(-237.085440, -224.133860) "></path>
-                        <polyline id="Stroke-2" stroke="#63D0D2" points="197 93.0934157 166.785324 93.0934157 156.716444 83 127.03118 83 91 119.930299 91 136"></polyline>
-                        <polyline id="Stroke-3" stroke="#0043BA" points="174 83 201.325833 83 239 121"></polyline>
-                        <polyline id="Stroke-4" stroke="#00BC4C" points="209 254 201.392729 262 164 262"></polyline>
-                        <path d="M195,251 L162,251" id="Stroke-5" stroke="#63D0D2"></path>
-                        <polyline id="Stroke-6" stroke="#00BC4C" points="119 223 136.600833 242 212 242"></polyline>
-                        <polyline id="Stroke-6" stroke="#00BC4C" transform="translate(181.500000, 112.500000) rotate(-180.000000) translate(-181.500000, -112.500000) " points="139 104 154.600833 121 224 121"></polyline>
-                        <polyline id="Stroke-7" stroke="#0043BA" points="151 261 140.344778 261 103 223.393656 103 224"></polyline>
-                        <polyline id="Stroke-8" stroke="#63D0D2" points="172 271 137.203875 271 91 224.835227 91 154"></polyline>
-                        <polyline id="Stroke-9" stroke="#088BE8" points="78 205 78 238.454733 109.837578 271 122 271"></polyline>
-                        <polyline id="Stroke-10" stroke="#00BC4C" points="65 183 65 256.51307 110 301"></polyline>
-                        <polyline id="Stroke-11" stroke="#0043BA" points="73 250 114.936261 292 189 292"></polyline>
-                        <path d="M119,281 L149,281" id="Stroke-12" stroke="#0043BA"></path>
-                        <polyline id="Stroke-13" stroke="#088BE8" points="160 281 209.685214 281 234 257"></polyline>
-                        <polyline id="Stroke-14" stroke="#088BE8" points="76 282 54.1390863 260.329067 54.3928934 217.311265 45 208"></polyline>
-                        <polyline id="Stroke-15" stroke="#63D0D2" points="3 223 71.927674 291.914642 84 292"></polyline>
-                        <polyline id="Stroke-16" stroke="#0043BA" points="44 159 34 169.386619 34 212.052085 42.6140147 221"></polyline>
-                        <polyline id="Stroke-17" stroke="#00BC4C" points="44 173 44 193.776373 53 203"></polyline>
-                        <polyline id="Stroke-18" stroke="#00BC4C" points="54.4771711 172 54.4771711 156.419532 44 145.800868 44 108.604408 89 63"></polyline>
-                        <polyline id="Stroke-19" stroke="#63D0D2" points="54 139 54 111.772739 74 92"></polyline>
-                        <polyline id="Stroke-20" stroke="#088BE8" points="63 159 63 117.739493 85.7121347 96.2189403 85.7121347 82.1242685 105 63"></polyline>
-                        <polyline id="Stroke-21" stroke="#63D0D2" points="95 87 129.603514 52 199 52"></polyline>
-                        <polyline id="Stroke-22" stroke="#0043BA" points="157 63 132.806987 63 77 119.168294 77 178"></polyline>
-                        <polyline id="Stroke-23" stroke="#088BE8" points="140 73.6680213 172.609377 73.6680213 183.366054 63 225.694993 63 263 100"></polyline>
-                        <polyline id="Stroke-24" stroke="#00BC4C" points="186 72 205.250301 72 226 93"></polyline>
-                        <path d="M236,103 L254,121" id="Stroke-25" stroke="#088BE8"></path>
-                        <polyline id="Stroke-26" stroke="#63D0D2" points="220 72 263.381093 115.289596 263.381093 130.423017 283 150"></polyline>
-                        <polyline id="Stroke-27" stroke="#0043BA" points="275 128 295 147.765763 295 165"></polyline>
-                        <path d="M274,113 L313,152" id="Stroke-28" stroke="#088BE8"></path>
-                        <polyline id="Stroke-29" stroke="#00BC4C" points="264 146 284 166.391142 284 220"></polyline>
-                        <polyline id="Stroke-30" stroke="#63D0D2" points="274 171 274 231.857774 264 241.511249 264 271"></polyline>
-                        <polyline id="Stroke-31" stroke="#088BE8" points="264 163 264 213.385578 264 227.801267 254.076513 237.63418 254.076513 252.106729 234 272"></polyline>
-                        <polyline id="Stroke-32" stroke="#00BC4C" points="253 141 253 223.719203 205 272"></polyline>
-                        <polyline id="Stroke-33" stroke="#0043BA" points="294 182 294 226.252865 274 246.035358 274 260"></polyline>
-                        <polyline id="Stroke-34" stroke="#63D0D2" points="305 221 305 230.656716 284 251"></polyline>
-                        <polyline id="Stroke-35" stroke="#00BC4C" points="238 282 267.036666 282 294 255"></polyline>
-                        <polyline id="Stroke-36" stroke="#63D0D2" points="224 283 204.397532 303 138 303"></polyline>
-                        <polyline id="Stroke-37" stroke="#00BC4C" points="228 292 187.042464 333 162 333"></polyline>
-                        <path d="M145,312 L189,312" id="Stroke-38" stroke="#00BC4C"></path>
-                        <polyline id="Stroke-39" stroke="#0043BA" points="181 322 137.038778 322 126.424071 311.417945 77.5118518 311.417945 45 279"></polyline>
-                        <polyline id="Stroke-40" stroke="#088BE8" points="131 332 122.077307 323 73 323"></polyline>
-                        <polyline id="Stroke-41" stroke="#63D0D2" points="83 332.654703 121.787455 332.654703 132.280289 343 191.729036 343 211 324"></polyline>
-                        <polyline id="Stroke-43" stroke="#088BE8" points="206 341 225.738973 321.183011 225.738973 307.326288 242 291"></polyline>
-                        <polyline id="Stroke-44" stroke="#17A956" points="232 332 261.215989 302.40932 275.837446 302.40932 295 283"></polyline>
-                        <polyline id="Stroke-45" stroke="#0043BA" points="273 290 304 258.354029 304 244"></polyline>
-                        <polyline id="Stroke-46" stroke="#0043BA" points="314.447848 248 324 238.188629 324 200.270377 314 190"></polyline>
-                        <polyline id="Stroke-47" stroke="#088BE8" points="304 165 304 201.046925 314 211"></polyline>
-                        <polyline id="Stroke-48" stroke="#00BC4C" points="314 95 314 108.573572 324 118.68189 324 178"></polyline>
-                        <polyline id="Stroke-49" stroke="#088BE8" points="304 72 304 113.598396 314 124"></polyline>
-                        <polyline id="Stroke-50" stroke="#63D0D2" points="295 102 295 60.8024611 244.991764 11 200 11"></polyline>
-                        <polyline id="Stroke-51" stroke="#00BC4C" points="241 21 179.708659 21 169.461887 11 139 11"></polyline>
-                        <polyline id="Stroke-52" stroke="#088BE8" points="189 10.5748031 178.275423 0 133.092255 0 121.93646 11 99 11"></polyline>
-                        <polyline id="Stroke-54" stroke="#63D0D2" points="238 33 264.663096 60.0871872 264.663096 74.5142342 274 84"></polyline>
-                        <polyline id="Stroke-55" stroke="#0043BA" points="251 32 284 65.1423639 284 94"></polyline>
-                        <polyline id="Stroke-56" stroke="#0043BA" points="186 42 231.188717 42 251 62"></polyline>
-                        <polyline id="Stroke-57" stroke="#088BE8" points="221 32 172.206963 32 161.518363 43 111 43"></polyline>
-                        <polyline id="Stroke-58" stroke="#00BC4C" points="215 52 227.836144 52 313 137"></polyline>
-                        <polyline id="Stroke-59" stroke="#63D0D2" points="158 21 101.828478 21 82.1532015 42 68 42"></polyline>
-                        <polyline id="Stroke-60" stroke="#0043BA" points="160 32 106.241876 32 55 83"></polyline>
-                        <polyline id="Stroke-61" stroke="#0043BA" points="44 92 44 64.4172518 54 54"></polyline>
-                        <polyline id="Stroke-62" stroke="#00BC4C" points="82 12 33 61.0582279 33 75"></polyline>
-                        <polyline id="Stroke-63" stroke="#0043BA" points="24 70 13 81.0870094 13 95"></polyline>
-                        <polyline id="Stroke-64" stroke="#63D0D2" points="24 86 24 99.4045006 14 109.684712 14 139"></polyline>
-                        <polyline id="Stroke-65" stroke="#00BC4C" points="32 105 23 114.238066 23 138"></polyline>
-                        <polyline id="Stroke-66" stroke="#0043BA" points="34 119 34 137.138818 14 156.927252 14 201"></polyline>
-                        <polyline id="Stroke-67" stroke="#088BE8" points="33 157 24 165.860226 24 181"></polyline>
-                        <polyline id="Stroke-70" stroke="#00BC4C" points="4 124 4 209.96686 34 240"></polyline>
-                        <polyline id="Stroke-71" stroke="#63D0D2" points="24.080374 191 24 215.811055 44.9186086 237.113568 45 250"></polyline>
-                        <polyline id="Stroke-73" stroke="#00BC4C" points="34 270 34 284.347452 63 314"></polyline>
-                        <polyline id="Stroke-74" stroke="#088BE8" points="315 81 335 101.300752 335 180.009881 326.145031 189"></polyline>
-                        <polyline id="Stroke-75" stroke="#63D0D2" points="335 201 335 242.601768 304 273"></polyline>
-                        <path d="M257,292 L236,313" id="Stroke-76" stroke="#63D0D2"></path>
-                        <g id="Group-381" transform="translate(0.000000, 9.000000)">
-                            <polyline id="Stroke-77" stroke="#63D0D2" points="264.9753 303.6534 234.6283 334.0004 221.3983 334.0004"></polyline>
-                            <path d="M76.2429,82.8145 C76.2429,83.6425 75.5719,84.3145 74.7429,84.3145 C73.9149,84.3145 73.2429,83.6425 73.2429,82.8145 C73.2429,81.9855 73.9149,81.3145 74.7429,81.3145 C75.5719,81.3145 76.2429,81.9855 76.2429,82.8145 Z" id="Stroke-79" stroke="#63D0D2"></path>
-                            <path d="M25.4929,76.1758 C25.4929,77.0048 24.8219,77.6758 23.9929,77.6758 C23.1649,77.6758 22.4929,77.0048 22.4929,76.1758 C22.4929,75.3478 23.1649,74.6758 23.9929,74.6758 C24.8219,74.6758 25.4929,75.3478 25.4929,76.1758 Z" id="Stroke-81" stroke="#63D0D2"></path>
-                            <path d="M92.5,128.5 C92.5,129.328 91.828,130 91,130 C90.172,130 89.5,129.328 89.5,128.5 C89.5,127.672 90.172,127 91,127 C91.828,127 92.5,127.672 92.5,128.5 Z" id="Stroke-83" stroke="#63D0D2"></path>
-                            <path d="M160.6208,12.4122 C160.6208,13.2412 159.9488,13.9122 159.1208,13.9122 C158.2928,13.9122 157.6208,13.2412 157.6208,12.4122 C157.6208,11.5842 158.2928,10.9122 159.1208,10.9122 C159.9488,10.9122 160.6208,11.5842 160.6208,12.4122 Z" id="Stroke-85" stroke="#63D0D2"></path>
-                            <path d="M202.3933,43.2823 C202.3933,44.1103 201.7213,44.7823 200.8933,44.7823 C200.0653,44.7823 199.3933,44.1103 199.3933,43.2823 C199.3933,42.4543 200.0653,41.7823 200.8933,41.7823 C201.7213,41.7823 202.3933,42.4543 202.3933,43.2823 Z" id="Stroke-87" stroke="#63D0D2"></path>
-                            <path d="M238.0622,22.8702 C238.0622,23.6992 237.3912,24.3702 236.5622,24.3702 C235.7342,24.3702 235.0622,23.6992 235.0622,22.8702 C235.0622,22.0422 235.7342,21.3702 236.5622,21.3702 C237.3912,21.3702 238.0622,22.0422 238.0622,22.8702 Z" id="Stroke-89" stroke="#63D0D2"></path>
-                            <path d="M295.8591,94.4717 C295.8591,95.3007 295.1871,95.9717 294.3591,95.9717 C293.5311,95.9717 292.8591,95.3007 292.8591,94.4717 C292.8591,93.6437 293.5311,92.9717 294.3591,92.9717 C295.1871,92.9717 295.8591,93.6437 295.8591,94.4717 Z" id="Stroke-91" stroke="#63D0D2"></path>
-                            <path d="M220.5378,62.7715 C220.5378,63.5995 219.8668,64.2715 219.0378,64.2715 C218.2098,64.2715 217.5378,63.5995 217.5378,62.7715 C217.5378,61.9425 218.2098,61.2715 219.0378,61.2715 C219.8668,61.2715 220.5378,61.9425 220.5378,62.7715 Z" id="Stroke-93" stroke="#63D0D2"></path>
-                            <path d="M35.03,94.9239 C35.03,95.7519 34.359,96.4239 33.53,96.4239 C32.702,96.4239 32.03,95.7519 32.03,94.9239 C32.03,94.0959 32.702,93.4239 33.53,93.4239 C34.359,93.4239 35.03,94.0959 35.03,94.9239 Z" id="Stroke-95" stroke="#01BC4D"></path>
-                            <path d="M56.0495,164.3223 C56.0495,165.1503 55.3775,165.8223 54.5495,165.8223 C53.7215,165.8223 53.0495,165.1503 53.0495,164.3223 C53.0495,163.4933 53.7215,162.8223 54.5495,162.8223 C55.3775,162.8223 56.0495,163.4933 56.0495,164.3223 Z" id="Stroke-97" stroke="#01BC4D"></path>
-                            <path d="M56.0495,195.4756 C56.0495,196.3036 55.3775,196.9756 54.5495,196.9756 C53.7215,196.9756 53.0495,196.3036 53.0495,195.4756 C53.0495,194.6466 53.7215,193.9756 54.5495,193.9756 C55.3775,193.9756 56.0495,194.6466 56.0495,195.4756 Z" id="Stroke-99" stroke="#01BC4D"></path>
-                            <path d="M35.7341,231.9776 C35.7341,232.8056 35.0621,233.4776 34.2341,233.4776 C33.4061,233.4776 32.7341,232.8056 32.7341,231.9776 C32.7341,231.1486 33.4061,230.4776 34.2341,230.4776 C35.0621,230.4776 35.7341,231.1486 35.7341,231.9776 Z" id="Stroke-101" stroke="#01BC4D"></path>
-                            <path d="M144.613,303.586 C144.613,304.414 143.941,305.086 143.113,305.086 C142.285,305.086 141.613,304.414 141.613,303.586 C141.613,302.757 142.285,302.086 143.113,302.086 C143.941,302.086 144.613,302.757 144.613,303.586 Z" id="Stroke-103" stroke="#01BC4D"></path>
-                            <path d="M134.2644,323.6592 C134.2644,324.4882 133.5924,325.1592 132.7644,325.1592 C131.9354,325.1592 131.2644,324.4882 131.2644,323.6592 C131.2644,322.8312 131.9354,322.1592 132.7644,322.1592 C133.5924,322.1592 134.2644,322.8312 134.2644,323.6592 Z" id="Stroke-105" stroke="#088BE8"></path>
-                            <path d="M111.8747,293.8047 C111.8747,294.6327 111.2037,295.3047 110.3747,295.3047 C109.5467,295.3047 108.8747,294.6327 108.8747,293.8047 C108.8747,292.9757 109.5467,292.3047 110.3747,292.3047 C111.2037,292.3047 111.8747,292.9757 111.8747,293.8047 Z" id="Stroke-107" stroke="#01BC4D"></path>
-                            <path d="M65.823,305.086 C65.823,305.914 65.151,306.586 64.323,306.586 C63.495,306.586 62.823,305.914 62.823,305.086 C62.823,304.257 63.495,303.586 64.323,303.586 C65.151,303.586 65.823,304.257 65.823,305.086 Z" id="Stroke-109" stroke="#01BC4D"></path>
-                            <path d="M198,242 C198,242.829 197.328,243.5 196.5,243.5 C195.672,243.5 195,242.829 195,242 C195,241.172 195.672,240.5 196.5,240.5 C197.328,240.5 198,241.172 198,242 Z" id="Stroke-111" stroke="#63D0D2"></path>
-                            <path d="M225.574,273.1954 C225.574,274.0234 224.902,274.6954 224.074,274.6954 C223.245,274.6954 222.574,274.0234 222.574,273.1954 C222.574,272.3664 223.245,271.6954 224.074,271.6954 C224.902,271.6954 225.574,272.3664 225.574,273.1954 Z" id="Stroke-113" stroke="#63D0D2"></path>
-                            <path d="M284.2302,243.2491 C284.2302,244.0771 283.5582,244.7491 282.7302,244.7491 C281.9012,244.7491 281.2302,244.0771 281.2302,243.2491 C281.2302,242.4201 281.9012,241.7491 282.7302,241.7491 C283.5582,241.7491 284.2302,242.4201 284.2302,243.2491 Z" id="Stroke-115" stroke="#63D0D2"></path>
-                            <path d="M336.4997,190.7022 C336.4997,191.5302 335.8287,192.2022 334.9997,192.2022 C334.1717,192.2022 333.4997,191.5302 333.4997,190.7022 C333.4997,189.8742 334.1717,189.2022 334.9997,189.2022 C335.8287,189.2022 336.4997,189.8742 336.4997,190.7022 Z" id="Stroke-117" stroke="#63D0D2"></path>
-                            <path d="M267.4939,302.2706 C267.4939,303.0986 266.8219,303.7706 265.9939,303.7706 C265.1659,303.7706 264.4939,303.0986 264.4939,302.2706 C264.4939,301.4426 265.1659,300.7706 265.9939,300.7706 C266.8219,300.7706 267.4939,301.4426 267.4939,302.2706 Z" id="Stroke-119" stroke="#63D0D2"></path>
-                            <path d="M236.7234,305.086 C236.7234,305.914 236.0514,306.586 235.2234,306.586 C234.3954,306.586 233.7234,305.914 233.7234,305.086 C233.7234,304.257 234.3954,303.586 235.2234,303.586 C236.0514,303.586 236.7234,304.257 236.7234,305.086 Z" id="Stroke-121" stroke="#63D0D2"></path>
-                            <path d="M213.7195,313.8643 C213.7195,314.6933 213.0475,315.3643 212.2195,315.3643 C211.3915,315.3643 210.7195,314.6933 210.7195,313.8643 C210.7195,313.0363 211.3915,312.3643 212.2195,312.3643 C213.0475,312.3643 213.7195,313.0363 213.7195,313.8643 Z" id="Stroke-123" stroke="#63D0D2"></path>
-                            <path d="M124.2722,262.5811 C124.2722,263.4091 123.6012,264.0811 122.7722,264.0811 C121.9442,264.0811 121.2722,263.4091 121.2722,262.5811 C121.2722,261.7531 121.9442,261.0811 122.7722,261.0811 C123.6012,261.0811 124.2722,261.7531 124.2722,262.5811 Z" id="Stroke-125" stroke="#088BE8"></path>
-                            <path d="M86.9743,283.4317 C86.9743,284.2597 86.3033,284.9317 85.4743,284.9317 C84.6463,284.9317 83.9743,284.2597 83.9743,283.4317 C83.9743,282.6037 84.6463,281.9317 85.4743,281.9317 C86.3033,281.9317 86.9743,282.6037 86.9743,283.4317 Z" id="Stroke-127" stroke="#63D0D2"></path>
-                            <path d="M91.7654,53.4005 C91.7654,54.2295 91.0934,54.9005 90.2654,54.9005 C89.4374,54.9005 88.7654,54.2295 88.7654,53.4005 C88.7654,52.5725 89.4374,51.9005 90.2654,51.9005 C91.0934,51.9005 91.7654,52.5725 91.7654,53.4005 Z" id="Stroke-129" stroke="#00BC4C"></path>
-                            <path d="M34.78,66.8702 C34.78,67.6992 34.108,68.3702 33.28,68.3702 C32.452,68.3702 31.78,67.6992 31.78,66.8702 C31.78,66.0422 32.452,65.3702 33.28,65.3702 C34.108,65.3702 34.78,66.0422 34.78,66.8702 Z" id="Stroke-131" stroke="#00BC4C"></path>
-                            <path d="M157.4997,84.3272 C157.4997,85.1552 156.8287,85.8272 155.9997,85.8272 C155.1717,85.8272 154.4997,85.1552 154.4997,84.3272 C154.4997,83.4992 155.1717,82.8272 155.9997,82.8272 C156.8287,82.8272 157.4997,83.4992 157.4997,84.3272 Z" id="Stroke-133" stroke="#088BE8"></path>
-                            <path d="M228.4997,224.3272 C228.4997,225.1552 227.8287,225.8272 226.9997,225.8272 C226.1717,225.8272 225.4997,225.1552 225.4997,224.3272 C225.4997,223.4992 226.1717,222.8272 226.9997,222.8272 C227.8287,222.8272 228.4997,223.4992 228.4997,224.3272 Z" id="Stroke-133" stroke="#088BE8"></path>
-                            <path d="M106.8865,53.4005 C106.8865,54.2295 106.2145,54.9005 105.3865,54.9005 C104.5585,54.9005 103.8865,54.2295 103.8865,53.4005 C103.8865,52.5725 104.5585,51.9005 105.3865,51.9005 C106.2145,51.9005 106.8865,52.5725 106.8865,53.4005 Z" id="Stroke-135" stroke="#088BE8"></path>
-                            <path d="M236.5378,93.2022 C236.5378,94.0302 235.8658,94.7022 235.0378,94.7022 C234.2098,94.7022 233.5378,94.0302 233.5378,93.2022 C233.5378,92.3742 234.2098,91.7022 235.0378,91.7022 C235.8658,91.7022 236.5378,92.3742 236.5378,93.2022 Z" id="Stroke-137" stroke="#088BE8"></path>
-                            <path d="M315.9821,144.334 C315.9821,145.162 315.3101,145.834 314.4821,145.834 C313.6541,145.834 312.9821,145.162 312.9821,144.334 C312.9821,143.506 313.6541,142.834 314.4821,142.834 C315.3101,142.834 315.9821,143.506 315.9821,144.334 Z" id="Stroke-139" stroke="#088BE8"></path>
-                            <path d="M264.7458,91.9786 C264.7458,92.8066 264.0738,93.4786 263.2458,93.4786 C262.4178,93.4786 261.7458,92.8066 261.7458,91.9786 C261.7458,91.1506 262.4178,90.4786 263.2458,90.4786 C264.0738,90.4786 264.7458,91.1506 264.7458,91.9786 Z" id="Stroke-141" stroke="#088BE8"></path>
-                            <path d="M305.9997,62.0626 C305.9997,62.8906 305.3287,63.5626 304.4997,63.5626 C303.6717,63.5626 302.9997,62.8906 302.9997,62.0626 C302.9997,61.2346 303.6717,60.5626 304.4997,60.5626 C305.3287,60.5626 305.9997,61.2346 305.9997,62.0626 Z" id="Stroke-143" stroke="#088BE8"></path>
-                            <path d="M223.5378,22.8702 C223.5378,23.6992 222.8668,24.3702 222.0378,24.3702 C221.2098,24.3702 220.5378,23.6992 220.5378,22.8702 C220.5378,22.0422 221.2098,21.3702 222.0378,21.3702 C222.8668,21.3702 223.5378,22.0422 223.5378,22.8702 Z" id="Stroke-145" stroke="#088BE8"></path>
-                            <path d="M99.3435,2.9034 C99.3435,3.7314 98.6715,4.4034 97.8435,4.4034 C97.0155,4.4034 96.3435,3.7314 96.3435,2.9034 C96.3435,2.0744 97.0155,1.4034 97.8435,1.4034 C98.6715,1.4034 99.3435,2.0744 99.3435,2.9034 Z" id="Stroke-147" stroke="#088BE8"></path>
-                            <path d="M215.3327,43.2823 C215.3327,44.1103 214.6607,44.7823 213.8327,44.7823 C213.0047,44.7823 212.3327,44.1103 212.3327,43.2823 C212.3327,42.4543 213.0047,41.7823 213.8327,41.7823 C214.6607,41.7823 215.3327,42.4543 215.3327,43.2823 Z" id="Stroke-149" stroke="#00BC4C"></path>
-                            <path d="M186.1941,63.5772 C186.1941,64.4052 185.5231,65.0772 184.6941,65.0772 C183.8661,65.0772 183.1941,64.4052 183.1941,63.5772 C183.1941,62.7492 183.8661,62.0772 184.6941,62.0772 C185.5231,62.0772 186.1941,62.7492 186.1941,63.5772 Z" id="Stroke-151" stroke="#00BC4C"></path>
-                            <path d="M139.196,2.5381 C139.196,3.3661 138.524,4.0381 137.696,4.0381 C136.867,4.0381 136.196,3.3661 136.196,2.5381 C136.196,1.7091 136.867,1.0381 137.696,1.0381 C138.524,1.0381 139.196,1.7091 139.196,2.5381 Z" id="Stroke-153" stroke="#00BC4C"></path>
-                            <path d="M215,233 C215,233.828 214.328,234.5 213.5,234.5 C212.671,234.5 212,233.828 212,233 C212,232.172 212.671,231.5 213.5,231.5 C214.328,231.5 215,232.172 215,233 Z" id="Stroke-155" stroke="#00BC4C"></path>
-                            <path d="M139,95 C139,95.828 138.328,96.5 137.5,96.5 C136.671,96.5 136,95.828 136,95 C136,94.172 136.671,93.5 137.5,93.5 C138.328,93.5 139,94.172 139,95 Z" id="Stroke-155" stroke="#00BC4C"></path>
-                            <path d="M163.6658,252.6397 C163.6658,253.4677 162.9938,254.1397 162.1658,254.1397 C161.3378,254.1397 160.6658,253.4677 160.6658,252.6397 C160.6658,251.8117 161.3378,251.1397 162.1658,251.1397 C162.9938,251.1397 163.6658,251.8117 163.6658,252.6397 Z" id="Stroke-157" stroke="#00BC4C"></path>
-                            <path d="M230.4822,281.8467 C230.4822,282.6747 229.8102,283.3467 228.9822,283.3467 C228.1542,283.3467 227.4822,282.6747 227.4822,281.8467 C227.4822,281.0187 228.1542,280.3467 228.9822,280.3467 C229.8102,280.3467 230.4822,281.0187 230.4822,281.8467 Z" id="Stroke-159" stroke="#00BC4C"></path>
-                            <path d="M297.0739,244.7491 C297.0739,245.5771 296.4019,246.2491 295.5739,246.2491 C294.7459,246.2491 294.0739,245.5771 294.0739,244.7491 C294.0739,243.9201 294.7459,243.2491 295.5739,243.2491 C296.4019,243.2491 297.0739,243.9201 297.0739,244.7491 Z" id="Stroke-161" stroke="#00BC4C"></path>
-                            <path d="M273.8894,281.8467 C273.8894,282.6747 273.2184,283.3467 272.3894,283.3467 C271.5614,283.3467 270.8894,282.6747 270.8894,281.8467 C270.8894,281.0187 271.5614,280.3467 272.3894,280.3467 C273.2184,280.3467 273.8894,281.0187 273.8894,281.8467 Z" id="Stroke-163" stroke="#0043BA"></path>
-                            <path d="M231.9822,323.8878 C231.9822,324.7158 231.3102,325.3878 230.4822,325.3878 C229.6542,325.3878 228.9822,324.7158 228.9822,323.8878 C228.9822,323.0598 229.6542,322.3878 230.4822,322.3878 C231.3102,322.3878 231.9822,323.0598 231.9822,323.8878 Z" id="Stroke-165" stroke="#00BC4C"></path>
-                            <path d="M255.1794,130.3741 C255.1794,131.2031 254.5084,131.8741 253.6794,131.8741 C252.8514,131.8741 252.1794,131.2031 252.1794,130.3741 C252.1794,129.5461 252.8514,128.8741 253.6794,128.8741 C254.5084,128.8741 255.1794,129.5461 255.1794,130.3741 Z" id="Stroke-167" stroke="#00BC4C"></path>
-                            <path d="M325.9782,171.3682 C325.9782,172.1972 325.3062,172.8682 324.4782,172.8682 C323.6492,172.8682 322.9782,172.1972 322.9782,171.3682 C322.9782,170.5402 323.6492,169.8682 324.4782,169.8682 C325.3062,169.8682 325.9782,170.5402 325.9782,171.3682 Z" id="Stroke-169" stroke="#00BC4C"></path>
-                            <path d="M285.2722,212.7715 C285.2722,213.5995 284.6012,214.2715 283.7722,214.2715 C282.9442,214.2715 282.2722,213.5995 282.2722,212.7715 C282.2722,211.9435 282.9442,211.2715 283.7722,211.2715 C284.6012,211.2715 285.2722,211.9435 285.2722,212.7715 Z" id="Stroke-171" stroke="#00BC4C"></path>
-                            <path d="M315.7849,129.5547 C315.7849,130.3837 315.1129,131.0547 314.2849,131.0547 C313.4569,131.0547 312.7849,130.3837 312.7849,129.5547 C312.7849,128.7267 313.4569,128.0547 314.2849,128.0547 C315.1129,128.0547 315.7849,128.7267 315.7849,129.5547 Z" id="Stroke-173" stroke="#00BC4C"></path>
-                            <path d="M305.7683,154.3526 C305.7683,155.1806 305.0973,155.8526 304.2683,155.8526 C303.4403,155.8526 302.7683,155.1806 302.7683,154.3526 C302.7683,153.5236 303.4403,152.8526 304.2683,152.8526 C305.0973,152.8526 305.7683,153.5236 305.7683,154.3526 Z" id="Stroke-175" stroke="#088BE8"></path>
-                            <path d="M325.9782,181.4835 C325.9782,182.3125 325.3062,182.9835 324.4782,182.9835 C323.6492,182.9835 322.9782,182.3125 322.9782,181.4835 C322.9782,180.6555 323.6492,179.9835 324.4782,179.9835 C325.3062,179.9835 325.9782,180.6555 325.9782,181.4835 Z" id="Stroke-177" stroke="#088BE8"></path>
-                            <path d="M45.6667,212.9776 C45.6667,213.8056 44.9947,214.4776 44.1667,214.4776 C43.3387,214.4776 42.6667,213.8056 42.6667,212.9776 C42.6667,212.1486 43.3387,211.4776 44.1667,211.4776 C44.9947,211.4776 45.6667,212.1486 45.6667,212.9776 Z" id="Stroke-179" stroke="#0043BA"></path>
-                            <path d="M45.4343,269.7022 C45.4343,270.5302 44.7633,271.2022 43.9343,271.2022 C43.1063,271.2022 42.4343,270.5302 42.4343,269.7022 C42.4343,268.8742 43.1063,268.2022 43.9343,268.2022 C44.7633,268.2022 45.4343,268.8742 45.4343,269.7022 Z" id="Stroke-181" stroke="#0043BA"></path>
-                            <path d="M45.6667,198.4122 C45.6667,199.2402 44.9947,199.9122 44.1667,199.9122 C43.3387,199.9122 42.6667,199.2402 42.6667,198.4122 C42.6667,197.5842 43.3387,196.9122 44.1667,196.9122 C44.9947,196.9122 45.6667,197.5842 45.6667,198.4122 Z" id="Stroke-183" stroke="#088BE8"></path>
-                            <path d="M79.0339,194.6221 C79.0339,195.4501 78.3629,196.1221 77.5339,196.1221 C76.7059,196.1221 76.0339,195.4501 76.0339,194.6221 C76.0339,193.7931 76.7059,193.1221 77.5339,193.1221 C78.3629,193.1221 79.0339,193.7931 79.0339,194.6221 Z" id="Stroke-185" stroke="#088BE8"></path>
-                            <path d="M275.157,117.6046 C275.157,118.4336 274.485,119.1046 273.657,119.1046 C272.829,119.1046 272.157,118.4336 272.157,117.6046 C272.157,116.7766 272.829,116.1046 273.657,116.1046 C274.485,116.1046 275.157,116.7766 275.157,117.6046 Z" id="Stroke-187" stroke="#0043BA"></path>
-                            <path d="M295.5739,171.3682 C295.5739,172.1972 294.9019,172.8682 294.0739,172.8682 C293.2459,172.8682 292.5739,172.1972 292.5739,171.3682 C292.5739,170.5402 293.2459,169.8682 294.0739,169.8682 C294.9019,169.8682 295.5739,170.5402 295.5739,171.3682 Z" id="Stroke-189" stroke="#0043BA"></path>
-                            <path d="M173.6247,74.1817 C173.6247,75.0107 172.9537,75.6817 172.1247,75.6817 C171.2967,75.6817 170.6247,75.0107 170.6247,74.1817 C170.6247,73.3537 171.2967,72.6817 172.1247,72.6817 C172.9537,72.6817 173.6247,73.3537 173.6247,74.1817 Z" id="Stroke-191" stroke="#0043BA"></path>
-                            <path d="M186.1941,33.1592 C186.1941,33.9872 185.5231,34.6592 184.6941,34.6592 C183.8661,34.6592 183.1941,33.9872 183.1941,33.1592 C183.1941,32.3302 183.8661,31.6592 184.6941,31.6592 C185.5231,31.6592 186.1941,32.3302 186.1941,33.1592 Z" id="Stroke-193" stroke="#0043BA"></path>
-                            <path d="M160.3972,53.7833 C160.3972,54.6113 159.7252,55.2833 158.8972,55.2833 C158.0682,55.2833 157.3972,54.6113 157.3972,53.7833 C157.3972,52.9543 158.0682,52.2833 158.8972,52.2833 C159.7252,52.2833 160.3972,52.9543 160.3972,53.7833 Z" id="Stroke-195" stroke="#0043BA"></path>
-                            <path d="M15.5544,193.1944 C15.5544,194.0224 14.8834,194.6944 14.0544,194.6944 C13.2264,194.6944 12.5544,194.0224 12.5544,193.1944 C12.5544,192.3664 13.2264,191.6944 14.0544,191.6944 C14.8834,191.6944 15.5544,192.3664 15.5544,193.1944 Z" id="Stroke-197" stroke="#0043BA"></path>
-                            <path d="M45.6667,84.7022 C45.6667,85.5302 44.9947,86.2022 44.1667,86.2022 C43.3387,86.2022 42.6667,85.5302 42.6667,84.7022 C42.6667,83.8742 43.3387,83.2022 44.1667,83.2022 C44.9947,83.2022 45.6667,83.8742 45.6667,84.7022 Z" id="Stroke-201" stroke="#0043BA"></path>
-                            <path d="M14.3952,87.7022 C14.3952,88.5302 13.7232,89.2022 12.8952,89.2022 C12.0662,89.2022 11.3952,88.5302 11.3952,87.7022 C11.3952,86.8742 12.0662,86.2022 12.8952,86.2022 C13.7232,86.2022 14.3952,86.8742 14.3952,87.7022 Z" id="Stroke-203" stroke="#0043BA"></path>
-                            <path d="M154.5417,252.4678 C154.5417,253.2958 153.8697,253.9678 153.0417,253.9678 C152.2137,253.9678 151.5417,253.2958 151.5417,252.4678 C151.5417,251.6398 152.2137,250.9678 153.0417,250.9678 C153.8697,250.9678 154.5417,251.6398 154.5417,252.4678 Z" id="Stroke-205" stroke="#0043BA"></path>
-                            <path d="M151.487,272.6465 C151.487,273.4745 150.816,274.1465 149.987,274.1465 C149.159,274.1465 148.487,273.4745 148.487,272.6465 C148.487,271.8175 149.159,271.1465 149.987,271.1465 C150.816,271.1465 151.487,271.8175 151.487,272.6465 Z" id="Stroke-207" stroke="#0043BA"></path>
-                            <path d="M73.3103,239.7344 C73.3103,240.5624 72.6393,241.2344 71.8103,241.2344 C70.9823,241.2344 70.3103,240.5624 70.3103,239.7344 C70.3103,238.9064 70.9823,238.2344 71.8103,238.2344 C72.6393,238.2344 73.3103,238.9064 73.3103,239.7344 Z" id="Stroke-209" stroke="#0043BA"></path>
-                            <path d="M235.9997,247.1358 C235.9997,247.9638 235.3287,248.6358 234.4997,248.6358 C233.6717,248.6358 232.9997,247.9638 232.9997,247.1358 C232.9997,246.3078 233.6717,245.6358 234.4997,245.6358 C235.3287,245.6358 235.9997,246.3078 235.9997,247.1358 Z" id="Stroke-211" stroke="#088BE8"></path>
-                            <path d="M314.9704,240.835 C314.9704,241.664 314.2994,242.335 313.4704,242.335 C312.6424,242.335 311.9704,241.664 311.9704,240.835 C311.9704,240.007 312.6424,239.335 313.4704,239.335 C314.2994,239.335 314.9704,240.007 314.9704,240.835 Z" id="Stroke-213" stroke="#0043BA"></path>
-                            <path d="M206.7195,334.0001 C206.7195,334.8281 206.0475,335.5001 205.2195,335.5001 C204.3915,335.5001 203.7195,334.8281 203.7195,334.0001 C203.7195,333.1721 204.3915,332.5001 205.2195,332.5001 C206.0475,332.5001 206.7195,333.1721 206.7195,334.0001 Z" id="Stroke-215" stroke="#088BE8"></path>
-                            <path d="M265.0222,152.4005 C265.0222,153.2285 264.3502,153.9005 263.5222,153.9005 C262.6932,153.9005 262.0222,153.2285 262.0222,152.4005 C262.0222,151.5725 262.6932,150.9005 263.5222,150.9005 C264.3502,150.9005 265.0222,151.5725 265.0222,152.4005 Z" id="Stroke-217" stroke="#088BE8"></path>
-                            <path d="M35.4314,146.9522 C35.4314,147.7802 34.7604,148.4522 33.9314,148.4522 C33.1034,148.4522 32.4314,147.7802 32.4314,146.9522 C32.4314,146.1242 33.1034,145.4522 33.9314,145.4522 C34.7604,145.4522 35.4314,146.1242 35.4314,146.9522 Z" id="Stroke-219" stroke="#088BE8"></path>
-                            <path d="M46.0544,242.2471 C46.0544,243.0751 45.3824,243.7471 44.5544,243.7471 C43.7264,243.7471 43.0544,243.0751 43.0544,242.2471 C43.0544,241.4191 43.7264,240.7471 44.5544,240.7471 C45.3824,240.7471 46.0544,241.4191 46.0544,242.2471 Z" id="Stroke-223" stroke="#63D0D2"></path>
-                            <path d="M92.3503,144.0059 C92.3503,144.8339 91.6783,145.5059 90.8503,145.5059 C90.0223,145.5059 89.3503,144.8339 89.3503,144.0059 C89.3503,143.1779 90.0223,142.5059 90.8503,142.5059 C91.6783,142.5059 92.3503,143.1779 92.3503,144.0059 Z" id="Stroke-225" stroke="#63D0D2"></path>
-                            <path d="M56.0271,130.2471 C56.0271,131.3231 55.1551,132.1951 54.0791,132.1951 C53.0031,132.1951 52.1311,131.3231 52.1311,130.2471 C52.1311,129.1711 53.0031,128.2991 54.0791,128.2991 C55.1551,128.2991 56.0271,129.1711 56.0271,130.2471" id="Fill-227" fill="#63D0D2"></path>
-                            <path d="M15.781,128.8008 C15.781,129.8768 14.909,130.7488 13.833,130.7488 C12.757,130.7488 11.884,129.8768 11.884,128.8008 C11.884,127.7248 12.757,126.8528 13.833,126.8528 C14.909,126.8528 15.781,127.7248 15.781,128.8008" id="Fill-229" fill="#63D0D2"></path>
-                            <path d="M5.4783,114.8067 C5.4783,115.8827 4.6063,116.7547 3.5303,116.7547 C2.4543,116.7547 1.5823,115.8827 1.5823,114.8067 C1.5823,113.7307 2.4543,112.8577 3.5303,112.8577 C4.6063,112.8577 5.4783,113.7307 5.4783,114.8067" id="Fill-233" fill="#00BC4C"></path>
-                            <path d="M83.9079,2.9034 C83.9079,3.9794 83.0349,4.8514 81.9589,4.8514 C80.8829,4.8514 80.0109,3.9794 80.0109,2.9034 C80.0109,1.8274 80.8829,0.9554 81.9589,0.9554 C83.0349,0.9554 83.9079,1.8274 83.9079,2.9034" id="Fill-235" fill="#00BC4C"></path>
-                            <path d="M25.3074,128.8008 C25.3074,129.8768 24.4354,130.7488 23.3594,130.7488 C22.2834,130.7488 21.4114,129.8768 21.4114,128.8008 C21.4114,127.7248 22.2834,126.8528 23.3594,126.8528 C24.4354,126.8528 25.3074,127.7248 25.3074,128.8008" id="Fill-237" fill="#00BC4C"></path>
-                            <path d="M45.8835,164.7022 C45.8835,165.7782 45.0105,166.6502 43.9345,166.6502 C42.8585,166.6502 41.9865,165.7782 41.9865,164.7022 C41.9865,163.6262 42.8585,162.7542 43.9345,162.7542 C45.0105,162.7542 45.8835,163.6262 45.8835,164.7022" id="Fill-239" fill="#00BC4C"></path>
-                            <path d="M64.8193,176.5809 C63.7443,176.5809 62.8713,175.7089 62.8713,174.6329 C62.8713,173.5569 63.7443,172.6849 64.8193,172.6849 C65.8953,172.6849 66.7683,173.5569 66.7683,174.6329 C66.7683,175.7089 65.8953,176.5809 64.8193,176.5809 Z" id="Fill-241" fill="#00BC4C"></path>
-                            <path d="M36.1824,260.7891 C36.1824,261.8651 35.3104,262.7371 34.2344,262.7371 C33.1584,262.7371 32.2864,261.8651 32.2864,260.7891 C32.2864,259.7131 33.1584,258.8401 34.2344,258.8401 C35.3104,258.8401 36.1824,259.7131 36.1824,260.7891" id="Fill-243" fill="#00BC4C"></path>
-                            <path d="M25.9783,171.3682 C25.9783,172.4442 25.1063,173.3172 24.0303,173.3172 C22.9543,173.3172 22.0823,172.4442 22.0823,171.3682 C22.0823,170.2932 22.9543,169.4202 24.0303,169.4202 C25.1063,169.4202 25.9783,170.2932 25.9783,171.3682" id="Fill-245" fill="#088BE8"></path>
-                            <path d="M25.9783,182.0421 C25.9783,183.1181 25.1063,183.9901 24.0303,183.9901 C22.9543,183.9901 22.0823,183.1181 22.0823,182.0421 C22.0823,180.9661 22.9543,180.0941 24.0303,180.0941 C25.1063,180.0941 25.9783,180.9661 25.9783,182.0421" id="Fill-247" fill="#63D0D2"></path>
-                            <path d="M164.114,242.4522 C164.114,243.5282 163.242,244.4002 162.166,244.4002 C161.09,244.4002 160.218,243.5282 160.218,242.4522 C160.218,241.3762 161.09,240.5042 162.166,240.5042 C163.242,240.5042 164.114,241.3762 164.114,242.4522" id="Fill-249" fill="#63D0D2"></path>
-                            <path d="M174.073,262.8018 C174.073,263.8778 173.201,264.7498 172.125,264.7498 C171.049,264.7498 170.177,263.8778 170.177,262.8018 C170.177,261.7258 171.049,260.8538 172.125,260.8538 C173.201,260.8538 174.073,261.7258 174.073,262.8018" id="Fill-251" fill="#63D0D2"></path>
-                            <path d="M265.9939,261.8897 C265.9939,262.9657 265.1219,263.8377 264.0459,263.8377 C262.9699,263.8377 262.0979,262.9657 262.0979,261.8897 C262.0979,260.8137 262.9699,259.9417 264.0459,259.9417 C265.1219,259.9417 265.9939,260.8137 265.9939,261.8897" id="Fill-253" fill="#63D0D2"></path>
-                            <path d="M306.2175,212.3233 C306.2175,213.3993 305.3445,214.2713 304.2685,214.2713 C303.1935,214.2713 302.3205,213.3993 302.3205,212.3233 C302.3205,211.2473 303.1935,210.3743 304.2685,210.3743 C305.3445,210.3743 306.2175,211.2473 306.2175,212.3233" id="Fill-255" fill="#63D0D2"></path>
-                            <path d="M306.2175,265.085 C306.2175,266.161 305.3445,267.033 304.2685,267.033 C303.1935,267.033 302.3205,266.161 302.3205,265.085 C302.3205,264.009 303.1935,263.137 304.2685,263.137 C305.3445,263.137 306.2175,264.009 306.2175,265.085" id="Fill-257" fill="#63D0D2"></path>
-                            <path d="M139.448,293.3936 C139.448,294.4696 138.576,295.3416 137.5,295.3416 C136.424,295.3416 135.552,294.4696 135.552,293.3936 C135.552,292.3176 136.424,291.4456 137.5,291.4456 C138.576,291.4456 139.448,292.3176 139.448,293.3936" id="Fill-259" fill="#63D0D2"></path>
-                            <path d="M84.8035,323.8878 C84.8035,324.9638 83.9315,325.8358 82.8555,325.8358 C81.7795,325.8358 80.9075,324.9638 80.9075,323.8878 C80.9075,322.8118 81.7795,321.9398 82.8555,321.9398 C83.9315,321.9398 84.8035,322.8118 84.8035,323.8878" id="Fill-261" fill="#63D0D2"></path>
-                            <path d="M75.6638,313.8643 C75.6638,314.9403 74.7908,315.8133 73.7148,315.8133 C72.6398,315.8133 71.7668,314.9403 71.7668,313.8643 C71.7668,312.7893 72.6398,311.9163 73.7148,311.9163 C74.7908,311.9163 75.6638,312.7893 75.6638,313.8643" id="Fill-263" fill="#088BE8"></path>
-                            <path d="M223.3474,334.0001 C223.3474,335.0761 222.4744,335.9481 221.3984,335.9481 C220.3224,335.9481 219.4504,335.0761 219.4504,334.0001 C219.4504,332.9241 220.3224,332.0521 221.3984,332.0521 C222.4744,332.0521 223.3474,332.9241 223.3474,334.0001" id="Fill-265" fill="#63D0D2"></path>
-                            <path d="M259.323,281.8467 C259.323,282.9227 258.451,283.7947 257.375,283.7947 C256.299,283.7947 255.427,282.9227 255.427,281.8467 C255.427,280.7707 256.299,279.8987 257.375,279.8987 C258.451,279.8987 259.323,280.7707 259.323,281.8467" id="Fill-267" fill="#63D0D2"></path>
-                            <path d="M190.3435,303.586 C190.3435,304.661 189.4715,305.534 188.3955,305.534 C187.3195,305.534 186.4475,304.661 186.4475,303.586 C186.4475,302.51 187.3195,301.637 188.3955,301.637 C189.4715,301.637 190.3435,302.51 190.3435,303.586" id="Fill-269" fill="#00BC4C"></path>
-                            <path d="M164.114,323.8878 C164.114,324.9638 163.242,325.8358 162.166,325.8358 C161.09,325.8358 160.218,324.9638 160.218,323.8878 C160.218,322.8118 161.09,321.9398 162.166,321.9398 C163.242,321.9398 164.114,322.8118 164.114,323.8878" id="Fill-271" fill="#00BC4C"></path>
-                            <path d="M207.237,262.8272 C207.237,263.9032 206.365,264.7752 205.289,264.7752 C204.213,264.7752 203.34,263.9032 203.34,262.8272 C203.34,261.7512 204.213,260.8792 205.289,260.8792 C206.365,260.8792 207.237,261.7512 207.237,262.8272" id="Fill-273" fill="#00BC4C"></path>
-                            <path d="M240.3591,273.1954 C240.3591,274.2714 239.4871,275.1434 238.4111,275.1434 C237.3351,275.1434 236.4621,274.2714 236.4621,273.1954 C236.4621,272.1194 237.3351,271.2464 238.4111,271.2464 C239.4871,271.2464 240.3591,272.1194 240.3591,273.1954" id="Fill-275" fill="#00BC4C"></path>
-                            <path d="M297.5222,273.1954 C297.5222,274.2714 296.6502,275.1434 295.5742,275.1434 C294.4982,275.1434 293.6262,274.2714 293.6262,273.1954 C293.6262,272.1194 294.4982,271.2464 295.5742,271.2464 C296.6502,271.2464 297.5222,272.1194 297.5222,273.1954" id="Fill-277" fill="#00BC4C"></path>
-                            <path d="M118.949,215.896 C117.873,215.896 117,215.024 117,213.948 C117,212.872 117.873,212 118.949,212 C120.025,212 120.897,212.872 120.897,213.948 C120.897,215.024 120.025,215.896 118.949,215.896 Z" id="Fill-279" fill="#00BC4C"></path>
-                            <path d="M223.949,113.896 C222.873,113.896 222,113.024 222,111.948 C222,110.872 222.873,110 223.949,110 C225.025,110 225.897,110.872 225.897,111.948 C225.897,113.024 225.025,113.896 223.949,113.896 Z" id="Fill-279" fill="#00BC4C"></path>
-                            <path d="M209.0469,247.2713 C207.9709,247.2713 207.0989,246.3993 207.0989,245.3233 C207.0989,244.2473 207.9709,243.3743 209.0469,243.3743 C210.1229,243.3743 210.9949,244.2473 210.9949,245.3233 C210.9949,246.3993 210.1229,247.2713 209.0469,247.2713 Z" id="Fill-281" fill="#00BC4C"></path>
-                            <path d="M265.9939,137.7071 C265.9939,138.7831 265.1219,139.6551 264.0459,139.6551 C262.9699,139.6551 262.0979,138.7831 262.0979,137.7071 C262.0979,136.6311 262.9699,135.7591 264.0459,135.7591 C265.1219,135.7591 265.9939,136.6311 265.9939,137.7071" id="Fill-283" fill="#00BC4C"></path>
-                            <path d="M316.4831,86.7618 C316.4831,87.8378 315.6111,88.7108 314.5351,88.7108 C313.4591,88.7108 312.5871,87.8378 312.5871,86.7618 C312.5871,85.6868 313.4591,84.8138 314.5351,84.8138 C315.6111,84.8138 316.4831,85.6868 316.4831,86.7618" id="Fill-285" fill="#00BC4C"></path>
-                            <path d="M255.573,112.1993 C255.573,113.2753 254.701,114.1473 253.625,114.1473 C252.549,114.1473 251.677,113.2753 251.677,112.1993 C251.677,111.1233 252.549,110.2513 253.625,110.2513 C254.701,110.2513 255.573,111.1233 255.573,112.1993" id="Fill-287" fill="#088BE8"></path>
-                            <path d="M275.8532,103.7852 C275.8532,104.8612 274.9812,105.7332 273.9052,105.7332 C272.8292,105.7332 271.9572,104.8612 271.9572,103.7852 C271.9572,102.7092 272.8292,101.8372 273.9052,101.8372 C274.9812,101.8372 275.8532,102.7092 275.8532,103.7852" id="Fill-289" fill="#088BE8"></path>
-                            <path d="M316.573,115.4444 C316.573,116.5194 315.701,117.3924 314.625,117.3924 C313.549,117.3924 312.677,116.5194 312.677,115.4444 C312.677,114.3684 313.549,113.4954 314.625,113.4954 C315.701,113.4954 316.573,114.3684 316.573,115.4444" id="Fill-291" fill="#088BE8"></path>
-                            <path d="M316.573,72.004 C316.573,73.08 315.701,73.952 314.625,73.952 C313.549,73.952 312.677,73.08 312.677,72.004 C312.677,70.928 313.549,70.055 314.625,70.055 C315.701,70.055 316.573,70.928 316.573,72.004" id="Fill-293" fill="#088BE8"></path>
-                            <path d="M141.5925,64.2715 C141.5925,65.3465 140.7205,66.2195 139.6445,66.2195 C138.5685,66.2195 137.6965,65.3465 137.6965,64.2715 C137.6965,63.1955 138.5685,62.3225 139.6445,62.3225 C140.7205,62.3225 141.5925,63.1955 141.5925,64.2715" id="Fill-295" fill="#088BE8"></path>
-                            <path d="M112.698,33.2764 C112.698,34.3524 111.826,35.2244 110.75,35.2244 C109.674,35.2244 108.802,34.3524 108.802,33.2764 C108.802,32.2004 109.674,31.3284 110.75,31.3284 C111.826,31.3284 112.698,32.2004 112.698,33.2764" id="Fill-297" fill="#088BE8"></path>
-                            <path d="M191.4558,2.5381 C191.4558,3.6141 190.5828,4.4861 189.5068,4.4861 C188.4318,4.4861 187.5588,3.6141 187.5588,2.5381 C187.5588,1.4621 188.4318,0.5901 189.5068,0.5901 C190.5828,0.5901 191.4558,1.4621 191.4558,2.5381" id="Fill-299" fill="#088BE8"></path>
-                            <path d="M161.0691,23.1104 C161.0691,24.1864 160.1971,25.0584 159.1211,25.0584 C158.0451,25.0584 157.1731,24.1864 157.1731,23.1104 C157.1731,22.0344 158.0451,21.1624 159.1211,21.1624 C160.1971,21.1624 161.0691,22.0344 161.0691,23.1104" id="Fill-301" fill="#0043BA"></path>
-                            <path d="M240.6404,111.4756 C240.6404,112.5516 239.7684,113.4236 238.6924,113.4236 C237.6164,113.4236 236.7444,112.5516 236.7444,111.4756 C236.7444,110.3996 237.6164,109.6736 238.6924,109.6736 C239.7684,109.6736 240.6404,110.3996 240.6404,111.4756" id="Fill-303" fill="#0043BA"></path>
-                            <path d="M286.0652,85.2442 C286.0652,86.3192 285.1932,87.1922 284.1172,87.1922 C283.0412,87.1922 282.1692,86.3192 282.1692,85.2442 C282.1692,84.1682 283.0412,83.2952 284.1172,83.2952 C285.1932,83.2952 286.0652,84.1682 286.0652,85.2442" id="Fill-305" fill="#0043BA"></path>
-                            <path d="M77.3096,172.2108 C76.2336,172.2108 75.3606,171.3388 75.3606,170.2628 C75.3606,169.1868 76.2336,168.3148 77.3096,168.3148 C78.3846,168.3148 79.2576,169.1868 79.2576,170.2628 C79.2576,171.3388 78.3846,172.2108 77.3096,172.2108 Z" id="Fill-307" fill="#0043BA"></path>
-                            <path d="M56.782,74.2276 C56.782,75.3036 55.91,76.1756 54.834,76.1756 C53.758,76.1756 52.885,75.3036 52.885,74.2276 C52.885,73.1516 53.758,72.2796 54.834,72.2796 C55.91,72.2796 56.782,73.1516 56.782,74.2276" id="Fill-309" fill="#0043BA"></path>
-                            <path d="M56.782,45.3165 C56.782,46.3925 55.91,47.2645 54.834,47.2645 C53.758,47.2645 52.885,46.3925 52.885,45.3165 C52.885,44.2405 53.758,43.3685 54.834,43.3685 C55.91,43.3685 56.782,44.2405 56.782,45.3165" id="Fill-311" fill="#0043BA"></path>
-                            <path d="M25.782,61.5381 C25.782,62.6141 24.91,63.4861 23.834,63.4861 C22.758,63.4861 21.885,62.6141 21.885,61.5381 C21.885,60.4621 22.758,59.5901 23.834,59.5901 C24.91,59.5901 25.782,60.4621 25.782,61.5381" id="Fill-313" fill="#0043BA"></path>
-                            <path d="M96.198,78.6182 C96.198,79.6942 95.326,80.5672 94.25,80.5672 C93.174,80.5672 92.302,79.6942 92.302,78.6182 C92.302,77.5432 93.174,76.6702 94.25,76.6702 C95.326,76.6702 96.198,77.5432 96.198,78.6182" id="Fill-315" fill="#63D0D2"></path>
-                            <path d="M68.4236,33.2764 C68.4236,34.3524 67.5506,35.2244 66.4746,35.2244 C65.3996,35.2244 64.5266,34.3524 64.5266,33.2764 C64.5266,32.2004 65.3996,31.3284 66.4746,31.3284 C67.5506,31.3284 68.4236,32.2004 68.4236,33.2764" id="Fill-317" fill="#63D0D2"></path>
-                            <path d="M201.6003,2.4239 C201.6003,3.4999 200.7273,4.3719 199.6523,4.3719 C198.5763,4.3719 197.7033,3.4999 197.7033,2.4239 C197.7033,1.3479 198.5763,0.4759 199.6523,0.4759 C200.7273,0.4759 201.6003,1.3479 201.6003,2.4239" id="Fill-319" fill="#63D0D2"></path>
-                            <path d="M199.0613,84.3272 C199.0613,85.4032 198.1883,86.2752 197.1133,86.2752 C196.0373,86.2752 195.1643,85.4032 195.1643,84.3272 C195.1643,83.2512 196.0373,82.3792 197.1133,82.3792 C198.1883,82.3792 199.0613,83.2512 199.0613,84.3272" id="Fill-321" fill="#63D0D2"></path>
-                            <path d="M275.823,74.3721 C275.823,75.4481 274.951,76.3201 273.875,76.3201 C272.799,76.3201 271.927,75.4481 271.927,74.3721 C271.927,73.2961 272.799,72.4231 273.875,72.4231 C274.951,72.4231 275.823,73.2961 275.823,74.3721" id="Fill-323" fill="#63D0D2"></path>
-                            <path d="M227.9997,84.3272 C227.9997,85.4032 227.1267,86.2752 226.0507,86.2752 C224.9747,86.2752 224.1027,85.4032 224.1027,84.3272 C224.1027,83.2512 224.9747,82.3792 226.0507,82.3792 C227.1267,82.3792 227.9997,83.2512 227.9997,84.3272" id="Fill-325" fill="#00BC4C"></path>
-                            <path d="M242.3777,12.7296 C242.3777,13.8056 241.5047,14.6776 240.4287,14.6776 C239.3527,14.6776 238.4807,13.8056 238.4807,12.7296 C238.4807,11.6536 239.3527,10.7816 240.4287,10.7816 C241.5047,10.7816 242.3777,11.6536 242.3777,12.7296" id="Fill-327" fill="#00BC4C"></path>
-                            <path d="M253.237,22.8702 C253.237,23.9462 252.365,24.8182 251.289,24.8182 C250.213,24.8182 249.34,23.9462 249.34,22.8702 C249.34,21.7942 250.213,20.9222 251.289,20.9222 C252.365,20.9222 253.237,21.7942 253.237,22.8702" id="Fill-329" fill="#0043BA"></path>
-                            <path d="M253.237,52.6651 C253.237,53.7411 252.365,54.6131 251.289,54.6131 C250.213,54.6131 249.34,53.7411 249.34,52.6651 C249.34,51.5891 250.213,50.7171 251.289,50.7171 C252.365,50.7171 253.237,51.5891 253.237,52.6651" id="Fill-331" fill="#0043BA"></path>
-                            <path d="M46.115,150.4005 C46.115,151.4765 45.243,152.3485 44.167,152.3485 C43.091,152.3485 42.219,151.4765 42.219,150.4005 C42.219,149.3245 43.091,148.4525 44.167,148.4525 C45.243,148.4525 46.115,149.3245 46.115,150.4005" id="Fill-333" fill="#0043BA"></path>
-                            <path d="M35.8503,109.9366 C35.8503,111.0126 34.9773,111.8846 33.9013,111.8846 C32.8263,111.8846 31.9533,111.0126 31.9533,109.9366 C31.9533,108.8606 32.8263,107.9886 33.9013,107.9886 C34.9773,107.9886 35.8503,108.8606 35.8503,109.9366" id="Fill-335" fill="#0043BA"></path>
-                            <path d="M103,216 C101.924,216 101.052,215.128 101.052,214.052 C101.052,212.976 101.924,212.103 103,212.103 C104.076,212.103 104.948,212.976 104.948,214.052 C104.948,215.128 104.076,216 103,216 Z" id="Fill-337" fill="#0043BA"></path>
-                            <path d="M120.8054,272.6465 C120.8054,273.7225 119.9334,274.5945 118.8574,274.5945 C117.7814,274.5945 116.9084,273.7225 116.9084,272.6465 C116.9084,271.5705 117.7814,270.6975 118.8574,270.6975 C119.9334,270.6975 120.8054,271.5705 120.8054,272.6465" id="Fill-339" fill="#0043BA"></path>
-                            <path d="M77.5759,273.1046 C77.5759,274.1806 76.7039,275.0526 75.6279,275.0526 C74.5519,275.0526 73.6799,274.1806 73.6799,273.1046 C73.6799,272.0286 74.5519,271.1566 75.6279,271.1566 C76.7039,271.1566 77.5759,272.0286 77.5759,273.1046" id="Fill-341" fill="#088BE8"></path>
-                            <path d="M4.5827,214.7208 C4.5827,215.7968 3.7107,216.6688 2.6347,216.6688 C1.5587,216.6688 0.6867,215.7968 0.6867,214.7208 C0.6867,213.6448 1.5587,212.7728 2.6347,212.7728 C3.7107,212.7728 4.5827,213.6448 4.5827,214.7208" id="Fill-343" fill="#63D0D2"></path>
-                            <path d="M190.448,283.0137 C190.448,284.0897 189.576,284.9617 188.5,284.9617 C187.424,284.9617 186.552,284.0897 186.552,283.0137 C186.552,281.9377 187.424,281.0647 188.5,281.0647 C189.576,281.0647 190.448,281.9377 190.448,283.0137" id="Fill-345" fill="#0043BA"></path>
-                            <path d="M182.823,313.8643 C182.823,314.9403 181.951,315.8133 180.875,315.8133 C179.799,315.8133 178.927,314.9403 178.927,313.8643 C178.927,312.7893 179.799,311.9163 180.875,311.9163 C181.951,311.9163 182.823,312.7893 182.823,313.8643" id="Fill-347" fill="#0043BA"></path>
-                            <path d="M316.4304,202.2715 C316.4304,203.3475 315.5584,204.2205 314.4824,204.2205 C313.4064,204.2205 312.5344,203.3475 312.5344,202.2715 C312.5344,201.1965 313.4064,200.3235 314.4824,200.3235 C315.5584,200.3235 316.4304,201.1965 316.4304,202.2715" id="Fill-351" fill="#088BE8"></path>
-                            <path d="M275.6052,161.4005 C275.6052,162.4765 274.7332,163.3485 273.6572,163.3485 C272.5812,163.3485 271.7092,162.4765 271.7092,161.4005 C271.7092,160.3245 272.5812,159.4525 273.6572,159.4525 C274.7332,159.4525 275.6052,160.3245 275.6052,161.4005" id="Fill-353" fill="#63D0D2"></path>
-                            <path d="M285.9714,142.5128 C285.9714,143.5888 285.0994,144.4608 284.0234,144.4608 C282.9474,144.4608 282.0754,143.5888 282.0754,142.5128 C282.0754,141.4368 282.9474,140.5648 284.0234,140.5648 C285.0994,140.5648 285.9714,141.4368 285.9714,142.5128" id="Fill-355" fill="#63D0D2"></path>
-                            <path d="M235.6716,263.1368 C235.6716,264.2128 234.7996,265.0848 233.7236,265.0848 C232.6476,265.0848 231.7756,264.2128 231.7756,263.1368 C231.7756,262.0608 232.6476,261.1888 233.7236,261.1888 C234.7996,261.1888 235.6716,262.0608 235.6716,263.1368" id="Fill-357" fill="#088BE8"></path>
-                            <path d="M245.4304,281.8467 C245.4304,282.9227 244.5584,283.7947 243.4824,283.7947 C242.4064,283.7947 241.5344,282.9227 241.5344,281.8467 C241.5344,280.7707 242.4064,279.8987 243.4824,279.8987 C244.5584,279.8987 245.4304,280.7707 245.4304,281.8467" id="Fill-359" fill="#088BE8"></path>
-                            <path d="M161.7878,272.6465 C161.7878,273.7225 160.9148,274.5945 159.8388,274.5945 C158.7628,274.5945 157.8908,273.7225 157.8908,272.6465 C157.8908,271.5705 158.7628,270.6975 159.8388,270.6975 C160.9148,270.6975 161.7878,271.5705 161.7878,272.6465" id="Fill-361" fill="#088BE8"></path>
-                            <path d="M103,123.896 C101.924,123.896 101.052,123.024 101.052,121.948 C101.052,120.872 101.924,120 103,120 C104.076,120 104.948,120.872 104.948,121.948 C104.948,123.024 104.076,123.896 103,123.896 Z" id="Fill-363" fill="#088BE8"></path>
-                            <path d="M246,208 C244.924,208 244.052,207.128 244.052,206.052 C244.052,204.976 244.924,204.104 246,204.104 C247.076,204.104 247.948,204.976 247.948,206.052 C247.948,207.128 247.076,208 246,208 Z" id="Fill-363" fill="#088BE8"></path>
-                            <path d="M64.782,150.2852 C64.782,151.3612 63.91,152.2332 62.834,152.2332 C61.758,152.2332 60.885,151.3612 60.885,150.2852 C60.885,149.2092 61.758,148.3372 62.834,148.3372 C63.91,148.3372 64.782,149.2092 64.782,150.2852" id="Fill-365" fill="#088BE8"></path>
-                            <path d="M276.2868,250.8702 C276.2868,251.9462 275.4138,252.8182 274.3388,252.8182 C273.2628,252.8182 272.3898,251.9462 272.3898,250.8702 C272.3898,249.7942 273.2628,248.9222 274.3388,248.9222 C275.4138,248.9222 276.2868,249.7942 276.2868,250.8702" id="Fill-367" fill="#0043BA"></path>
-                            <path d="M306.3845,236.127 C306.3845,237.203 305.5125,238.075 304.4365,238.075 C303.3605,238.075 302.4885,237.203 302.4885,236.127 C302.4885,235.051 303.3605,234.179 304.4365,234.179 C305.5125,234.179 306.3845,235.051 306.3845,236.127" id="Fill-369" fill="#0043BA"></path>
-                            <path d="M316.4304,181.7852 C316.4304,182.8612 315.5584,183.7332 314.4824,183.7332 C313.4064,183.7332 312.5344,182.8612 312.5344,181.7852 C312.5344,180.7092 313.4064,179.8372 314.4824,179.8372 C315.5584,179.8372 316.4304,180.7092 316.4304,181.7852" id="Fill-371" fill="#0043BA"></path>
-                            <path d="M296.07,154.3526 C296.07,155.4276 295.198,156.3006 294.122,156.3006 C293.046,156.3006 292.174,155.4276 292.174,154.3526 C292.174,153.2766 293.046,152.4036 294.122,152.4036 C295.198,152.4036 296.07,153.2766 296.07,154.3526" id="Fill-373" fill="#0043BA"></path>
-                        </g>
-                    </g>
-                </g>
-            </g>
-        </g>
-    </g>
-</svg>
-          </div>
-        </div>
-      </div>
-      <div class="col-sm-12 col-md-6 offset-lg-1 pt-2x pt-md-0x products">
-                  <div class="row">
-            <div class="col">
-              <h3>Kong Community Edition</h3>
-              <p>The blazingly fast open source microservice API gateway.</p>
-              <p class="mt-1x">
-                <a href="https://konghq.com/kong-community-edition/" class="green" alt="Learn more about Kong Community Edition">Learn more about Kong Community Edition&nbsp;<i class="fa fa-chevron-right fa-1" aria-hidden="true"></i></a>
-              </p>
             </div>
-          </div>
-                  <div class="row">
-            <div class="col">
-              <h3>Kong Enterprise Edition</h3>
-              <p>The microservice API platform for large organizations.</p>
-              <p class="mt-1x">
-                <a href="https://konghq.com/kong-enterprise-edition/" class="green" alt="Learn more about Kong Enterprise Edition">Learn more about Kong Enterprise Edition&nbsp;<i class="fa fa-chevron-right fa-1" aria-hidden="true"></i></a>
-              </p>
-            </div>
-          </div>
+          </div><!--/col-->
+                <div class="col-xs-12 col-md-4 pt-2x">
+            <div class="row">
+              <div class="col-3 text-right">
+                <img src="https://2tjosk2rxzc21medji3nfn1g-wpengine.netdna-ssl.com/wp-content/uploads/2017/08/icon-fast.svg" alt="Blazingly Fast"/>
               </div>
-    </div>
-  </div>
-</section>
-
-<section class="py-4x">
-  <div class="container">
-    <div class="row justify-content-center">
-      <div class="col col-md-8 text-center">
-        <h2>Orchestrate Common Functionality</h2>
-        <p>Kong provides a flexible abstraction layer that securely manages communication between clients and microservices via APIs.</p>
-      </div>
-    </div>
-    <div class="row justify-content-center pt-2x pt-md-4x pb-1x">
-      <div class="col-sm-12 col-md-6 pb-2x px-1x px-md-1x">
-        <h4 class="mb-2x text-center blue">The Redundant Old Way</h4>
-        <img src="https://2tjosk2rxzc21medji3nfn1g-wpengine.netdna-ssl.com/wp-content/themes/konghq/assets/img/home/legacy-architecture.svg" alt="Legacy Architecture"/>
-        <ul class="list-group">
-          <li class="list-group-item icon icon-x">Common functionality is duplicated across multiple services</li>
-          <li class="list-group-item icon icon-x">Systems tend to be monolithic and hard to maintain</li>
-          <li class="list-group-item icon icon-x">Difficult to expand without impacting other services</li>
-          <li class="list-group-item icon icon-x">Productivity is inefficient because of system constraints</li>
-        </ul>
-      </div>
-      <div class="col-sm-12 col-md-6 px-1x px-md-1x">
-        <h4 class="mb-2x text-center blue">The Kong Way</h4>
-        <img src="https://2tjosk2rxzc21medji3nfn1g-wpengine.netdna-ssl.com/wp-content/themes/konghq/assets/img/home/kong-architecture.svg" alt="Kong Architecture"/>
-        <ul class="list-group">
-          <li class="list-group-item icon icon-check">Kong orchestrates common functionality</li>
-          <li class="list-group-item icon icon-check">Build efficient distributed architectures ready to scale</li>
-          <li class="list-group-item icon icon-check">Expand functionality from one place with a simple command</li>
-          <li class="list-group-item icon icon-check">Focus on your product and let Kong do the REST</li>
-        </ul>
-      </div>
-    </div>
-    <div class="row pt-4x">
-      <div class="col text-center">
-        <h2>Centralized or Decentralized Deployment</h2>
-      </div>
-    </div>
-    <div class="row justify-content-center pt-2x pt-md-4x pb-1x">
-      <div class="col-sm-12 col-md-6 pb-2x px-1x px-md-1x">
-        <h4 class="mb-1x text-center blue">API Gateway Pattern</h4>
-        <p class="mb-2x px-2x sm text-center">Deploy Kong in a centralized pattern where APIs consume Kong services for authentication, rate limiting and more at the gateway.</p>
-        <img src="https://2tjosk2rxzc21medji3nfn1g-wpengine.netdna-ssl.com/wp-content/themes/konghq/assets/img/home/kong-centralized.svg" alt="Kong Centralized"/>
-      </div>
-      <div class="col-sm-12 col-md-6 px-1x px-md-1x">
-        <h4 class="mb-1x text-center blue">Sidecar Pattern</h4>
-        <p class="mb-2x px-2x sm text-center">Deploy Kong in a decentralized “mesh” where microservices and APIs are tightly integrated with Kong services.</p>
-        <img src="https://2tjosk2rxzc21medji3nfn1g-wpengine.netdna-ssl.com/wp-content/themes/konghq/assets/img/home/kong-sidecar.svg" alt="Kong Sidecar" />
-      </div>
-    </div>
-  </div>
-</section>
-
-<section class="bg-gray kong-platforms pt-4x">
-  <div class="container pb-2x">
-    <div class="row justify-content-center">
-      <div class="col col-md-10 text-center">
-        <h2>Platform Agnostic: On-Prem, Cloud or Hybrid</h2>
-        <p>Containers to clouds. Single instance to global clusters. Kong supports your setup.</p>
-      </div>
-    </div>
-  </div>
-  <div class="container justify-content-center" >
-    <div class="d-flex flex-wrap flex-row justify-content-center align-items-center text-center logos">
-      <div class="col-6 col-md-4 my-1x">
-        <a href="https://getkong.org/install/docker/" target="_blank">
-          <div class="card">
-            <img src="https://2tjosk2rxzc21medji3nfn1g-wpengine.netdna-ssl.com/wp-content/themes/konghq/assets/img/home/platforms/docker.svg" alt="Docker" />
-          </div>
-        </a>
-      </div>
-      <div class="col-6 col-md-4 my-1x">
-        <a href="https://getkong.org/install/kubernetes/" target="_blank">
-          <div class="card">
-              <img src="https://2tjosk2rxzc21medji3nfn1g-wpengine.netdna-ssl.com/wp-content/themes/konghq/assets/img/home/platforms/kubernetes.svg" alt="Kubernetes" />
-          </div>
-        </a>
-      </div>
-      <div class="col-6 col-md-4 my-1x">
-        <a href="https://getkong.org/install/dcos/" target="_blank">
-          <div class="card">
-              <img src="https://2tjosk2rxzc21medji3nfn1g-wpengine.netdna-ssl.com/wp-content/themes/konghq/assets/img/home/platforms/dcos.svg" alt="DCOS" />
-          </div>
-        </a>
-      </div>
-      <div class="col-6 col-md-4 my-1x">
-        <a href="https://getkong.org/install/aws-marketplace/" target="_blank">
-          <div class="card">
-              <img src="https://2tjosk2rxzc21medji3nfn1g-wpengine.netdna-ssl.com/wp-content/themes/konghq/assets/img/home/platforms/aws.svg" alt="AWS" />
-          </div>
-        </a>
-      </div>
-      <div class="col-6 col-md-4 my-1x">
-        <a href="https://getkong.org/install/google-cloud/" target="_blank">
-          <div class="card">
-              <img src="https://2tjosk2rxzc21medji3nfn1g-wpengine.netdna-ssl.com/wp-content/themes/konghq/assets/img/home/platforms/google.svg" alt="Google" />
-          </div>
-        </a>
-      </div>
-      <div class="col-6 col-md-4 my-1x">
-        <a href="https://getkong.org/install/centos/" target="_blank">
-          <div class="card">
-              <img src="https://2tjosk2rxzc21medji3nfn1g-wpengine.netdna-ssl.com/wp-content/themes/konghq/assets/img/home/platforms/centos.svg" alt="Centos" />
-          </div>
-        </a>
-      </div>
-      <div class="col-6 col-md-4 my-1x">
-        <a href="https://getkong.org/install/redhat/" target="_blank">
-          <div class="card">
-              <img src="https://2tjosk2rxzc21medji3nfn1g-wpengine.netdna-ssl.com/wp-content/themes/konghq/assets/img/home/platforms/redhat.svg" alt="Redhat" />
-          </div>
-        </a>
-      </div>
-      <div class="col-6 col-md-4 my-1x">
-        <a href="https://getkong.org/install/debian/" target="_blank">
-          <div class="card">
-              <img src="https://2tjosk2rxzc21medji3nfn1g-wpengine.netdna-ssl.com/wp-content/themes/konghq/assets/img/home/platforms/debian.svg" alt="Debian" />
-          </div>
-        </a>
-      </div>
-      <div class="col-6 col-md-4 my-1x">
-        <a href="https://getkong.org/install/ubuntu/" target="_blank">
-          <div class="card">
-              <img src="https://2tjosk2rxzc21medji3nfn1g-wpengine.netdna-ssl.com/wp-content/themes/konghq/assets/img/home/platforms/ubuntu.svg" alt="Ubuntu" />
-          </div>
-        </a>
-      </div>
-    </div>
-  </div>
-  <div class="container mt-2x">
-    <div class="row">
-      <div class="col-12 text-center">
-        <a href="/install" class="green my-2x px-4x" alt="See all platforms">SEE ALL PLATFORMS</a>
-      </div>
-    </div>
-  </div>
-
-</section>
-
-
-  </main><!--/.main-->
-
-  <section class="newsletter-container">
-
-  <div class="container d-flex flex-wrap flex-md-nowrap align-items-center pb-1x">
-
-    <div class="newsletter-icon col-auto mx-auto mx-md-0 mb-1x mb-md-0x">
-      <i class="fa fa-envelope" aria-hidden="true"></i>
-    </div><!--/ envelope icon -->
-
-    <div class="newsletter-headline col-12 col-md-6 text-center text-md-left">
-      <p class="mb-md-0x fw-500 lrg">Keep up-to-date with Kong <span class="hidden-sm-down">product releases and</span> news.</p>
-    </div> <!--/ heading -->
-
-    <div class="col-12 col-md-6 newsletter-form">
-      <iframe id="pardot-form-frame" src="https://go.pardot.com/l/392112/2017-08-16/b2qn8v" width="100%" height="60" type="text/html" frameborder="0" allowTransparency="true" style="border: 0"></iframe>
-    </div>
-
-  </div>
-</section>
-
-  <footer class="kong-footer light px-sm-2x">
-    <div class="container">
-      <nav class="kong-footer_nav ">
-        <ul class="kong-footer_nav_list d-flex flex-wrap justify-content-between">
-          <li class="kong-footer_nav_list_link col-12 col-md-auto">
-            <h5>Products</h5>
-            <a href="/kong-community-edition">Kong Community Edition</a>
-            <a href="/kong-enterprise-edition">Kong Enterprise Edition</a>
-            <a href="/cloud">Kong Cloud</a>
-            <a href="/subscriptions">Subscriptions</a>
-          </li>
-           <li class="kong-footer_nav_list_link col-12 col-md-auto">
-            <h5>Resources</h5>
-            <a href="https://support.mashape.com" target="_blank">Enterprise Support</a>
-            <a href="https://getkong.org/docs" target="_blank">Documentation</a>
-            <a href="/partners">Partners</a>
-            <a href="/webinars">Webinars</a>
-            <a href="/ebooks">Ebooks</a>
-            <a href="/meetups">Meetups</a>
-          </li>
-          <li class="kong-footer_nav_list_link col-12 col-md-auto">
-            <h5>Company</h5>
-            <a href="/about-kong-inc">About</a>
-            <a href="/investors">Investors</a>
-            <a href="/blog">News</a>
-            <a href="/jobs">Jobs</a>
-            <a href="/contact">Contact</a>
-          </li>
-          <li class="kong-footer_nav_list_link col-12 col-md-auto">
-            <h5>Open Source</h5>
-            <a href="http://mockbin.org/">Mockbin</a>
-            <a href="http://apiembed.com/">API Embed</a>
-            <a href="http://unirest.io/">Unirest</a>
-            <a href="http://guardianjs.com/">Guardian JS</a>
-            <a href="http://oauthbible.com/">OAuth Bible</a>
-          </li>
-          <li class="kong-footer_nav_list_link col-12 col-md-auto">
-            <h5>Legal</h5>
-            <a href="/terms">Terms of Service</a>
-            <a href="/privacy">Privacy</a>
-          </li>
-        </ul>
-      </nav>
-
-      <div class="kong-footer_bottom">
-        <ul class="d-flex flex-row align-items-center justify-content-between flex-wrap text-center">
-          <li class="col-12 col-md-5 pl-md-0x text-md-left">
-            <span class="pr-1x pr-lg-2x">&copy; Kong Inc. 2018</span><br class="hidden-md-up">
-            <a class="heading-5" href="/terms">Terms</a>
-            <span class="bullet"> &#8226; </span>
-            <a class="heading-5" href="/privacy">Privacy</a>
-          </li>
-          <li class="col text-center pt-1x pt-md-0x kong-secret"><svg xmlns="http://www.w3.org/2000/svg" width="36px" height="32px" viewBox="0 0 36 32" version="1.1">
-  <g fill="#004b80" fill-rule="evenodd" stroke="none" stroke-width="1">
-    <path id="kogo-foot" d="M11.5197255 26.1503163l-.8635306 1.0892615 1.9496674 3.0352708-.2028406 1.4047695h8.2698045l.5715827-1.4047694-3.3235398-4.1245323"/>
-    <path id="kogo-arm" d="M16.0419367 7.6788574l-2.9904407 5.217346L27.6417615 30.102853l-.416374 1.5768942h6.6917954l1.213155-5.5967952L19.516473 7.6736904"/>
-    <path id="kogo-head" d="M22.240985.323L18.02702 3.7548358l-1.420208 2.6119024h3.5270284l6.0583236 7.181763 3.6022026-2.9461408v-1.87238l-1.2526864-1.7503105.9247716-.9581496"/>
-    <path id="kogo-body" d="M7.166948 18.2954268H5.1955705l-5.195441 6.5756128v6.8087722h5.573904l.9827724-1.276564 4.3017758-5.5493238h6.2183927l1.9146726-2.9222434-6.7436395-7.977153"/>
-  </g>
-</svg>
-</li>
-          <li class="col-12 col-md-5 pr-md-0x pt-1x pt-md-0x text-md-right social">
-            <a href="https://www.facebook.com/konghq/" target="_blank">
-              <i class="social-icon fa fa-facebook-official" aria-hidden="true" aria-label="Facebook"></i>
-            </a>
-            <a href="https://twitter.com/thekonginc" target="_blank">
-              <i class="social-icon fa fa-twitter" aria-hidden="true" aria-label="Twitter"></i>
-            </a>
-            <a href="https://www.meetup.com/topics/kong/all/" target="_blank">
-              <i class="social-icon fa fa-meetup" aria-hidden="true" aria-label="Meetup"></i>
-            </a>
-            <a href="https://linkedin.com/company/278819" target="_blank">
-              <i class="social-icon fa fa-linkedin" aria-hidden="true" aria-label="LinkedIn"></i>
-            </a>
-            <a href="https://github.com/kong/kong" target="_blank" class="btn-gh">
-              <i class="fa fa-github" aria-hidden="true" aria-label="GitHub"></i> Star
-            </a>
-          </li>
-        </ul>
-      </div>
-    </div>
-  </footer><!--/kong-footer-->
-
-  <script type='text/javascript' src='https://2tjosk2rxzc21medji3nfn1g-wpengine.netdna-ssl.com/wp-content/themes/konghq/assets/js/site.min.js?ver=7a5b70669d68abd500ba490bac35d110'></script>
-<script type='text/javascript' src='https://2tjosk2rxzc21medji3nfn1g-wpengine.netdna-ssl.com/wp-content/themes/konghq/assets/js/vendor/bootstrap.min.js'></script>
-<script type='text/javascript' src='https://2tjosk2rxzc21medji3nfn1g-wpengine.netdna-ssl.com/wp-content/themes/konghq/assets/js/vendor/highlight.min.js'></script>
-<script type='text/javascript' src='https://2tjosk2rxzc21medji3nfn1g-wpengine.netdna-ssl.com/wp-includes/js/wp-embed.min.js?ver=4.9.8'></script>
-
-</body>
+              <div class="col-9">
+                <h4>Blazingly Fast</h4>
+                <p class="sm">Kong accelerates applications, achieving sub-millisecond latency for virtually all requests.</p>
+              </div>
+            </div>
+          </div><!--/col-->
+                <div class="col-xs-12 col-md-4 pt-2x">
+            <div class="row">
+              <div class="col-3 text-right">
+                <img src="https://2tjosk2rxzc21medji3nfn1g-wpengine.netdna-ssl.com/wp-content/uploads/2017/08/icon-open-source.svg" alt="Open Source"/>
+              </div>
+              <div class="col-9">
+                <h4>Open Source</h4>
+                <p class="sm">Open and developer-friendly, tens of thousands have embraced the Kong microservice API gateway.</p>
+              </div>
+            </div>
+          </div><!--/col-->
+                <div class="col-xs-12 col-md-4 pt-2x">
+            <div class="row">
+              <div class="col-3 text-right">
+                <img src="https://2tjosk2rxzc21medji3nfn1g-wpengine.netdna-ssl.com/wp-content/uploads/2017/08/icn-platform-agnostic.svg" alt="Platform Agnostic"/>
+              </div>
+              <div class="col-9">
+                <h4>Platform Agnostic</h4>
+                <p class="sm">Containers to clouds. Single instance to global clusters. Kong supports your setup.</p>
+              </div>
+            </div>
+          </div><!--/col-->
+                <div class="col-xs-12 col-md-4 pt-2x">
+            <div class="row">
+              <div class="col-3 text-right">
+                <img src="https://2tjosk2rxzc21medji3nfn1g-wpengine.netdna-ssl.com/wp-content/uploads/2017/08/icon-cloud-native.svg" alt="Cloud Native"/>
+              </div>
+              <div class="col-9">
+                <h4>Cloud Native</h4>
+                <p class="sm">Achieve flexibility at scale, with microservices, containers, and orchestration.</p>
+              </div>
+            </div>
+          </div><!--/col-->
+                <div class="col-xs-12 col-md-4 pt-2x">
+            <div class="row">
+              <div class="col-3 text-right">
+                <img src="https://2tjosk2rxzc21medji3nfn1g-wpengine.netdna-ssl.com/wp-content/uploads/2017/08/icon-restful.svg" alt="RESTful Interface"/>
+              </div>
+              <div class="col-9">
+                <h4>RESTful Interface</h4>
+                <p class="sm">Built on top of NGINX, Kong operates through a simple and easy-to-use RESTful API.</p>
+              </div>
+            </div>
+          </div><!--/col-->
+              </div><!--/row-->
+      </div><!--/container-->
+    </section>
+    </main><!--/.main-->
+    <script type='text/javascript' src='https://2tjosk2rxzc21medji3nfn1g-wpengine.netdna-ssl.com/wp-content/themes/konghq/assets/js/site.min.js?ver=7a5b70669d68abd500ba490bac35d110'></script>
+    <script type='text/javascript' src='https://2tjosk2rxzc21medji3nfn1g-wpengine.netdna-ssl.com/wp-content/themes/konghq/assets/js/vendor/bootstrap.min.js'></script>
+    <script type='text/javascript' src='https://2tjosk2rxzc21medji3nfn1g-wpengine.netdna-ssl.com/wp-content/themes/konghq/assets/js/vendor/highlight.min.js'></script>
+    <script type='text/javascript' src='https://2tjosk2rxzc21medji3nfn1g-wpengine.netdna-ssl.com/wp-includes/js/wp-embed.min.js?ver=4.9.8'></script>
+  </body>
 </html>
