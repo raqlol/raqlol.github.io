@@ -317,33 +317,26 @@
         <div class="row mt-md-4x">
                 <div class="col-xs-12 col-md-4 pt-2x">
             <div class="row">
-              <div class="col-3 text-right">
-                <img src="https://2tjosk2rxzc21medji3nfn1g-wpengine.netdna-ssl.com/wp-content/uploads/2017/08/icon-extensible.svg" alt="Radically Extensible"/>
-              </div>
               <div class="col-9">
-                <h4>400</h4>
-                <p class="sm">Ready-to-deploy plugins add powerful functionality to your APIs and applications.</p>
+                <h4>+<span id="metric-one" data-number="400000"></span>K</h4>
+                <p class="sm">Running Instances</p>
               </div>
             </div>
           </div><!--/col-->
                 <div class="col-xs-12 col-md-4 pt-2x">
             <div class="row">
-              <div class="col-3 text-right">
-                <img src="https://2tjosk2rxzc21medji3nfn1g-wpengine.netdna-ssl.com/wp-content/uploads/2017/08/icon-fast.svg" alt="Blazingly Fast"/>
-              </div>
+
               <div class="col-9">
-                <h4>17</h4>
-                <p class="sm">Kong accelerates applications, achieving sub-millisecond latency for virtually all requests.</p>
+                <h4>+<span id="metric-two" data-number="17000">17</span>K</h4>
+                <p class="sm">Github Stars</p>
               </div>
             </div>
           </div><!--/col-->
                 <div class="col-xs-12 col-md-4 pt-2x">
             <div class="row">
-              <div class="col-3 text-right">
-                <img src="https://2tjosk2rxzc21medji3nfn1g-wpengine.netdna-ssl.com/wp-content/uploads/2017/08/icon-open-source.svg" alt="Open Source"/>
-              </div>
+
               <div class="col-9">
-                <h4>4.6</h4>
+                <h4><span id="metric-three" data-number="3000000">3</span>M</h4>
                 <p class="sm">Open and developer-friendly, tens of thousands have embraced the Kong microservice API gateway.</p>
               </div>
             </div>
@@ -353,6 +346,12 @@
       </div><!--/container-->
     </section>
     </main><!--/.main-->
+    <script type="text/javascript">
+    window.onload = function () {
+      const metricOne = document.getElementById("metric-one")
+      setTimeout(function(){ counter(metricOne);}, 3000);
+    }
+    </script>
     <script type='text/javascript' src='https://2tjosk2rxzc21medji3nfn1g-wpengine.netdna-ssl.com/wp-content/themes/konghq/assets/js/site.min.js?ver=7a5b70669d68abd500ba490bac35d110'></script>
     <script type='text/javascript' src='https://2tjosk2rxzc21medji3nfn1g-wpengine.netdna-ssl.com/wp-content/themes/konghq/assets/js/vendor/bootstrap.min.js'></script>
     <script type='text/javascript' src='https://2tjosk2rxzc21medji3nfn1g-wpengine.netdna-ssl.com/wp-content/themes/konghq/assets/js/vendor/highlight.min.js'></script>
