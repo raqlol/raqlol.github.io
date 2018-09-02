@@ -93,176 +93,92 @@
         </nav>
       </div>
     </header>
-    <header class="navbar-inverse navbar-toggleable-lg flex-row align-items-center">
-      <div class="container d-flex">
-        <a href="/" class="navbar-brand col col-xl-auto">
-          <img src="https://2tjosk2rxzc21medji3nfn1g-wpengine.netdna-ssl.com/wp-content/themes/konghq/assets/img/Kogo.svg" alt="Kong Logo">
-        </a>
-        <nav id="ctaNav" class="col-auto justify-content-md-end kong-navbar_nav hidden-sm-down">
-          <ul class="navbar-nav flex-row justify-content-end">
-              <li class="kong-navbar_nav_link kong-navbar_nav_link--cta"><a class="nav-link" href="/request-demo">link 1</a></li>
-              <li class="kong-navbar_nav_link kong-navbar_nav_link--cta"><a class="nav-link " href="/request-demo">link 2</a></li>
-              <li class="kong-navbar_nav_link kong-navbar_nav_link--cta"><a class="nav-link" href="/request-demo">link 3</a></li>
-              <li class="kong-navbar_nav_link kong-navbar_nav_link--cta"><a class="nav-link" href="/request-demo">link 4</a></li>
-              <li class="kong-navbar_nav_link kong-navbar_nav_link--cta"><a class="nav-link" href="/request-demo">link 5</a></li>
-              <li class="kong-navbar_nav_link kong-navbar_nav_link--cta"><a class="nav-link" href="/request-demo">link 6</a></li>
-              <li class="kong-navbar_nav_link kong-navbar_nav_link--cta"><a class="nav-link" href="/request-demo">link 7</a></li>
-              <li class="kong-navbar_nav_link kong-navbar_nav_link--cta"><a class="nav-link btn btn-outline-secondary" href="/request-demo">Request Demo</a></li>
-            <li class="kong-navbar_nav_link kong-navbar_nav_link--cta"><a class="nav-link btn btn-primary" href="/installations">Installation</a></li>
-          </ul>
-        </nav>
-      </div>
-    </header>
+    <nav id="ctaNav" class="navbar flex-row align-items-center justify-content-center py-0 kong-subnav">
+      <ul class="navbar-nav flex-row justify-content-end">
+          <li class="kong-navbar_nav_link kong-navbar_nav_link--cta"><a class="nav-link" href="/request-demo">About</a></li>
+          <li class="kong-navbar_nav_link kong-navbar_nav_link--cta"><a class="nav-link " href="/request-demo">Investors</a></li>
+          <li class="kong-navbar_nav_link kong-navbar_nav_link--cta active"><a class="nav-link" href="/request-demo">Jobs</a></li>
+          <li class="kong-navbar_nav_link kong-navbar_nav_link--cta"><a class="nav-link" href="/request-demo">Contact</a></li>
+      </ul>
+    </nav>
     <main class="kong-main">
+      <!-- rename hero -->
+      <!-- check for dup ids -->
       <section class="kong-masthead">
         <div class="container">
           <div class="row justify-content-center">
             <div class="col-sm-12 col-md-10 text-center">
-              <h1 class="hero"><span>Next-Generation API Platform</span><br>for Modern Architectures</h1>
+              <h1 class="hero">Are you ready to join the API revolution?</h1>
+              <a href="/installations" class="btn btn-lg btn-success" alt="Install Kong">See Open Positions</a>
+              <p>Not ready to apply? <a href="#" class="green">Keep in touch</a></p>
             </div>
           </div>
-        </div><!--/container-->
+        </div>
       </section>
-    <div class="announcements dark justify-content-center">
-      <div class="container col-md-8">
-        <div class="row justify-content-center">
-      <div id="announcement_carousel" class="carousel slide" data-ride="carousel">
-        <!-- Wrapper for slides -->
-        <div class="carousel-inner">
-          <div class="carousel-item active">
-            <div class="col-md-3 text-right hidden-sm-down"><img src="https://2tjosk2rxzc21medji3nfn1g-wpengine.netdna-ssl.com/wp-content/uploads/2017/08/icn-announcement-EE.svg"/></div>
-            <div class="col px-2x px-md-1x">
-              <h5>New</h5>
-              <p>Kong Enterprise Edition <span> Featuring RBAC, Workspaces, Prometheus Plugin, and More!</span> <a href="https://konghq.com/blog/announcing-kong-enterprise-0-33/" class="green">Learn More</a></p>
+      <!-- carousel -->
+      <div class="announcements dark justify-content-center">
+        <div class="container col-md-8">
+          <div class="row justify-content-center">
+        <div id="announcement_carousel" class="carousel slide" data-ride="carousel">
+          <!-- Wrapper for slides -->
+          <div class="carousel-inner">
+            <div class="carousel-item active">
+              <div class="col-md-3 text-right hidden-sm-down"><img src="https://2tjosk2rxzc21medji3nfn1g-wpengine.netdna-ssl.com/wp-content/uploads/2017/08/icn-announcement-EE.svg"/></div>
+              <div class="col px-2x px-md-1x">
+                <h5>New</h5>
+                <p>Kong Enterprise Edition <span> Featuring RBAC, Workspaces, Prometheus Plugin, and More!</span> <a href="https://konghq.com/blog/announcing-kong-enterprise-0-33/" class="green">Learn More</a></p>
+              </div>
+            </div><!-- /item -->
+            <div class="carousel-item ">
+              <div class="col-md-3 text-right hidden-sm-down"><img src="https://2tjosk2rxzc21medji3nfn1g-wpengine.netdna-ssl.com/wp-content/uploads/2017/08/icn-download.svg"/></div>
+              <div class="col px-2x px-md-1x">
+                <h5>Install Kong</h5>
+                <p>Kong Community Edition <span></span> <a href="https://konghq.com/installations/" class="green">Learn More</a></p>
+              </div>
+            </div><!-- /item -->
+            <div class="carousel-item ">
+              <div class="col-md-3 text-right hidden-sm-down"><img src="https://2tjosk2rxzc21medji3nfn1g-wpengine.netdna-ssl.com/wp-content/uploads/2017/08/icn-webinars.svg"/></div>
+              <div class="col px-2x px-md-1x">
+                <h5>Webinar</h5>
+                <p>Demystifying Service Mesh <span>New Pattern or New Technology?</span> <a href="https://konghq.com/webinars/demystifying-service-mesh-new-pattern-or-new-technology/" class="green">Learn More</a></p>
+              </div>
+            </div><!-- /item -->
+            <div class="carousel-item ">
+              <div class="col-md-3 text-right hidden-sm-down"><img src="https://2tjosk2rxzc21medji3nfn1g-wpengine.netdna-ssl.com/wp-content/uploads/2017/12/icn-kong-nation.svg"/></div>
+              <div class="col px-2x px-md-1x">
+                <h5>Discussion Forum</h5>
+                <p>Join Kong Nation <span></span> <a href="https://konghq.com/blog/join-kong-nation/" class="green">Learn More</a></p>
+              </div>
+            </div><!-- /item -->
             </div>
-          </div><!-- /item -->
-          <div class="carousel-item ">
-            <div class="col-md-3 text-right hidden-sm-down"><img src="https://2tjosk2rxzc21medji3nfn1g-wpengine.netdna-ssl.com/wp-content/uploads/2017/08/icn-download.svg"/></div>
-            <div class="col px-2x px-md-1x">
-              <h5>Install Kong</h5>
-              <p>Kong Community Edition <span></span> <a href="https://konghq.com/installations/" class="green">Learn More</a></p>
-            </div>
-          </div><!-- /item -->
-          <div class="carousel-item ">
-            <div class="col-md-3 text-right hidden-sm-down"><img src="https://2tjosk2rxzc21medji3nfn1g-wpengine.netdna-ssl.com/wp-content/uploads/2017/08/icn-webinars.svg"/></div>
-            <div class="col px-2x px-md-1x">
-              <h5>Webinar</h5>
-              <p>Demystifying Service Mesh <span>New Pattern or New Technology?</span> <a href="https://konghq.com/webinars/demystifying-service-mesh-new-pattern-or-new-technology/" class="green">Learn More</a></p>
-            </div>
-          </div><!-- /item -->
-          <div class="carousel-item ">
-            <div class="col-md-3 text-right hidden-sm-down"><img src="https://2tjosk2rxzc21medji3nfn1g-wpengine.netdna-ssl.com/wp-content/uploads/2017/12/icn-kong-nation.svg"/></div>
-            <div class="col px-2x px-md-1x">
-              <h5>Discussion Forum</h5>
-              <p>Join Kong Nation <span></span> <a href="https://konghq.com/blog/join-kong-nation/" class="green">Learn More</a></p>
-            </div>
-          </div><!-- /item -->
           </div>
-        </div>
-        </div><!--/slider row-->
+          </div><!--/slider row-->
+          </div><!--/container-->
+      </div><!--/anouncements -->
+      <section class="kong-unleashed pt-0x pb-4x pb-md-4x">
+        <div class="container unleashed-intro py-4x">
+          <div class="row justify-content-md-center text-center">
+            <div class="col col-md-8">
+              <h1 class="hero mb-0x"><a href="/kong-enterprise-edition/" class="no-decoration">Unleash Kong</a></h1>
+              <h3>Extend microservices with configurable Kong plugins.</h3>
+            </div><!--/col-->
+          </div><!--/row-->
         </div><!--/container-->
-    </div><!--/anouncements -->
-    <section class="kong-unleashed pt-0x pb-4x pb-md-4x">
-      <div class="container unleashed-intro py-4x">
-        <div class="row justify-content-md-center text-center">
-          <div class="col col-md-8">
-            <h1 class="hero mb-0x"><a href="/kong-enterprise-edition/" class="no-decoration">Unleash Kong</a></h1>
-            <h3>Extend microservices with configurable Kong plugins.</h3>
-          </div><!--/col-->
-        </div><!--/row-->
-      </div><!--/container-->
-      <div class="plugins-banner pb-2x pb-md-4x">
-        <div class="row no-gutters justify-content-md-center align-items-center text-center">
-          <div class="col">
-            <div class="scrolling-icons plugins-left"></div><!--/left icons-->
-            <div class="kongIcon py-2x">
-              <a href="/plugins" alt="Plugins Hub">
-                <img src="https://2tjosk2rxzc21medji3nfn1g-wpengine.netdna-ssl.com/wp-content/themes/konghq/assets/img/home/kong-glow.svg" alt="Kong" />
-              </a>
-            </div><!--/kong icon -->
-            <div class="scrolling-icons plugins-right"></div><!--/right icons-->
-          </div>
-        </div>
-        <div class="row justify-content-center">
-          <div class="col-1 text-center">
-            <svg width="11" height="103" viewBox="0 0 11 103" version="1.1">
-              <g fill="none" fill-rule="evenodd" stroke="none" stroke-width="1">
-                <circle cx="5.7110236" cy="5" r="5" fill="#1747A9"/>
-                <circle cx="5.7110236" cy="98" r="4" stroke="#1747A9" stroke-width="2" class="dot outline"/>
-                <path stroke="#1747A9" stroke-width="2" d="M5.7110236 9v84.3629835" stroke-linecap="square" id="line" />
-                <circle r="5" fill="#1747A9" class="dot-solid">
-                  <animateMotion dur="2s" repeatCount="indefinite" calcMode="linear">
-                    <mpath xlink:href="#line"></mpath>
-                  </animateMotion>
-                </circle>
-              </g>
-            </svg>
-          </div>
-        </div>
-      </div><!--/plugins-->
+        <div class="row justify-content-center pt-2x pt-md-4x pb-1x">
+          <div class="col-sm-12 col-md-6 pb-2x px-1x px-md-1x">
+            <h4 class="mb-1x text-center blue">API Gateway Pattern</h4>
+            <p class="mb-2x px-2x sm text-center">Our teams work on the bleeding edge of API innovation to provide our users with a central nervous system for data and services.</p>
+            <p class="mb-2x px-2x sm text-center">We believe in the power of Open Source and everything it stands for. That’s why developers around the world enthusiastically contribute on top of our open-source platform.</p>
 
-      <div class="container col-lg-8 mb-4x">
-        <div class="row justify-content-center mb-2x">
-                <div class="col-xs-12 col-sm-3 py-2x py-md-0x text-center">
-            <img class="mb-1x" src="https://2tjosk2rxzc21medji3nfn1g-wpengine.netdna-ssl.com/wp-content/uploads/2017/08/icn-iot.svg" alt="IoT" />
-            <p class="lrg">IoT</p>
-            <p>Powering connectivity to IoT, mobile, and other devices.</p>
-          </div><!--/col-->
-                <div class="col-xs-12 col-sm-3 py-2x py-md-0x text-center">
-            <img class="mb-1x" src="https://2tjosk2rxzc21medji3nfn1g-wpengine.netdna-ssl.com/wp-content/uploads/2017/08/icn-microservices.svg" alt="Microservice APIs" />
-            <p class="lrg">Microservice APIs</p>
-            <p>Connect and orches­trate micro­services through APIs.</p>
-          </div><!--/col-->
-                <div class="col-xs-12 col-sm-3 py-2x py-md-0x text-center">
-            <img class="mb-1x" src="https://2tjosk2rxzc21medji3nfn1g-wpengine.netdna-ssl.com/wp-content/uploads/2017/08/icn-developers.svg" alt="Developers" />
-            <p class="lrg">Developers</p>
-            <p>Securely publish APIs to thousands of developers.</p>
-          </div><!--/col-->
-              </div><!--/row-->
-      </div><!--/container-->
+          </div>
+          <div class="col-sm-12 col-md-6 px-1x px-md-1x">
+            <h4 class="mb-1x text-center blue">Sidecar Pattern</h4>
+            <p class="mb-2x px-2x sm text-center">We put design at the heart of everything we do, and we’re relentlessly focused on creating beautiful experiences for our customers. That’s why technology companies, major banks, e-commerce innovators, and government agencies put Kong in front of their most important web applications.</p>
+          </div>
+        </div>
 
       <div class="container">
-        <div class="row justify-content-center no-gutters">
-          <div class="col col-md-6 text-center">
-            <p class="sm heading-divide text-uppercase">Used at scale by</p>
-          </div>
-        </div>
-        <div class="row justify-content-center no-gutters">
-          <div class="col-12 col-md-8 d-flex flex-wrap flex-row justify-content-center align-items-center text-center logos">
-            <div class="col-6 col-md-3 py-2 pb-1">
-              <img src="https://2tjosk2rxzc21medji3nfn1g-wpengine.netdna-ssl.com/wp-content/themes/konghq/assets/img/customers/logo-nokia.svg" alt="nokia" />
-            </div>
-            <div class="col-6 col-md-3 py-2 pb-1">
-              <img src="https://2tjosk2rxzc21medji3nfn1g-wpengine.netdna-ssl.com/wp-content/themes/konghq/assets/img/customers/logo-ibm.svg" alt="ibm" />
-            </div>
-            <div class="col-6 col-md-3 py-2 pb-1">
-              <img src="https://2tjosk2rxzc21medji3nfn1g-wpengine.netdna-ssl.com/wp-content/themes/konghq/assets/img/customers/logo-intel.svg" alt="intel" />
-            </div>
-            <div class="col-6 col-md-3 py-2 pb-1">
-              <img src="https://2tjosk2rxzc21medji3nfn1g-wpengine.netdna-ssl.com/wp-content/themes/konghq/assets/img/customers/logo-harvard.svg" alt="harvard" />
-            </div>
-            <div class="col-6 col-md-3 py-2 pb-1">
-              <img src="https://2tjosk2rxzc21medji3nfn1g-wpengine.netdna-ssl.com/wp-content/themes/konghq/assets/img/customers/logo-pokemon.svg" alt="pokemon" />
-            </div>
-            <div class="col-6 col-md-3 py-2 pb-1">
-              <img src="https://2tjosk2rxzc21medji3nfn1g-wpengine.netdna-ssl.com/wp-content/themes/konghq/assets/img/customers/logo-invision.svg" alt="invision" />
-            </div>
-            <div class="col-6 col-md-3 py-2 pb-1">
-              <img src="https://2tjosk2rxzc21medji3nfn1g-wpengine.netdna-ssl.com/wp-content/themes/konghq/assets/img/customers/logo-nyt.svg" alt="nyt" />
-            </div>
-          </div>
-        </div>
-      </div>
 
-    </section><!--/kong unleashed-->
-    <section class="bg-gray py-4x">
-      <div class="container">
-        <div class="row justify-content-center">
-          <div class="col col-md-8 text-center">
-            <h2>The Microservice API Gateway</h2>
-            <p class="lrg">Quickly build API-centric applications. Leverage the latest microservice and container design patterns. And tie it all together with the Kong microservice API gateway.</p>
-          </div><!--/col-->
-        </div><!--/row-->
         <div class="row mt-md-4x">
                 <div class="col-xs-12 col-md-4 pt-2x">
             <div class="row">
@@ -270,7 +186,7 @@
                 <img src="https://2tjosk2rxzc21medji3nfn1g-wpengine.netdna-ssl.com/wp-content/uploads/2017/08/icon-extensible.svg" alt="Radically Extensible"/>
               </div>
               <div class="col-9">
-                <h4>Radically Extensible</h4>
+                <h4>400</h4>
                 <p class="sm">Ready-to-deploy plugins add powerful functionality to your APIs and applications.</p>
               </div>
             </div>
@@ -281,7 +197,7 @@
                 <img src="https://2tjosk2rxzc21medji3nfn1g-wpengine.netdna-ssl.com/wp-content/uploads/2017/08/icon-fast.svg" alt="Blazingly Fast"/>
               </div>
               <div class="col-9">
-                <h4>Blazingly Fast</h4>
+                <h4>17</h4>
                 <p class="sm">Kong accelerates applications, achieving sub-millisecond latency for virtually all requests.</p>
               </div>
             </div>
@@ -292,45 +208,13 @@
                 <img src="https://2tjosk2rxzc21medji3nfn1g-wpengine.netdna-ssl.com/wp-content/uploads/2017/08/icon-open-source.svg" alt="Open Source"/>
               </div>
               <div class="col-9">
-                <h4>Open Source</h4>
+                <h4>4.6</h4>
                 <p class="sm">Open and developer-friendly, tens of thousands have embraced the Kong microservice API gateway.</p>
               </div>
             </div>
           </div><!--/col-->
-                <div class="col-xs-12 col-md-4 pt-2x">
-            <div class="row">
-              <div class="col-3 text-right">
-                <img src="https://2tjosk2rxzc21medji3nfn1g-wpengine.netdna-ssl.com/wp-content/uploads/2017/08/icn-platform-agnostic.svg" alt="Platform Agnostic"/>
-              </div>
-              <div class="col-9">
-                <h4>Platform Agnostic</h4>
-                <p class="sm">Containers to clouds. Single instance to global clusters. Kong supports your setup.</p>
-              </div>
-            </div>
-          </div><!--/col-->
-                <div class="col-xs-12 col-md-4 pt-2x">
-            <div class="row">
-              <div class="col-3 text-right">
-                <img src="https://2tjosk2rxzc21medji3nfn1g-wpengine.netdna-ssl.com/wp-content/uploads/2017/08/icon-cloud-native.svg" alt="Cloud Native"/>
-              </div>
-              <div class="col-9">
-                <h4>Cloud Native</h4>
-                <p class="sm">Achieve flexibility at scale, with microservices, containers, and orchestration.</p>
-              </div>
-            </div>
-          </div><!--/col-->
-                <div class="col-xs-12 col-md-4 pt-2x">
-            <div class="row">
-              <div class="col-3 text-right">
-                <img src="https://2tjosk2rxzc21medji3nfn1g-wpengine.netdna-ssl.com/wp-content/uploads/2017/08/icon-restful.svg" alt="RESTful Interface"/>
-              </div>
-              <div class="col-9">
-                <h4>RESTful Interface</h4>
-                <p class="sm">Built on top of NGINX, Kong operates through a simple and easy-to-use RESTful API.</p>
-              </div>
-            </div>
-          </div><!--/col-->
-              </div><!--/row-->
+
+        </div><!--/row-->
       </div><!--/container-->
     </section>
     </main><!--/.main-->
