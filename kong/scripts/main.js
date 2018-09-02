@@ -3,7 +3,7 @@ function counter(element) {
   let endNum = parseInt(element.getAttribute("data-number"));
   let counter = element;
   let increment = 1;
-  console.log(startNum)
+  console.log(displayNum)
   console.log(endNum)
   while (displayNum < endNum) {
     element.innerHTML = displayNum;
