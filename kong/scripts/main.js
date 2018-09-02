@@ -11,30 +11,30 @@ function counter(element) {
       increment = 1;
       displayNum += increment
     }
-    else if(displayNum > 99) {
+    else if(displayNum < 99) {
       increment = 10;
       displayNum += increment
     }
-    else if(displayNum > 999) {
+    else if(displayNum < 999) {
       increment = 100;
       displayNum += increment
       let interval = 500;
     }
-    else if(displayNum > 9999) {
+    else if(displayNum < 9999) {
       increment = 1000;
       displayCondensed = displayNum/1000
       displayNum += increment
       let interval = 100;
     }
-    setInterval(function(){
-      if(displayNum > 9999) {
-        element.innerHTML = "+" + displayCondensed + "K";
-      }
-      else {
-        element.innerHTML = displayNum
-      }
-    }, interval);
-    console.log(displayNum)
   }
+  setInterval(function(){
+    if(displayNum > 9999) {
+      element.innerHTML = "+" + displayCondensed + "K";
+    }
+    else {
+      element.innerHTML = displayNum
+    }
+  }, interval);
+  console.log(displayNum)
   console.log("done")
 }
