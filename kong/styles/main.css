@@ -1,6 +1,6 @@
 @charset "UTF-8";
 .carousel {
-  background-image:url("https://www.noisebridge.net/images/1/1c/Header_Banner.jpg");
+  background-image:url("img/carousel.jpg");
   height: 400px;
   width:100%;
   padding:0;
@@ -20,5 +20,5 @@
 }
 @-webkit-keyframes scroll {
     from {background-position: 0 0;}
-    to {background-position: -180px 0px;}
+    to {background-position: -1810px 0px;}
 }
