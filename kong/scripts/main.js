@@ -14,16 +14,16 @@ function visibleCounter (element) {
 			increment++;
 		}
 		else if (increment <= 999999 && increment >= 1000) {
-			displayNum = "+"(increment/1000).toFixed(0) + "K"
+			displayNum = "+" + (increment/1000).toFixed(0) + "K"
 			element.innerHTML = displayNum;
 			increment++;
 		}
 		else if (increment >= 999999) {
-			displayNum = "+"(increment/1000000).toFixed(0) + "M"
+			displayNum = "+" + (increment/1000000).toFixed(0) + "M"
 			element.innerHTML = displayNum;
 			increment++;
 		}
-	}, 50)
+	}, 10)
   //setInterval(function(){  if (increment >= 100 && increment < endNum) {element.innerHTML = increment; increment++}}, 1000)
 }
 visibleCounter(metricOne)
