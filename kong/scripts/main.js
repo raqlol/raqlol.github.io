@@ -5,6 +5,7 @@ const metricThree = document.getElementById('metric-three')
 
 function visibleCounter (element) {
 	let endNum = parseInt(element.getAttribute("data-number"));
+	console.log(endNum)
   let increment = 1;
 	let displayNum;
   setInterval(function(){
@@ -13,13 +14,13 @@ function visibleCounter (element) {
 			increment++;
 			console.log(1)
 		}
-		else if (increment <= 1000 && increment >= 100) {
+		else if (increment < 1000 && increment >= 100) {
 			element.innerHTML = increment;
 			increment += 10;
 			console.log(increment)
 			console.log(2)
 		}
-		else if (increment <= 999999 && increment >= 1000 && increment <= endNum) {
+		else if (increment < 999999 && increment >= 1000 && increment <= endNum) {
 			displayNum = "+" + (increment/1000).toFixed(0) + "K"
 			element.innerHTML = displayNum;
 			increment += 1000;
