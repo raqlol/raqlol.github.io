@@ -1,4 +1,8 @@
 @charset "UTF-8";
+.hero {
+  background: #F2F4F5;
+  height: 900px;
+}
 .carousel {
   background-image:url("/kong/img/carousel.jpg");
   height: 617px;
