@@ -14,11 +14,13 @@ function visibleCounter (element) {
 			increment++;
 		}
 		else if (increment <= 999999 && increment >= 1000) {
+			increment = 100;
 			displayNum = "+" + (increment/1000).toFixed(0) + "K"
 			element.innerHTML = displayNum;
 			increment++;
 		}
 		else if (increment >= 999999) {
+			increment = 1000;
 			displayNum = "+" + (increment/1000000).toFixed(0) + "M"
 			element.innerHTML = displayNum;
 			increment++;
