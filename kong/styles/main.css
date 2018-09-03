@@ -22,3 +22,54 @@
     from {background-position: 0 0;}
     to {background-position: -1861px 0px;}
 }
+
+.roamers {
+  width:100%;
+  height:600px;
+  display: block;
+}
+#guy {
+  width:40px;
+  height:40px;
+  background:blue;
+  position:relative;
+  top:20px;
+  left:40px;
+  -webkit-animation: guymover 5s linear infinite;
+  -webkit-animation-fill-mode: forwards;
+  animation: guymover 5s linear;
+  animation-fill-mode: forwards;
+  animation-iteration-count: infinite;
+  display:block;
+}
+#gal {
+  width:40px;
+  height:40px;
+  background:pink;
+  position:relative;
+  top:40px;
+  left:50px;
+  -webkit-animation: galmover 5s linear infinite;
+  -webkit-animation-fill-mode: forwards;
+  animation: galmover 5s linear;
+  animation-fill-mode: forwards;
+  animation-iteration-count: infinite;
+  display:block;
+}
+
+@keyframes guymover {
+    from {top: 20px;left:70px;}
+    to {top: 1px;left:20px;}
+}
+@-webkit-keyframes guymover {
+    from {top: 1px;}
+    to {top: 61px;}
+}
+@keyframes galmover {
+    from {top: 20px;left:70px;}
+    to {top: 1px;20px;}
+}
+@-webkit-keyframes galmover {
+    from {top:20px;}
+    to {top: 21px ;}
+}
