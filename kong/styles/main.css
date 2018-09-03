@@ -1,7 +1,16 @@
 @charset "UTF-8";
-.metrics {text-align: center; margin-top: -50px;}
+.metrics {text-align: center; margin-top: -150px;}
 .metrics .row {justify-content: center;}
-.desk-bg {background-image: url("/kong/img/desk-flow.png");background-size: cover;background-repeat: no-repeat;height: 615px; margin-top: -200px;background-position: center;}
+.desk-bg {
+  margin-left: 0;
+  margin-right: 0;
+  background-image: url("/kong/img/desk-flow.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 1015px;
+  margin-top: -25 0px;
+  background-position: center;
+}
 .hero {
   background: #F2F4F5;
   height: 900px;

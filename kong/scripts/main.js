@@ -8,23 +8,32 @@ function visibleCounter (element) {
   let increment = 1;
 	let displayNum;
   setInterval(function(){
-
-		if (increment < 1000) {
+		if (increment < 100) {
 			element.innerHTML = increment;
 			increment++;
+			console.log(1)
 		}
-		else if (increment <= 999999 && increment >= 1000) {
+		else if (increment <= 1000 && increment >= 100) {
+			element.innerHTML = increment;
+			increment += 10;
+			console.log(increment)
+			console.log(2)
+		}
+		else if (increment <= 999999 && increment >= 1000 && increment <= endNum) {
 			displayNum = "+" + (increment/1000).toFixed(0) + "K"
 			element.innerHTML = displayNum;
-			increment + 1000;
+			increment += 1000;
+			console.log(increment)
+			console.log(3)
 		}
-		else if (increment >= 999999) {
+		else if (increment >= 999999  && increment <= endNum) {
 			displayNum = "+" + (increment/1000000).toFixed(0) + "M"
 			element.innerHTML = displayNum;
-			increment + 1000000;
+			increment += 1000000;
+			console.log(increment)
+			console.log(4)
 		}
 	}, 10)
-  //setInterval(function(){  if (increment >= 100 && increment < endNum) {element.innerHTML = increment; increment++}}, 1000)
 }
 visibleCounter(metricOne)
 visibleCounter(metricTwo)
