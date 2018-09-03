@@ -1,5 +1,7 @@
 @charset "UTF-8";
-.metrics {text-align: center;}
+.metrics {text-align: center; margin-top: -50px;}
+.metrics .row {justify-content: center;}
+.desk-bg {background-image: url("/kong/img/desk-flow.png");background-size: cover;background-repeat: no-repeat;height: 615px; margin-top: -200px;background-position: center;}
 .hero {
   background: #F2F4F5;
   height: 900px;
@@ -17,6 +19,10 @@
   animation: scroll 50s linear;
   animation-fill-mode: forwards;
   animation-iteration-count: infinite;
+}
+.metrics .col-9(even){
+  border-left: #979797 1px solid;
+  border-right: #979797 1px solid;
 }
 
 @keyframes scroll {
