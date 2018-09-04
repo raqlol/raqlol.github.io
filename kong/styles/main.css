@@ -28,7 +28,7 @@
 }
 .office span.station6{  background-image: url("/kong/img/station6.png"); height: 320px; width: 530px; position: absolute; right: 0; top: 80px;
 }
-.office span.coffee{  background-image: url("/kong/img/coffee.png");width: 80px; transition: 12s forward;
+.office span.coffee{  background-image: url("/kong/img/coffee.png");width: 80px; transition: 12s forward; left:240px;
 }
 .cta { width: 380px; text-align: left; margin-left: 0; border: 0;}
 .coffee {
@@ -38,34 +38,75 @@
   animation-fill-mode: forwards;
   animation-iteration-count: infinite;
 }
-#gal {
-  width:40px;
-  height:40px;
-  background:pink;
-  position:relative;
-  -webkit-animation: galmover 5s linear infinite;
+.dancer {
+  -webkit-animation: dancing 15s linear infinite;
   -webkit-animation-fill-mode: forwards;
-  animation: galmover 5s linear;
+  animation: dancing 15s linear;
   animation-fill-mode: forwards;
   animation-iteration-count: infinite;
-  display:block;
+}
+.ponytail {
+  -webkit-animation: dancing 15s linear infinite;
+  -webkit-animation-fill-mode: forwards;
+  animation: dancing 15s linear;
+  animation-fill-mode: forwards;
+  animation-iteration-count: infinite;
+}
+.headphone {
+  -webkit-animation: dancing 15s linear infinite;
+  -webkit-animation-fill-mode: forwards;
+  animation: dancing 15s linear;
+  animation-fill-mode: forwards;
+  animation-iteration-count: infinite;
+}
+.chairguy {
+  -webkit-animation: spin 30s ease-in infinite;
+  -webkit-animation-fill-mode: forwards;
+  animation: spin 30s ease-in;
+  animation-fill-mode: forwards;
+  animation-iteration-count: infinite;
+}
+@keyframes spin {
+    0% {transform:rotate( 0deg);}
+    20% {top: 50px; transform:rotate(50deg);}
+    50% {top: 50px; transform:rotate(180deg);}
+    70% {top: 50px; transform:rotate(260deg);}
+    100% {top:  -100px; transform:rotate(300deg);}
+}
+@-webkit-keyframes spin {
+  0% {transform:rotate( 0deg);}
+  20% {top: 50px; transform:rotate(50deg);}
+  50% {top: 50px; transform:rotate(180deg);}
+  70% {top: 50px; transform:rotate(260deg);}
+  100% {top:  -100px; transform:rotate(300deg);}
 }
 @keyframes guymover {
-    0% {top: 20px;}
-    50% {top: 50px; transform:rotate(180deg);}
-    100% {top: 10px;transform:rotate(180deg);}
+    0% {top: -100px;}
+    50% {top: 50px; transform:rotate(00deg);}
+    51% {top: 50px; transform:rotate(180deg);}
+    52% {top: 50px; transform:rotate(0deg);}
+    100% {top:  -100px;}
 }
 @-webkit-keyframes guymover {
-    from {top: 1px;}
-    to {top: 61px;}
+  0% {top: -100px;}
+  50% {top: 50px; transform:rotate(00deg);}
+  51% {top: 50px; transform:rotate(180deg);}
+  52% {top: 50px; transform:rotate(0deg);}
+  100% {top:  -100px;}
 }
-@keyframes galmover {
-    from {top: 20px;left:70px;}
-    to {top: 1px;20px;}
+@keyframes dancing {
+  0% {left: -100px;}
+  50% {left: 50px; transform:rotate(00deg);}
+  51% {left: 50px; transform:rotate(180deg);}
+  52% {left: 50px; transform:rotate(0deg);}
+  100% {left:  -100px;}
 }
-@-webkit-keyframes galmover {
-    from {top:20px;}
-    to {top: 21px ;}
+@-webkit-keyframes dancing {
+  0% {left: -100px;}
+  50% {left: 50px; transform:rotate(00deg);}
+  51% {left: 50px; transform:rotate(180deg);}
+  52% {left: 50px; transform:rotate(0deg);}
+  100% {left:  -100px;}
 }
 
 .metrics {text-align: center; margin-top: -150px;}
