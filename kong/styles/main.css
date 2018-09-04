@@ -106,15 +106,15 @@
   0% {left: -250px; transform: rotate(-90deg); top:-120px;}
   50% {left: 166px; transform:rotate(-90deg); top: -70px;}
   51% {left: 166px; transform:rotate(-270deg);}
-  99% {left:  -250px; transform:rotate(-270deg)}
-  100% {left:  -250px;transform:rotate(0deg)  top:-120px;}
+  99% {left:  -250px; transform:rotate(-270deg);top:-120px;}
+  100% {left:  -250px;transform:rotate(0deg);top:-120px;}
 }
 @-webkit-keyframes dancing {
   0% {left: -250px; transform: rotate(-90deg); top:-120px;}
   50% {left: 166px; transform:rotate(-90deg); top: -70px;}
   51% {left: 166px; transform:rotate(-270deg);}
   99% {left:  -250px; transform:rotate(-270deg)}
-  100% {left:  -250px;transform:rotate(0deg)  top:-120px;}
+  100% {left:  -250px;transform:rotate(0deg); top:-120px;}
 }
 
 .metrics {text-align: center; margin-top: -150px;}
