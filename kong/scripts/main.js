@@ -51,10 +51,10 @@ window.addEventListener("scroll", function() {
   // value of where target element is in relation to the page
   // parallax for the credit card banner
   if((scrolledHeight - 100) > metricOne.offsetTop) {
-		setTimeOut(function(){visibleCounter(metricTwo)}, 5)
-		setTimeOut(function(){visibleCounter(metricOne)}, 3)
+		setTimeout(function(){visibleCounter(metricTwo)}, 5)
+		setTimeout(function(){visibleCounter(metricOne)}, 3)
 		visibleCounter(metricThree)
   }
 });
 
-setInterval(function(){}, 1000)
+//setInterval(function(){}, 1000)
