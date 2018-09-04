@@ -114,7 +114,7 @@
 .idea {
   -webkit-animation: spark 15s linear infinite;
   -webkit-animation-fill-mode: forwards;
-  animation: spark 50s linear;
+  animation: spark 15s linear;
   animation-fill-mode: forwards;
   animation-iteration-count: infinite;
     background-color: teal;
@@ -127,18 +127,18 @@
 
 }
 @keyframes spark {
-    0% {left:100%;height: 50px;width: 50px;top: calc(50% - 40px)}
-    40% {left:0;height:10px;width:10px;top: calc(50% - 10px); transform: rotate(360deg);transform-origin: 0 0;}
-    50% {left:0;height:10px;width:10px;top: calc(50% - 10px);transform: rotate(360deg);transform-origin: -200px -200px;}
-    60% {left:0;height:10px;width:10px;top: calc(50% - 10px);transform: rotate(360deg);transform-origin: 0 0;}
-    100%{left:-100%;height: 50px;width: 50px;top: calc(50% - 40px)}
+    0% {left:100%;height: 50px;width: 50px;top: calc(50% - 15px); background-color: teal;}
+    40% {left:0;height:10px;width:10px;top: calc(50% - 12px); background-color: teal; opacity: 1;}
+    50% {left:0;height:250px;width:250px;top: calc(50% - 125px);border-radius: 200px;background-color: gold; opacity: .2;}
+    60% {left:0;height:10px;width:10px;top: calc(50% - 10px);background-color: orange; opacity: 1;}
+    100%{left:-100%;height: 50px;width: 50px;top: calc(50% - 40px);background-color: orange;}
 }
 @-webkit-keyframes spark {
-  0% {left:100%;height: 50px;width: 50px;top: calc(50% - 40px)}
-  40% {left:0;height:10px;width:10px;top: calc(50% - 10px); transform: rotate(360deg);transform-origin: 0 0;}
-  50% {left:0;height:10px;width:10px;top: calc(50% - 10px);transform: rotate(360deg);transform-origin: -200px -200px;}
-  60% {left:0;height:10px;width:10px;top: calc(50% - 10px);transform: rotate(360deg);transform-origin: 0 0;}
-  100%{left:-100%;height: 50px;width: 50px;top: calc(50% - 40px)}
+  0% {left:100%;height: 50px;width: 50px;top: calc(50% - 15px); background-color: teal;}
+  40% {left:0;height:10px;width:10px;top: calc(50% - 12px); background-color: teal; opacity: 1;}
+  50% {left:0;height:250px;width:250px;top: calc(50% - 125px);border-radius: 200px;background-color: gold; opacity: .2;}
+  60% {left:0;height:10px;width:10px;top: calc(50% - 10px);background-color: orange; opacity: 1;}
+  100%{left:-100%;height: 50px;width: 50px;top: calc(50% - 40px);background-color: orange;}
 }
 
 @keyframes scroll {
