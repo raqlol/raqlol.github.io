@@ -24,7 +24,7 @@ function visibleCounter (element) {
 
 		}
 		else if (increment < 999999 && increment >= 10000 && increment <= endNum) {
-			displayNum = "+" + (increment/1000).toFixed(0) + "K"
+			displayNum = (increment/1000).toFixed(0) + "K"
 			element.innerHTML = displayNum;
 			increment += 1000;
 
@@ -46,17 +46,15 @@ visibleCounter(metricTwo)
 visibleCounter(metricThree)
 
 window.addEventListener("scroll", function() {
-	console.log("stuff")
   // value of where you are on the page
   var scrolledHeight = window.pageYOffset;
   // value of where target element is in relation to the page
   // parallax for the credit card banner
-	console.log(metricOne)
-	console.log(scrolledHeight)
   if((scrolledHeight - 100) > metricOne.offsetTop) {
-		console.log("if")
-		visibleCounter(metricOne)
-		visibleCounter(metricTwo)
+		setTimeOut(function(){visibleCounter(metricTwo)}, 5)
+		setTimeOut(function(){visibleCounter(metricOne)}, 3)
 		visibleCounter(metricThree)
   }
 });
+
+setInterval(function(){}, 1000)
