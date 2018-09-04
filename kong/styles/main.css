@@ -10,15 +10,15 @@
 }
 .office span.station2{  background-image: url("/kong/img/station2.png"); height: 150px; width: 320px; right: 140px;
 }
-.office span.station3{  background-image: url("/kong/img/station3.png"); width: 130px;height: 70px; right:150px; top: 100px;
+.office span.station3{  background-image: url("/kong/img/station3.png"); width: 130px;height: 70px; right:150px; top: 10px;
 }
 .office span.plant{  background-image: url("/kong/img/plant.png"); height: 100px; width: 103px; right: 200px; bottom: 140px;
 }
 .office span.station4{  background-image: url("/kong/img/station4.png"); height: 285PX; width: 380px; top:100px;
 }
-.office span.headphone{  background-image: url("/kong/img/headphone.png"); height: 69px; transition: 23s ease-in-out; top: -300px; transform: rotate(300deg);
+.office span.headphone{  background-image: url("/kong/img/headphone.png"); height: 69px; top: -300px; transform: rotate(210deg); left:-430px;
 }
-.office span.chairguy{  background-image: url("/kong/img/chairguy.png");height: 100px;width: 100px; transition: 20s ease-in-out; top: -200px
+.office span.chairguy{  background-image: url("/kong/img/chairguy.png");height: 100px;width: 100px; transition: 20s ease-in-out; top: -370px
 }
 .office span.ponytail{  background-image: url("/kong/img/ponytail.png"); transition: 20s ease-in-out;
 }
