@@ -1,5 +1,5 @@
 @charset "UTF-8";
-.office span {height: 40px; width: 40px; background-size: cover;}
+.office span {height: 40px; width: 40px; background-size: cover;display: block;}
 .station1{  background-image: url("/kong/img/station1.png");
 }
 .station2{  background-image: url("/kong/img/station2.png");

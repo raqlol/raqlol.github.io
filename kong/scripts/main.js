@@ -39,3 +39,17 @@ function visibleCounter (element) {
 visibleCounter(metricOne)
 visibleCounter(metricTwo)
 visibleCounter(metricThree)
+
+window.addEventListener("scroll", function() {
+  // value of where you are on the page
+  var scrolledHeight = window.pageYOffset;
+  // value of where target element is in relation to the page
+  var limitBanner = metricOne.offsetTop + metricOne.offsetHeight;
+  var limitFeatureOne = featureOneParent.offsetTop + featureOneParent.offsetHeight;
+  // parallax for the credit card banner
+  if((scrolledHeight - 100) > metricOne.offsetTop && scrolledHeight <= limitBanner) {
+		visibleCounter(metricOne)
+		visibleCounter(metricTwo)
+		visibleCounter(metricThree)
+  }
+});
