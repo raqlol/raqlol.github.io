@@ -20,7 +20,14 @@ function visibleCounter (element) {
 			console.log(increment)
 			console.log(2)
 		}
-		else if (increment < 999999 && increment >= 1000 && increment <= endNum) {
+		else if (increment < 99999 && increment >= 1000 && increment <= endNum) {
+			displayNum = (increment/1000).toFixed(0) + "K"
+			element.innerHTML = displayNum;
+			increment += 1000;
+			console.log(increment)
+			console.log(3)
+		}
+		else if (increment < 999999 && increment >= 10000 && increment <= endNum) {
 			displayNum = "+" + (increment/1000).toFixed(0) + "K"
 			element.innerHTML = displayNum;
 			increment += 1000;
@@ -28,7 +35,7 @@ function visibleCounter (element) {
 			console.log(3)
 		}
 		else if (increment >= 999999  && increment <= endNum) {
-			displayNum = "+" + (increment/1000000).toFixed(0) + "M"
+			displayNum = (increment/1000000).toFixed(0) + "M"
 			element.innerHTML = displayNum;
 			increment += 1000000;
 			console.log(increment)
@@ -45,7 +52,6 @@ window.addEventListener("scroll", function() {
   var scrolledHeight = window.pageYOffset;
   // value of where target element is in relation to the page
   var limitBanner = metricOne.offsetTop + metricOne.offsetHeight;
-  var limitFeatureOne = featureOneParent.offsetTop + featureOneParent.offsetHeight;
   // parallax for the credit card banner
   if((scrolledHeight - 100) > metricOne.offsetTop && scrolledHeight <= limitBanner) {
 		visibleCounter(metricOne)
