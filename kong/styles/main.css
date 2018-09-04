@@ -16,13 +16,13 @@
 }
 .office span.station4{  background-image: url("/kong/img/station4.png"); height: 285PX; width: 380px; top:100px;
 }
-.office span.headphone{  background-image: url("/kong/img/headphone.png"); height: 69px; transition: 23s ease-in-out;
+.office span.headphone{  background-image: url("/kong/img/headphone.png"); height: 69px; transition: 23s ease-in-out; top: -300px;
 }
-.office span.chairguy{  background-image: url("/kong/img/chairguy.png");height: 100px;width: 100px; transition: 20s ease-in-out;
+.office span.chairguy{  background-image: url("/kong/img/chairguy.png");height: 100px;width: 100px; transition: 20s ease-in-out; top: -200px
 }
 .office span.ponytail{  background-image: url("/kong/img/ponytail.png"); transition: 20s ease-in-out;
 }
-.office span.dancer{  background-image: url("/kong/img/dancer.png");width:65px; transition: 15s ease-in-out;
+.office span.dancer{  background-image: url("/kong/img/dancer.png");width:65px; transition: 15s ease-in-out; left: 65px;
 }
 .office span.station5{  background-image: url("/kong/img/station5.png"); height: 180px; width: 238px; top:40px; left:190px;
 }
@@ -47,9 +47,9 @@
   animation-iteration-count: infinite;
 }
 .headphone {
-  -webkit-animation: dancing 15s linear infinite;
+  -webkit-animation: mover 15s linear infinite;
   -webkit-animation-fill-mode: forwards;
-  animation: dancing 15s linear;
+  animation: mover 15s linear;
   animation-fill-mode: forwards;
   animation-iteration-count: infinite;
 }
@@ -60,20 +60,19 @@
   animation-fill-mode: forwards;
   animation-iteration-count: infinite;
 }
-@keyframes guymover {
-    0% {left: -100px;}
-    50% {left: 46px; transform:rotate(00deg);}
-    51% {left: 50px; transform:rotate(180deg);}
-    99% {left:  -94px; transform:rotate(180deg)}
-    100% {left:  -100px;transform:rotate(0deg)}
+@keyframes mover {
+  0% {left: -100px; transform: rotate(190deg); top: 250px;}
+  50% {left: 46px; transform:rotate(180deg); top: 270px;}
+  51% {left: 50px; transform:rotate(20deg);}
+  99% {left:  -94px; transform:rotate(20deg)}
+  100% {left:  -100px;transform:rotate(20deg) top: 250px;}
 }
-@-webkit-keyframes guymover {
-  0% {left: -100px;}
-  50% {left: 46px; transform:rotate(00deg);}
-  51% {left: 50px; transform:rotate(180deg);}
-  99% {left:  -94px; transform:rotate(180deg)}
-  100% {left:  -100px;transform:rotate(0deg)}
-  100% {left:  -100px;}
+@-webkit-keyframes mover {
+  0% {left: -100px; transform: rotate(190deg); top: 250px;}
+  50% {left: 46px; transform:rotate(180deg); top: 270px;}
+  51% {left: 50px; transform:rotate(20deg);}
+  99% {left:  -94px; transform:rotate(20deg)}
+  100% {left:  -100px;transform:rotate(20deg) top: 250px;}
 }
 @keyframes spin {
     0% {transform:rotate( 0deg);}
@@ -92,33 +91,32 @@
   100% {transform:rotate(300deg);}
 }
 @keyframes guymover {
-    0% {top: -100px;}
-    50% {top: 46px; transform:rotate(00deg);}
-    51% {top: 50px; transform:rotate(180deg);}
-    99% {top:  -94px; transform:rotate(180deg)}
-    100% {top:  -100px;transform:rotate(0deg)}
+  0% {top: -100px; transform: rotate(190deg); top: 200px;}
+  50% {top: 46px; transform:rotate(180deg); top: 270px;}
+  51% {top: 50px; transform:rotate(20deg);}
+  99% {top:  -94px; transform:rotate(20deg)}
+  100% {top:  -100px;transform:rotate(20deg) top: 200px;}
 }
 @-webkit-keyframes guymover {
-  0% {top: -100px;}
-  50% {top: 46px; transform:rotate(00deg);}
-  51% {top: 50px; transform:rotate(180deg);}
-  99% {top:  -94px; transform:rotate(180deg)}
-  100% {top:  -100px;transform:rotate(0deg)}
-  100% {top:  -100px;}
+  0% {top: -100px; transform: rotate(190deg); top: 200px;}
+  50% {top: 46px; transform:rotate(180deg); top: 270px;}
+  51% {top: 50px; transform:rotate(20deg);}
+  99% {top:  -94px; transform:rotate(20deg)}
+  100% {top:  -100px;transform:rotate(20deg) top: 200px;}
 }
 @keyframes dancing {
-  0% {left: -100px;}
-  50% {left: 50px; transform:rotate(00deg);}
-  51% {left: 50px; transform:rotate(180deg);}
-  52% {left: 50px; transform:rotate(0deg);}
-  100% {left:  -100px;}
+  0% {left: -100px; transform: rotate(190deg); top: 250px;}
+  50% {left: 46px; transform:rotate(180deg); top: 270px;}
+  51% {left: 50px; transform:rotate(20deg);}
+  99% {left:  -94px; transform:rotate(20deg)}
+  100% {left:  -100px;transform:rotate(20deg) top: 250px;}
 }
 @-webkit-keyframes dancing {
-  0% {left: -100px;}
-  50% {left: 50px; transform:rotate(00deg);}
-  51% {left: 50px; transform:rotate(180deg);}
-  52% {left: 50px; transform:rotate(0deg);}
-  100% {left:  -100px;}
+  0% {left: -100px; transform: rotate(190deg); top: 250px;}
+  50% {left: 46px; transform:rotate(180deg); top: 270px;}
+  51% {left: 50px; transform:rotate(20deg);}
+  99% {left:  -94px; transform:rotate(20deg)}
+  100% {left:  -100px;transform:rotate(20deg) top: 250px;}
 }
 
 .metrics {text-align: center; margin-top: -150px;}
