@@ -38,14 +38,8 @@
   animation-fill-mode: forwards;
   animation-iteration-count: infinite;
 }
-.dancer {
-  -webkit-animation: dancing 15s linear infinite;
-  -webkit-animation-fill-mode: forwards;
-  animation: dancing 15s linear;
-  animation-fill-mode: forwards;
-  animation-iteration-count: infinite;
-}
 .ponytail {
+  transform: rotate(90deg);
   -webkit-animation: dancing 15s linear infinite;
   -webkit-animation-fill-mode: forwards;
   animation: dancing 15s linear;
@@ -66,32 +60,50 @@
   animation-fill-mode: forwards;
   animation-iteration-count: infinite;
 }
+@keyframes guymover {
+    0% {left: -100px;}
+    50% {left: 46px; transform:rotate(00deg);}
+    51% {left: 50px; transform:rotate(180deg);}
+    99% {left:  -94px; transform:rotate(180deg)}
+    100% {left:  -100px;transform:rotate(0deg)}
+}
+@-webkit-keyframes guymover {
+  0% {left: -100px;}
+  50% {left: 46px; transform:rotate(00deg);}
+  51% {left: 50px; transform:rotate(180deg);}
+  99% {left:  -94px; transform:rotate(180deg)}
+  100% {left:  -100px;transform:rotate(0deg)}
+  100% {left:  -100px;}
+}
 @keyframes spin {
     0% {transform:rotate( 0deg);}
-    20% {top: 50px; transform:rotate(50deg);}
-    50% {top: 50px; transform:rotate(180deg);}
-    70% {top: 50px; transform:rotate(260deg);}
-    100% {top:  -100px; transform:rotate(300deg);}
+    20% {transform:rotate(50deg);}
+    50% {transform:rotate(200deg);}
+    55% {transform:rotate(180deg);}
+    70% {transform:rotate(260deg);}
+    100% {transform:rotate(300deg);}
 }
 @-webkit-keyframes spin {
   0% {transform:rotate( 0deg);}
-  20% {top: 50px; transform:rotate(50deg);}
-  50% {top: 50px; transform:rotate(180deg);}
-  70% {top: 50px; transform:rotate(260deg);}
-  100% {top:  -100px; transform:rotate(300deg);}
+  20% {transform:rotate(50deg);}
+  50% {transform:rotate(200deg);}
+  55% {transform:rotate(180deg);}
+  70% {transform:rotate(260deg);}
+  100% {transform:rotate(300deg);}
 }
 @keyframes guymover {
     0% {top: -100px;}
-    50% {top: 50px; transform:rotate(00deg);}
+    50% {top: 46px; transform:rotate(00deg);}
     51% {top: 50px; transform:rotate(180deg);}
-    52% {top: 50px; transform:rotate(0deg);}
-    100% {top:  -100px;}
+    99% {top:  -94px; transform:rotate(180deg)}
+    100% {top:  -100px;transform:rotate(0deg)}
 }
 @-webkit-keyframes guymover {
   0% {top: -100px;}
-  50% {top: 50px; transform:rotate(00deg);}
+  50% {top: 46px; transform:rotate(00deg);}
   51% {top: 50px; transform:rotate(180deg);}
-  52% {top: 50px; transform:rotate(0deg);}
+  99% {top:  -94px; transform:rotate(180deg)}
+  100% {top:  -100px;transform:rotate(0deg)}
   100% {top:  -100px;}
 }
 @keyframes dancing {
