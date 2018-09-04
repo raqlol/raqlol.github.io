@@ -6,31 +6,31 @@
   position: relative;
 }
 .office span {height: 60px; width: 60px; background-size: cover;display: block;}
-.station1{  background-image: url("/kong/img/station1.png");height: 170px; width: 250px; top:240px;
+.office span.station1{  background-image: url("/kong/img/station1.png");height: 170px; width: 250px; top:240px;
 }
-.station2{  background-image: url("/kong/img/station2.png"); height: 150px; width: 320px;
+.office span.station2{  background-image: url("/kong/img/station2.png"); height: 150px; width: 320px;
 }
-.station3{  background-image: url("/kong/img/station2.png"); width: 130px;height: 70px; top:140px; right:50px;
+.office span.station3{  background-image: url("/kong/img/station2.png"); width: 130px;height: 70px; top:140px; right:50px;
 }
-.plant{  background-image: url("/kong/img/plant.png"); height: 100px; width: 103px; right: 100px; bottom: 140px;
+.office span.plant{  background-image: url("/kong/img/plant.png"); height: 100px; width: 103px; right: 100px; bottom: 140px;
 }
-.station4{  background-image: url("/kong/img/station4.png"); height: 285PX; width: 380px; right: 70px; top:100px;
+.office span.station4{  background-image: url("/kong/img/station4.png"); height: 285PX; width: 380px; right: 70px; top:100px;
 }
-.headphone{  background-image: url("/kong/img/headphone.png"); height: 69px;
+.office span.headphone{  background-image: url("/kong/img/headphone.png"); height: 69px;
 }
-.chairguy{  background-image: url("/kong/img/chairguy.png");height: 100px;width: 100px;
+.office span.chairguy{  background-image: url("/kong/img/chairguy.png");height: 100px;width: 100px;
 }
-.ponytail{  background-image: url("/kong/img/ponytail.png");
+.office span.ponytail{  background-image: url("/kong/img/ponytail.png");
 }
-.dancer{  background-image: url("/kong/img/dancer.png");width:65px;
+.office span.dancer{  background-image: url("/kong/img/dancer.png");width:65px;
 }
-.station5{  background-image: url("/kong/img/station5.png"); height: 180px; width: 238px;
+.office span.station5{  background-image: url("/kong/img/station5.png"); height: 180px; width: 238px;
 }
-.station6{  background-image: url("/kong/img/station6.png"); height: 320px; width: 530px;
+.office span.station6{  background-image: url("/kong/img/station6.png"); height: 320px; width: 530px;
 }
-.coffee{  background-image: url("/kong/img/coffee.png");width: 80px;
+.office span.coffee{  background-image: url("/kong/img/coffee.png");width: 80px;
 }
-
+.cta { width: 300px; text-align: left;}
 #guy {
   width:40px;
   height:40px;

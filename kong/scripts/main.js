@@ -50,9 +50,10 @@ window.addEventListener("scroll", function() {
   // value of where you are on the page
   var scrolledHeight = window.pageYOffset;
   // value of where target element is in relation to the page
-  var limitBanner = metricOne.offsetTop + metricOne.offsetHeight;
   // parallax for the credit card banner
-  if((scrolledHeight - 100) > metricOne.offsetTop && scrolledHeight <= limitBanner) {
+	console.log(metricOne)
+	console.log(scrolledHeight)
+  if((scrolledHeight - 100) > metricOne.offsetTop) {
 		console.log("if")
 		visibleCounter(metricOne)
 		visibleCounter(metricTwo)
