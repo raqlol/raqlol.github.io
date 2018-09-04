@@ -62,15 +62,19 @@
 }
 @keyframes mover {
   0% {left: -100px; transform: rotate(190deg); top: 250px;}
+  20% {left: 16px; transform:rotate(180deg); top: 270px;}
   50% {left: 46px; transform:rotate(180deg); top: 270px;}
   51% {left: 50px; transform:rotate(20deg);}
+  70% {left: 46px; transform:rotate(20deg); top: 270px;}
   99% {left:  -94px; transform:rotate(20deg)}
   100% {left:  -100px;transform:rotate(20deg) top: 250px;}
 }
 @-webkit-keyframes mover {
   0% {left: -100px; transform: rotate(190deg); top: 250px;}
+  20% {left: 16px; transform:rotate(180deg); top: 270px;}
   50% {left: 46px; transform:rotate(180deg); top: 270px;}
   51% {left: 50px; transform:rotate(20deg);}
+  70% {left: 46px; transform:rotate(20deg); top: 270px;}
   99% {left:  -94px; transform:rotate(20deg)}
   100% {left:  -100px;transform:rotate(20deg) top: 250px;}
 }
@@ -91,32 +95,32 @@
   100% {transform:rotate(300deg);}
 }
 @keyframes guymover {
-  0% {top: -100px; transform: rotate(190deg); top: 200px;}
-  50% {top: 46px; transform:rotate(180deg); top: 270px;}
-  51% {top: 50px; transform:rotate(20deg);}
-  99% {top:  -94px; transform:rotate(20deg)}
-  100% {top:  -100px;transform:rotate(20deg) top: 200px;}
+  0% {top: -100px; transform: rotate(160deg); left: 200px;}
+  50% {top: 200px; transform:rotate(170deg);left: 250px;}
+  51% {top: 200px; transform:rotate(-20deg);}
+  99% {top:  -94px; transform:rotate(-20deg)}
+  100% {top:  -100px;transform:rotate(-20deg);left: 200px;}
 }
 @-webkit-keyframes guymover {
-  0% {top: -100px; transform: rotate(190deg); top: 200px;}
-  50% {top: 46px; transform:rotate(180deg); top: 270px;}
-  51% {top: 50px; transform:rotate(20deg);}
-  99% {top:  -94px; transform:rotate(20deg)}
-  100% {top:  -100px;transform:rotate(20deg) top: 200px;}
+  0% {top: -100px; transform: rotate(160deg); left: 200px;}
+  50% {top: 200px; transform:rotate(170deg);left: 250px;}
+  51% {top: 200px; transform:rotate(-20deg);}
+  99% {top:  -94px; transform:rotate(-20deg)}
+  100% {top:  -100px;transform:rotate(-20deg);left: 200px;}
 }
 @keyframes dancing {
-  0% {left: -100px; transform: rotate(190deg); top: 250px;}
-  50% {left: 46px; transform:rotate(180deg); top: 270px;}
-  51% {left: 50px; transform:rotate(20deg);}
-  99% {left:  -94px; transform:rotate(20deg)}
-  100% {left:  -100px;transform:rotate(20deg) top: 250px;}
+  0% {left: -250px; transform: rotate(-90deg); top:-120px;}
+  50% {left: 166px; transform:rotate(-90deg); top: -70px;}
+  51% {left: 166px; transform:rotate(-270deg);}
+  99% {left:  -250px; transform:rotate(-270deg)}
+  100% {left:  -250px;transform:rotate(0deg)  top:-120px;}
 }
 @-webkit-keyframes dancing {
-  0% {left: -100px; transform: rotate(190deg); top: 250px;}
-  50% {left: 46px; transform:rotate(180deg); top: 270px;}
-  51% {left: 50px; transform:rotate(20deg);}
-  99% {left:  -94px; transform:rotate(20deg)}
-  100% {left:  -100px;transform:rotate(20deg) top: 250px;}
+  0% {left: -250px; transform: rotate(-90deg); top:-120px;}
+  50% {left: 166px; transform:rotate(-90deg); top: -70px;}
+  51% {left: 166px; transform:rotate(-270deg);}
+  99% {left:  -250px; transform:rotate(-270deg)}
+  100% {left:  -250px;transform:rotate(0deg)  top:-120px;}
 }
 
 .metrics {text-align: center; margin-top: -150px;}
