@@ -16,7 +16,7 @@
 }
 .office span.station4{  background-image: url("/kong/img/station4.png"); height: 285PX; width: 380px; top:100px;
 }
-.office span.headphone{  background-image: url("/kong/img/headphone.png"); height: 69px; transition: 23s ease-in-out; top: -300px;
+.office span.headphone{  background-image: url("/kong/img/headphone.png"); height: 69px; transition: 23s ease-in-out; top: -300px; transform: rotate(300deg);
 }
 .office span.chairguy{  background-image: url("/kong/img/chairguy.png");height: 100px;width: 100px; transition: 20s ease-in-out; top: -200px
 }
@@ -46,13 +46,7 @@
   animation-fill-mode: forwards;
   animation-iteration-count: infinite;
 }
-.headphone {
-  -webkit-animation: mover 15s linear infinite;
-  -webkit-animation-fill-mode: forwards;
-  animation: mover 15s linear;
-  animation-fill-mode: forwards;
-  animation-iteration-count: infinite;
-}
+
 .chairguy {
   -webkit-animation: spin 30s ease-in infinite;
   -webkit-animation-fill-mode: forwards;
@@ -66,8 +60,8 @@
   50% {left: 46px; transform:rotate(180deg); top: 270px;}
   51% {left: 50px; transform:rotate(20deg);}
   70% {left: 46px; transform:rotate(20deg); top: 270px;}
-  99% {left:  -94px; transform:rotate(20deg)}
-  100% {left:  -100px;transform:rotate(20deg) top: 250px;}
+  99% {left:  -94px; transform:rotate(20deg);}
+  100% {left:  -100px;transform:rotate(20deg); top: 250px;}
 }
 @-webkit-keyframes mover {
   0% {left: -100px; transform: rotate(190deg); top: 250px;}
@@ -76,7 +70,7 @@
   51% {left: 50px; transform:rotate(20deg);}
   70% {left: 46px; transform:rotate(20deg); top: 270px;}
   99% {left:  -94px; transform:rotate(20deg)}
-  100% {left:  -100px;transform:rotate(20deg) top: 250px;}
+  100% {left:  -100px;transform:rotate(20deg); top: 250px;}
 }
 @keyframes spin {
     0% {transform:rotate( 0deg);}
