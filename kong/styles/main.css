@@ -3,31 +3,32 @@
   width:100%;
   height:600px;
   display: block;
+  position: relative;
 }
-.office span {height: 40px; width: 40px; background-size: cover;display: block;}
-.station1{  background-image: url("/kong/img/station1.png");
+.office span {height: 60px; width: 60px; background-size: cover;display: block;}
+.station1{  background-image: url("/kong/img/station1.png");height: 170px; width: 250px; top:240px;
 }
-.station2{  background-image: url("/kong/img/station2.png");
+.station2{  background-image: url("/kong/img/station2.png"); height: 150px; width: 320px;
 }
-.station3{  background-image: url("/kong/img/station3.png");
+.station3{  background-image: url("/kong/img/station2.png"); width: 130px;height: 70px; top:140px; right:50px;
 }
-.plant{  background-image: url("/kong/img/plant.png");
+.plant{  background-image: url("/kong/img/plant.png"); height: 100px; width: 103px; right: 100px; bottom: 140px;
 }
-.station4{  background-image: url("/kong/img/station4.png");
+.station4{  background-image: url("/kong/img/station4.png"); height: 285PX; width: 380px; right: 70px; top:100px;
 }
-.headphone{  background-image: url("/kong/img/headphone.png");
+.headphone{  background-image: url("/kong/img/headphone.png"); height: 69px;
 }
-.chairguy{  background-image: url("/kong/img/chairguy.png");
+.chairguy{  background-image: url("/kong/img/chairguy.png");height: 100px;width: 100px;
 }
 .ponytail{  background-image: url("/kong/img/ponytail.png");
 }
-.dancer{  background-image: url("/kong/img/dancer.png");
+.dancer{  background-image: url("/kong/img/dancer.png");width:65px;
 }
-.station5{  background-image: url("/kong/img/station5.png");
+.station5{  background-image: url("/kong/img/station5.png"); height: 180px; width: 238px;
 }
-.station6{  background-image: url("/kong/img/station6.png");
+.station6{  background-image: url("/kong/img/station6.png"); height: 320px; width: 530px;
 }
-.coffee{  background-image: url("/kong/img/coffee.png");
+.coffee{  background-image: url("/kong/img/coffee.png");width: 80px;
 }
 
 #guy {
@@ -93,6 +94,7 @@
   background: #F2F4F5;
   height: 900px;
 }
+.hero .container {width: 100%; padding: 0;}
 .carousel {
   background-image:url("/kong/img/carousel.jpg");
   height: 617px;

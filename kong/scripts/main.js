@@ -36,8 +36,7 @@ function visibleCounter (element) {
 
 		}
 		else {
-			console.log('done')
-			return false;
+			clearInterval();
 		}
 	}, 10)
 
