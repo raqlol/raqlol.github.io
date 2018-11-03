@@ -1,1 +1,70 @@
-<!-- Put your final HTML here -->
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="assets/app.css">
+    <title>Asana Dog Adoption</title>
+  </head>
+  <body>
+    <!-- header -->
+    <div w3-include-html="snippets/header.html"></div>
+    <main>
+      <!-- gallery -->
+      <section id="dog-gallery">
+        <div class="dog-thumbnail"><!-- onclick changes class to dog-full -->
+          <img>
+          <div class="dog-bio">
+            <p>name</p>
+            <p>age</p>
+            <p>breed</p>
+            <div class="dog-extended-bio">
+              <p>gender</p>
+              <p>weight</p>
+              <p>bio</p>
+            </div>
+          </div>
+          <div class="dog-cta">
+            <button>Adopt</button>
+            <button>Call</button>
+            <p class="social">Share:<button>Twitter</button><button>Facebook</button><button>Instagram</button></p>
+          </div>
+        </div>
+      </section>
+    </main>
+    <!-- footer -->
+    <div w3-include-html="snippets/footer.html"></div>
+    <script>
+      function includeHTML() {
+        var z, i, elmnt, file, xhttp;
+        /*loop through a collection of all HTML elements:*/
+        z = document.getElementsByTagName("*");
+        for (i = 0; i < z.length; i++) {
+          elmnt = z[i];
+          /*search for elements with a certain atrribute:*/
+          file = elmnt.getAttribute("w3-include-html");
+          if (file) {
+            /*make an HTTP request using the attribute value as the file name:*/
+            xhttp = new XMLHttpRequest();
+            xhttp.onreadystatechange = function() {
+              if (this.readyState == 4) {
+                if (this.status == 200) {elmnt.innerHTML = this.responseText;}
+                if (this.status == 404) {elmnt.innerHTML = "Page not found.";}
+                /*remove the attribute, and call this function once more:*/
+                elmnt.removeAttribute("w3-include-html");
+                includeHTML();
+              }
+            }
+            xhttp.open("GET", file, true);
+            xhttp.send();
+            /*exit the function:*/
+            return;
+          }
+        }
+      }
+
+      includeHTML();
+    </script>
+    <script src="assets/image-loader.js"></script>
+  </body>
+</html>
