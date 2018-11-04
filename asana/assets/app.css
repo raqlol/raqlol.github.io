@@ -10,14 +10,26 @@
   line-height: 1.5;
 }
 
-body {
+html, body {
   margin: 0;
+  height: 100%;
+  width:100%;
 }
+body {
+  display: flex;
+  flex-direction: column;
 
+}
 a {
   color: var(--color-link);
 }
-
+main {
+  flex-grow: 2;
+  flex-shrink:
+}
+footer {
+  flex-grow:0;
+}
 /* Global Header */
 .global-header {
   padding-bottom: 2rem;
@@ -83,17 +95,25 @@ a {
   justify-content: space-between;
 }
 /* gallery thumbnail*/
-#dog-gallery .dog-thumbnail img {
+#dog-gallery .dog img {
   width: 100%;
+  margin:auto;
+  display: block;
 }
-.dog-thumbnail {
+.dog-thumbnail.dog {
   margin: 20px;
   width:250px;
+  position: static;
+  transform: translate(0%,0%);
+  padding: 10px;
+  z-index: 1;
+  transition: width 0s;
 }
-.dog-thumbnail .age, .dog-thumbnail .gender, .dog-thumbnail .size, .dog-thumbnail .bio {
+.dog-thumbnail .close, .dog-thumbnail .age, .dog-thumbnail .gender, .dog-thumbnail .size, .dog-thumbnail .bio, .dog-thumbnail .breed {
   display: none;
 }
 /* gallery large */
+.dog img {width:auto;}
 .dog {
   position: fixed;
   top:50%;
@@ -104,22 +124,15 @@ a {
   border-radius: 10px;
   padding: 20px;
   z-index: 10;
-}
-.dog-thumbnail.dog {
-  position: static;
-  transform: translate(0%,0%);
-  padding: 10px;
-  z-index: 1;
+  width: calc(100% - 100px);
+  transition: width 2s;
+  max-width: 1000px;
 }
 
 .close {
-  content:"\2716";
   color: #666;
   position: absolute;
   top: 0px;
   right: 10px;
   font-size: 2em;
-}
-.dog.dog-thumbnail.dog:before {
-  content: "";
 }
