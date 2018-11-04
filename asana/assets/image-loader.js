@@ -2,8 +2,9 @@ let dogBios;
 // image expander
 const dog = document.getElementsByClassName("dog");
 function expandBio(e) {
+  console.log("expand")
   let dogThumbnail = e.target
-  dogThumbnail.classList.remove("dog-thumbnail")
+  dogThumbnail.parentNode.classList.remove("dog-thumbnail")
 }
 /* load bios from json */
 function createBio(array) {
@@ -42,6 +43,9 @@ function createBio(array) {
       let bioTxt = document.createTextNode(array[i].bio);
       bio.appendChild(bioTxt)
 
+      let close = document.createTextNode("&#10006");
+      close.classList.add("close")
+      container.appendChild(close)
       container.appendChild(img)
       container.appendChild(name)
       container.appendChild(age)
@@ -66,15 +70,16 @@ function createBio(array) {
     xhr.open('GET', "assets/data/dogs.json", true);
     xhr.send();
 })();
-
+const lazyClass = document.getElementsByClassName('lazy')
 /* adds expander click event */
-for (i=0;i<dog.length;i++){
-  dog[i].addEventListener("click", function(event){
+for (i=0;i<lazyClass.length;i++){
+  lazyClass[i].addEventListener("click", function(event){
     expandBio(event)
   })
 }
 
 //lazy load
+
 document.addEventListener("DOMContentLoaded", function() {
   let lazyImages = [].slice.call(document.querySelectorAll("img.lazy"));
   let active = false;

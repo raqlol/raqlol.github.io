@@ -3,4 +3,4 @@ const masthead = document.getElementById("masthead")
 function shrinkMasthead() {
   masthead.classList.add("shrink")
 }
-window.addEventListener("scroll", shrinkMasthead;
+window.addEventListener("scroll", shrinkMasthead);
