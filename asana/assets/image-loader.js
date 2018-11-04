@@ -117,6 +117,17 @@ function createBio(array) {
     document.addEventListener("scroll", lazyLoad);
     window.addEventListener("resize", lazyLoad);
     window.addEventListener("orientationchange", lazyLoad);
+
+    for (i=0;i<dogPic.length;i++){
+      dogPic[i].addEventListener("click", function(event){
+        expandBio(event, true)
+      })
+    }
+    for (i=0;i<closeBtns.length;i++) {
+      closeBtns[i].addEventListener("click", function(event){
+        expandBio(event, false)
+      })
+    }
 }
 (function fetchJSONFile() {
     console.log("calling all json")
@@ -136,18 +147,6 @@ function createBio(array) {
   console.log("done")
 })();
 
-window.onload = function() {
-  for (i=0;i<dogPic.length;i++){
-    dogPic[i].addEventListener("click", function(event){
-      expandBio(event, true)
-    })
-  }
-  for (i=0;i<closeBtns.length;i++) {
-    closeBtns[i].addEventListener("click", function(event){
-      expandBio(event, false)
-    })
-  }
-}
 // image filter
 
 // random wiggle
