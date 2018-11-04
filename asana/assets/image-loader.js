@@ -13,7 +13,7 @@ function createBio(array) {
       container.classList.add("dog-thumbnail");
       container.classList.add("dog");
       let img = document.createElement("IMG");
-      img.src= "https://www.petlove.love/wp-content/uploads/2017/01/icon-logo-big.jpg"
+      img.src= "https://melbournechapter.net/images/beagle-clipart-cutedog-1.png"
       img.classList.add("lazy")
       img.setAttribute("data-src",array[i].image)
       img.setAttribute("alt", array[i].breed)
@@ -51,6 +51,7 @@ function createBio(array) {
       container.appendChild(bio)
       dogGallery.appendChild(container)
     }
+    addLL()
 }
 (function fetchJSONFile() {
     var httpRequest = new XMLHttpRequest();
@@ -78,7 +79,7 @@ for (i=0;i<dog.length;i++){
 document.addEventListener("DOMContentLoaded", function() {
   let lazyImages = [].slice.call(document.querySelectorAll("img.lazy"));
   let active = false;
-
+  console.log("i see you moving")
   const lazyLoad = function() {
     if (active === false) {
       active = true;
@@ -110,7 +111,6 @@ document.addEventListener("DOMContentLoaded", function() {
   window.addEventListener("resize", lazyLoad);
   window.addEventListener("orientationchange", lazyLoad);
 });
-
 // image filter
 
 // random wiggle
