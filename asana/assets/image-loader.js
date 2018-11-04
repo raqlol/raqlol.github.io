@@ -3,15 +3,10 @@ let dogBios;
 const dog = document.getElementsByClassName("dog");
 const lazyClass = document.getElementsByClassName('lazy')
 
-function expandBio(e) {
-  console.log("expand")
-  console.log(e)
-  let dogThumbnail = e.target
-  dogThumbnail.parentNode.classList.remove("dog-thumbnail");
-  /* should add something to close all other open thumbnails */
-}
 /* load bios from json */
-function createBio(array, callback) {
+function createBio(array) {
+
+  console.log("created the bios")
     const dogGallery = document.getElementById("dog-gallery");
     for (i=0;i<array.length;i++){
       let container = document.createElement("div");
@@ -52,7 +47,6 @@ function createBio(array, callback) {
       let bioTxt = document.createTextNode(array[i].bio);
       bio.appendChild(bioTxt)
       bio.classList.add("bio")
-
       let close = document.createElement("p");
       let closeTxt = document.createTextNode("✖");
       close.appendChild(closeTxt);
@@ -68,7 +62,44 @@ function createBio(array, callback) {
       container.appendChild(bio)
       dogGallery.appendChild(container)
     }
-    callback()
+  console.log("done with bios")
+  let lazyImages = [].slice.call(document.querySelectorAll("img.lazy"));
+    let active = false;
+    console.log(lazyImages);
+    const lazyLoad = function() {
+      console.log("lazyloading func");
+      if (active === false) {
+        console.log("if");
+        active = true;
+        setTimeout(function() {
+          lazyImages.forEach(function(lazyImage) {
+            if (
+              lazyImage.getBoundingClientRect().top <= window.innerHeight &&
+              lazyImage.getBoundingClientRect().bottom >= 0 &&
+              getComputedStyle(lazyImage).display !== "none"
+            ) {
+              console.log("if again");
+              lazyImage.src = lazyImage.dataset.src;
+              lazyImage.classList.remove("lazy");
+
+              lazyImages = lazyImages.filter(function(image) {
+                return image !== lazyImage;
+              });
+              if (lazyImages.length === 0) {
+                console.log("nothing there");
+                document.removeEventListener("scroll", lazyLoad);
+                window.removeEventListener("resize", lazyLoad);
+                window.removeEventListener("orientationchange", lazyLoad);
+              }
+            }
+          });
+          active = false;
+        }, 200);
+      }
+    };
+    document.addEventListener("scroll", lazyLoad);
+    window.addEventListener("resize", lazyLoad);
+    window.addEventListener("orientationchange", lazyLoad);
 }
 (function fetchJSONFile() {
     console.log("calling all json")
@@ -77,64 +108,13 @@ function createBio(array, callback) {
     xhr.onreadystatechange = function() {
         if (xhr.readyState === 4) {
             if (xhr.status === 200) {
+              console.log("success")
                 dogBios = (JSON.parse(xhr.responseText)).dogs
-                createBio(dogBios, addLL);
-                console.log("probably need to do a callback after this completes to add the lazy load stuff")
+                createBio(dogBios);
             }
         }
     };
-    xhr.open('GET', "assets/data/dogs.json", true);
+    xhr.open('GET', "https://raqlol.github.io/asana/assets/data/dogs.json", true);
     xhr.send();
+  console.log("done")
 })();
-
-
-//lazy load
-function addLL() {
-  document.addEventListener("DOMContentLoaded", function() {
-    console.log("lazy load working")
-    let lazyImages = [].slice.call(document.querySelectorAll("img.lazy"));
-    let active = false;
-    console.log("i see you moving")
-    const lazyLoad = function() {
-      if (active === false) {
-        active = true;
-
-        setTimeout(function() {
-          lazyImages.forEach(function(lazyImage) {
-            if ((lazyImage.getBoundingClientRect().top <= window.innerHeight && lazyImage.getBoundingClientRect().bottom >= 0) && getComputedStyle(lazyImage).display !== "none") {
-              lazyImage.src = lazyImage.dataset.src;
-              lazyImage.classList.remove("lazy");
-
-              lazyImages = lazyImages.filter(function(image) {
-                return image !== lazyImage;
-              });
-
-              if (lazyImages.length === 0) {
-                document.removeEventListener("scroll", lazyLoad);
-                window.removeEventListener("resize", lazyLoad);
-                window.removeEventListener("orientationchange", lazyLoad);
-              }
-            }
-          });
-
-          active = false;
-        }, 200);
-      }
-    };
-
-    document.addEventListener("scroll", lazyLoad);
-    window.addEventListener("resize", lazyLoad);
-    window.addEventListener("orientationchange", lazyLoad);
-  });
-  for (i=0;i<lazyClass.length;i++){
-    console.log("adding image event listener")
-    lazyClass[i].addEventListener("click", function(event){
-      expandBio(event)
-    })
-  }
-}
-// image filter
-
-// random wiggle
-
-// konami code
