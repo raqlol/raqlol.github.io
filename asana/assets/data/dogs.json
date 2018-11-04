@@ -1,77 +1,166 @@
 {
   "dogs": [
   {
-      "image": "/assets/images/raw/1.jpeg",
+      "image": "/asana/assets/images/raw/1.jpeg",
+      "name": "Leela",
+      "age": "4",
+      "breed": "Samoyed",
+      "gender": "Female",
+      "size": "medium",
+      "bio": "I'm an orphan looking for my parents.",
       "source": "https://unsplash.com/photos/ybHtKz5He9Y"
+
     },
 
     {
-      "image": "/assets/images/raw/2.jpeg",
+      "image": "/asana/assets/images/raw/2.jpeg",
+      "name": "Fry",
+      "age": "3",
+      "breed": "Samoyed",
+      "gender": "Male",
+      "size": "medium",
+      "bio": "I'm loveable and full of energy but I may still need to be housebroken.",
       "source": "https://unsplash.com/photos/rY79kwEEyGo"
     },
 
     {
-      "image": "/assets/images/raw/3.jpeg",
+      "image": "/asana/assets/images/raw/3.jpeg",
+      "name": "Bender",
+      "age": "9",
+      "breed": "Golden Retriever",
+      "gender": "Male",
+      "size": "medium",
+      "bio": "I'm the greatest.",
       "source": "https://unsplash.com/photos/ngqyo2AYYnE"
     },
 
     {
-      "image": "/assets/images/raw/4.jpeg",
+      "image": "/asana/assets/images/raw/4.jpeg",
+      "name": "The Professor",
+      "age": "17",
+      "breed": "Beagle",
+      "gender": "Male",
+      "size": "small",
+      "bio": "Good news everyone! I'm still available for adoption.",
       "source": "https://unsplash.com/photos/9A64wd1QaAU"
     },
 
     {
-      "image": "/assets/images/raw/5.jpeg",
+      "image": "/asana/assets/images/raw/5.jpeg",
+      "name": "Hermes",
+      "age": "7",
+      "breed": "Samoyed",
+      "gender": "Male",
+      "size": "medium",
+      "bio": "I was born in Jamaica.",
       "source": "https://unsplash.com/photos/915UJQaxtrk"
     },
 
     {
-      "image": "/assets/images/raw/6.jpeg",
+      "image": "/asana/assets/images/raw/6.jpeg",
+      "name": "Amy",
+      "age": "2",
+      "breed": "Collie",
+      "gender": "Female",
+      "size": "medium",
+      "bio": "I'm very social and I love pink.",
       "source": "https://unsplash.com/photos/mx0DEnfYxic"
     },
 
     {
-      "image": "/assets/images/raw/7.jpeg",
+      "image": "/asana/assets/images/raw/7.jpeg",
+      "name": "Zoidberg",
+      "age": "6",
+      "breed": "German Shepherd",
+      "gender": "Male",
+      "size": "medium",
+      "bio": "I'm an honorary Globetrotter.",
       "source": "https://unsplash.com/photos/OsOQhAzcEKc"
     },
 
     {
-      "image": "/assets/images/raw/8.jpeg",
+      "image": "/asana/assets/images/raw/8.jpeg",
+      "name": "Scruffy",
+      "age": "10",
+      "breed": "Husky",
+      "gender": "Male",
+      "size": "big",
+      "bio": "I have a $300 haircut.",
       "source": "https://unsplash.com/photos/6WneSv56YVI"
     },
 
     {
-      "image": "/assets/images/raw/9.jpeg",
+      "image": "/asana/assets/images/raw/9.jpeg",
+      "name": "Michelle",
+      "age": "2",
+      "breed": "Golden Retriever",
+      "gender": "Female",
+      "size": "big",
+      "bio": "I'm a little clingy but very pretty.",
       "source": "https://unsplash.com/photos/CdVG9f96kyg"
     },
 
     {
-      "image": "/assets/images/raw/10.jpeg",
+      "image": "/asana/assets/images/raw/10.jpeg",
+      "name": "Cubert",
+      "age": "1",
+      "breed": "Australian Cattle Dog",
+      "gender": "Male",
+      "size": "medium",
+      "bio": "I'm a genius!",
       "source": "https://unsplash.com/photos/bVA2DI7c9e8"
     },
 
     {
-      "image": "/assets/images/raw/11.jpeg",
+      "image": "/asana/assets/images/raw/11.jpeg",
+      "name": "Seymoure",
+      "age": "15",
+      "breed": "Great Dane",
+      "gender": "Male",
+      "size": "big",
+      "bio": "I have wet dog smell, even when dry. And I'm not above chasing the number 29 bus.",
       "source": "https://unsplash.com/photos/GvhSUEN-Lm8"
     },
 
     {
-      "image": "/assets/images/raw/12.jpeg",
+      "image": "/asana/assets/images/raw/12.jpeg",
+      "name": "Zapp",
+      "age": "5",
+      "breed": "Beagle",
+      "gender": "Male",
+      "size": "small",
+      "bio": "I love velour",
       "source": "https://unsplash.com/photos/t2XHKIdc4Kw"
     },
 
     {
-      "image": "/assets/images/raw/13.jpeg",
+      "image": "/asana/assets/images/raw/13.jpeg",
+      "name": "Kif",
+      "age": "3",
+      "breed": "Australian Shepherd",
+      "gender": "Male",
+      "size": "medium",
+      "bio": "I'm a a bit nervous and twitchy but a loyal companion. ",
       "source": "https://unsplash.com/photos/saRU3vzmgkY"
     },
 
     {
-      "image": "/assets/images/raw/14.jpeg",
+      "image": "/asana/assets/images/raw/14.jpeg",
+      "name": "Nibbler",
+      "age": "16",
+      "breed": "Beagle",
+      "gender": "Male",
+      "bio": "I'm old, wise, and a celebrated pooper",
       "source": "https://unsplash.com/photos/1z-kI6gIEpg"
     },
 
     {
-      "image": "/assets/images/raw/15.jpeg",
+      "image": "/asana/assets/images/raw/15.jpeg",
+      "name": "Mom",
+      "age": "12",
+      "breed": "Corgi",
+      "gender": "Female",
+      "bio": "I'm a sweet old lady",
       "source": "https://unsplash.com/photos/zHZ2nTnBnAQ"
     }
   ]
