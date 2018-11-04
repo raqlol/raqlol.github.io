@@ -150,6 +150,7 @@
       "age": "16",
       "breed": "Beagle",
       "gender": "Male",
+      "size": "small",
       "bio": "I'm old, wise, and a celebrated pooper",
       "source": "https://unsplash.com/photos/1z-kI6gIEpg"
     },
@@ -160,6 +161,7 @@
       "age": "12",
       "breed": "Corgi",
       "gender": "Female",
+      "size": "small",
       "bio": "I'm a sweet old lady",
       "source": "https://unsplash.com/photos/zHZ2nTnBnAQ"
     }
