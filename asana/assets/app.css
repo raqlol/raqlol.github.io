@@ -40,9 +40,13 @@ a {
   top: 0;
   text-decoration: none;
   letter-spacing: .2em;
-  transition: background-color 3s, font-size 3s;
+  background-color:none;
+  transition: background-color 3s;
 }
-
+#masthead h1 {
+  font-size: 2.5em;
+  transition: font-size 3s;
+}
 #masthead img{
   height: 40px;
   width: 52px;
@@ -58,10 +62,10 @@ a {
   margin-top: 100px;
   text-shadow: 1px 1px 5px #333;
 }
-.shrink.masthead {
+.shrink#masthead {
   background:var(--color-secondary);
 }
-.shrink h1 {
+#masthead.shrink h1 {
   font-size: 1em;
 }
 /* Global Footer */
@@ -83,4 +87,33 @@ a {
 .dog-thumbnail {
   margin: 20px;
   width:250px;
+}
+/* gallery large */
+.dog {
+  position: fixed;
+  top:50%;
+  left:50%;
+  transform: translate(-50%,-50%);
+  background: #fff;
+  border: #666 5px solid;
+  border-radius: 10px;
+  padding: 20px;
+  z-index: 10;
+}
+.dog-thumbnail.dog {
+  position: static;
+  transform: translate(0%,0%);
+  padding: 10px;
+  z-index: 1;
+}
+.dog:before {
+  content:"\2716";
+  color: #666;
+  position: absolute;
+  top: 0px;
+  right: 10px;
+  font-size: 2em;
+}
+.dog.dog-thumbnail.dog:before {
+  content: "";
 }
