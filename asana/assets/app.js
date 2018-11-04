@@ -2,7 +2,7 @@
 function shrinkMasthead() {
   let masthead = document.getElementById("masthead")
   let scroll = window.pageYOffset
-        if (scroll >= 500) {
+        if (scroll >= 200) {
               masthead.classList.add("shrink")
         } else {
               masthead.classList.remove("shrink")

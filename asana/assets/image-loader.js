@@ -15,16 +15,6 @@ function expandBio(e, state) {
   }
   /* should add something to close all other open thumbnails */
 }
-for (i=0;i<dogPic.length;i++){
-  dogPic[i].addEventListener("click", function(event){
-    expandBio(event, true)
-  })
-}
-for (i=0;i<closeBtns.length;i++) {
-  closeBtns[i].addEventListener("click", function(event){
-    expandBio(event, false)
-  })
-}
 function createBio(array) {
   console.log("created the bios")
     const dogGallery = document.getElementById("dog-gallery");
@@ -80,10 +70,12 @@ function createBio(array) {
       container.appendChild(close)
       container.appendChild(imgContainer)
       container.appendChild(name)
-      container.appendChild(age)
-      container.appendChild(breed)
-      container.appendChild(gender)
       container.appendChild(size)
+      container.appendChild(age)
+      container.appendChild(gender)
+      container.appendChild(breed)
+
+
       container.appendChild(bio)
       dogGallery.appendChild(container)
     }
@@ -144,6 +136,18 @@ function createBio(array) {
   console.log("done")
 })();
 
+window.onload = function() {
+  for (i=0;i<dogPic.length;i++){
+    dogPic[i].addEventListener("click", function(event){
+      expandBio(event, true)
+    })
+  }
+  for (i=0;i<closeBtns.length;i++) {
+    closeBtns[i].addEventListener("click", function(event){
+      expandBio(event, false)
+    })
+  }
+}
 // image filter
 
 // random wiggle

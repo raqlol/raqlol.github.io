@@ -39,8 +39,9 @@ footer {
 .global-header {
   background-image: url("https://images.unsplash.com/photo-1525253013412-55c1a69a5738?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=3aa9feeafa35aafd43a4f9c90c8a9ef7&auto=format&fit=crop&w=3750&q=80");
   background-size:cover;
-  min-height: 600px;
+  min-height: 700px;
   background-position: center;
+  background-attachment: fixed;
 }
 
 #masthead {
@@ -74,7 +75,7 @@ footer {
   margin-right: auto;
   max-width: 460px;
   margin-top: 100px;
-  text-shadow: 1px 1px 5px #333;
+  text-shadow: 1px 1px 10px #333;
 }
 .shrink#masthead {
   background:var(--color-secondary);
@@ -116,6 +117,7 @@ footer {
   width: 100%;
   height: 300px;
   overflow:hidden;
+  margin-bottom:10px;
 }
 /* gallery large */
 .dog img {width:auto;}
@@ -135,11 +137,74 @@ footer {
   max-height: calc(100% -  250px);
   overflow: hidden;
 }
-
+.dog p {display: inline;}
+p.name:before {
+  content: "My name is "
+}
+p.name:after {
+  content: ".  "
+}
+p.size:after {
+  content: ". and I'm a "
+}
+p.age:after {
+  content: " year old, "
+}
+p.gender:before {
+  content: " "
+}
+p.breed:after {
+  content: ". "
+}
 .close {
-  color: #666;
+  color: #fff;
   position: absolute;
-  top: 0px;
+  top: -22px;
   right: 10px;
   font-size: 2em;
+  line-height: 0;
+  width: 0;
+  text-indent: -11px;
+  border: 16px #333 solid;
+}
+
+@media screen and (max-width: 768px) {
+  .global-header {background-position: right;}
+  .dog-thumbnail.dog {
+    margin:10px;
+    flex-grow: 1;
+    flex-shrink: 1;
+    flex-basis: 210px;
+  }
+  .img-container{
+    height: auto;
+    max-height: 300px;
+  }
+
+}
+
+
+@media screen and (max-width: 520px) {
+  .global-header {min-height: 350px;}
+  .header-quote {
+    background-color: rgba(0,0,0,.4);
+    padding: 20px;
+  }
+  #masthead h1 {font-size: 1em;}
+  .img-container {
+    height: auto;
+    max-height: 500px;
+  }
+  .dog-thumbnail.dog{
+    width: 100%;
+  }
+  .dog {
+    padding: 10px;
+    position: relative;
+    left:0;
+    transform: none;
+    margin:10px 20px;
+    width: auto;
+  }
+
 }
