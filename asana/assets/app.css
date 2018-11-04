@@ -40,3 +40,16 @@ a {
   font-family: var(--font-serif);
   text-align: center;
 }
+/* gallery */
+#dog-gallery {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+/* gallery thumbnail*/
+#dog-gallery .dog-thumbnail img {
+  width:200px;
+}
+.dog-thumbnail {
+  margin: 20px;
+}
