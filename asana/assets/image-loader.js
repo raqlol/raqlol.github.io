@@ -2,21 +2,46 @@ let dogBios;
 // image expander
 const dog = document.getElementsByClassName("dog");
 const lazyClass = document.getElementsByClassName('lazy')
+const dogPic = document.getElementsByClassName("pic");
+const closeBtns = document.getElementsByClassName("close")
 
-/* load bios from json */
+function expandBio(e, state) {
+  let dogThumbnail = e.target
+  if(state == true) {
+    dogThumbnail.parentNode.classList.remove("dog-thumbnail");
+  }
+  else {
+    dogThumbnail.parentNode.classList.add("dog-thumbnail");
+  }
+  /* should add something to close all other open thumbnails */
+}
+for (i=0;i<dogPic.length;i++){
+  dogPic[i].addEventListener("click", function(event){
+    expandBio(event, true)
+  })
+}
+for (i=0;i<closeBtns.length;i++) {
+  closeBtns[i].addEventListener("click", function(event){
+    expandBio(event, false)
+  })
+}
 function createBio(array) {
-
   console.log("created the bios")
     const dogGallery = document.getElementById("dog-gallery");
     for (i=0;i<array.length;i++){
       let container = document.createElement("div");
       container.classList.add("dog-thumbnail");
       container.classList.add("dog");
+
+      let imgContainer = document.createElement("div");
       let img = document.createElement("IMG");
       img.src= "https://melbournechapter.net/images/beagle-clipart-cutedog-1.png"
       img.classList.add("lazy")
+      img.classList.add("pic")
       img.setAttribute("data-src",array[i].image)
       img.setAttribute("alt", array[i].breed)
+      imgContainer.appendChild(img)
+      imgContainer.classList.add("img-container")
 
       let name = document.createElement("p");
       let nameTxt = document.createTextNode(array[i].name);
@@ -53,7 +78,7 @@ function createBio(array) {
       close.classList.add("close")
 
       container.appendChild(close)
-      container.appendChild(img)
+      container.appendChild(imgContainer)
       container.appendChild(name)
       container.appendChild(age)
       container.appendChild(breed)
@@ -118,3 +143,9 @@ function createBio(array) {
     xhr.send();
   console.log("done")
 })();
+
+// image filter
+
+// random wiggle
+
+// konami code

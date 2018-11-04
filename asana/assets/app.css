@@ -112,6 +112,11 @@ footer {
 .dog-thumbnail .close, .dog-thumbnail .age, .dog-thumbnail .gender, .dog-thumbnail .size, .dog-thumbnail .bio, .dog-thumbnail .breed {
   display: none;
 }
+.img-container {
+  width: 100%;
+  height: 300px;
+  overflow:hidden;
+}
 /* gallery large */
 .dog img {width:auto;}
 .dog {
@@ -127,6 +132,8 @@ footer {
   width: calc(100% - 100px);
   transition: width 2s;
   max-width: 1000px;
+  max-height: calc(100% -  250px);
+  overflow: hidden;
 }
 
 .close {
