@@ -1,10 +1,14 @@
 let dogBios;
 // image expander
 const dog = document.getElementsByClassName("dog");
+const lazyClass = document.getElementsByClassName('lazy')
+
 function expandBio(e) {
   console.log("expand")
+  console.log(e)
   let dogThumbnail = e.target
-  dogThumbnail.parentNode.classList.remove("dog-thumbnail")
+  dogThumbnail.parentNode.classList.remove("dog-thumbnail");
+  /* should add something to close all other open thumbnails */
 }
 /* load bios from json */
 function createBio(array) {
@@ -44,7 +48,6 @@ function createBio(array) {
       bio.appendChild(bioTxt)
 
       let close = document.createTextNode("&#10006");
-      close.classList.add("close")
       container.appendChild(close)
       container.appendChild(img)
       container.appendChild(name)
@@ -57,6 +60,7 @@ function createBio(array) {
     }
 }
 (function fetchJSONFile() {
+    console.log("calling all json")
     var httpRequest = new XMLHttpRequest();
     let xhr = new XMLHttpRequest();
     xhr.onreadystatechange = function() {
@@ -64,23 +68,19 @@ function createBio(array) {
             if (xhr.status === 200) {
                 dogBios = (JSON.parse(xhr.responseText)).dogs
                 createBio(dogBios)
+                console.log("probably need to do a callback after this completes to add the lazy load stuff")
             }
         }
     };
     xhr.open('GET', "assets/data/dogs.json", true);
     xhr.send();
 })();
-const lazyClass = document.getElementsByClassName('lazy')
-/* adds expander click event */
-for (i=0;i<lazyClass.length;i++){
-  lazyClass[i].addEventListener("click", function(event){
-    expandBio(event)
-  })
-}
+
 
 //lazy load
 
 document.addEventListener("DOMContentLoaded", function() {
+  console.log("lazy load working")
   let lazyImages = [].slice.call(document.querySelectorAll("img.lazy"));
   let active = false;
   console.log("i see you moving")
@@ -120,3 +120,12 @@ document.addEventListener("DOMContentLoaded", function() {
 // random wiggle
 
 // konami code
+window.onload = function() {
+  /* adds expander click event */
+  for (i=0;i<lazyClass.length;i++){
+    console.log("adding image event listener")
+    lazyClass[i].addEventListener("click", function(event){
+      expandBio(event)
+    })
+  }
+}
