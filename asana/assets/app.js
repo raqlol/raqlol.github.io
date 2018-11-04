@@ -1,6 +1,9 @@
 // resize header on scroll
-const masthead = document.getElementById("masthead")
 function shrinkMasthead() {
+  const masthead = document.getElementById("masthead")
+  console.log(masthead)
   masthead.classList.add("shrink")
 }
-window.addEventListener("scroll", shrinkMasthead);
+window.onload = function () {
+  window.addEventListener("scroll", shrinkMasthead);
+}

@@ -11,7 +11,7 @@ function expandBio(e) {
   /* should add something to close all other open thumbnails */
 }
 /* load bios from json */
-function createBio(array) {
+function createBio(array, callback) {
     const dogGallery = document.getElementById("dog-gallery");
     for (i=0;i<array.length;i++){
       let container = document.createElement("div");
@@ -26,28 +26,38 @@ function createBio(array) {
       let name = document.createElement("p");
       let nameTxt = document.createTextNode(array[i].name);
       name.appendChild(nameTxt)
+      name.classList.add("name")
 
       let age = document.createElement("p");
       let ageTxt = document.createTextNode(array[i].age);
       age.appendChild(ageTxt)
+      age.classList.add("age")
 
       let breed = document.createElement("p");
       let breedTxt = document.createTextNode(array[i].breed);
       breed.appendChild(breedTxt)
+      breed.classList.add("breed")
 
       let gender = document.createElement("p");
       let genderTxt = document.createTextNode(array[i].gender);
       gender.appendChild(genderTxt)
+      gender.classList.add("gender")
 
       let size = document.createElement("p");
       let sizeTxt = document.createTextNode(array[i].size);
       size.appendChild(sizeTxt)
+      size.classList.add("size")
 
       let bio = document.createElement("p");
       let bioTxt = document.createTextNode(array[i].bio);
       bio.appendChild(bioTxt)
+      bio.classList.add("bio")
 
-      let close = document.createTextNode("&#10006");
+      let close = document.createElement("p");
+      let closeTxt = document.createTextNode("✖");
+      close.appendChild(closeTxt);
+      close.classList.add("close")
+
       container.appendChild(close)
       container.appendChild(img)
       container.appendChild(name)
@@ -58,6 +68,7 @@ function createBio(array) {
       container.appendChild(bio)
       dogGallery.appendChild(container)
     }
+    callback()
 }
 (function fetchJSONFile() {
     console.log("calling all json")
@@ -67,7 +78,7 @@ function createBio(array) {
         if (xhr.readyState === 4) {
             if (xhr.status === 200) {
                 dogBios = (JSON.parse(xhr.responseText)).dogs
-                createBio(dogBios)
+                createBio(dogBios, addLL);
                 console.log("probably need to do a callback after this completes to add the lazy load stuff")
             }
         }
@@ -78,50 +89,43 @@ function createBio(array) {
 
 
 //lazy load
+function addLL() {
+  document.addEventListener("DOMContentLoaded", function() {
+    console.log("lazy load working")
+    let lazyImages = [].slice.call(document.querySelectorAll("img.lazy"));
+    let active = false;
+    console.log("i see you moving")
+    const lazyLoad = function() {
+      if (active === false) {
+        active = true;
 
-document.addEventListener("DOMContentLoaded", function() {
-  console.log("lazy load working")
-  let lazyImages = [].slice.call(document.querySelectorAll("img.lazy"));
-  let active = false;
-  console.log("i see you moving")
-  const lazyLoad = function() {
-    if (active === false) {
-      active = true;
+        setTimeout(function() {
+          lazyImages.forEach(function(lazyImage) {
+            if ((lazyImage.getBoundingClientRect().top <= window.innerHeight && lazyImage.getBoundingClientRect().bottom >= 0) && getComputedStyle(lazyImage).display !== "none") {
+              lazyImage.src = lazyImage.dataset.src;
+              lazyImage.classList.remove("lazy");
 
-      setTimeout(function() {
-        lazyImages.forEach(function(lazyImage) {
-          if ((lazyImage.getBoundingClientRect().top <= window.innerHeight && lazyImage.getBoundingClientRect().bottom >= 0) && getComputedStyle(lazyImage).display !== "none") {
-            lazyImage.src = lazyImage.dataset.src;
-            lazyImage.classList.remove("lazy");
+              lazyImages = lazyImages.filter(function(image) {
+                return image !== lazyImage;
+              });
 
-            lazyImages = lazyImages.filter(function(image) {
-              return image !== lazyImage;
-            });
-
-            if (lazyImages.length === 0) {
-              document.removeEventListener("scroll", lazyLoad);
-              window.removeEventListener("resize", lazyLoad);
-              window.removeEventListener("orientationchange", lazyLoad);
+              if (lazyImages.length === 0) {
+                document.removeEventListener("scroll", lazyLoad);
+                window.removeEventListener("resize", lazyLoad);
+                window.removeEventListener("orientationchange", lazyLoad);
+              }
             }
-          }
-        });
+          });
 
-        active = false;
-      }, 200);
-    }
-  };
+          active = false;
+        }, 200);
+      }
+    };
 
-  document.addEventListener("scroll", lazyLoad);
-  window.addEventListener("resize", lazyLoad);
-  window.addEventListener("orientationchange", lazyLoad);
-});
-// image filter
-
-// random wiggle
-
-// konami code
-window.onload = function() {
-  /* adds expander click event */
+    document.addEventListener("scroll", lazyLoad);
+    window.addEventListener("resize", lazyLoad);
+    window.addEventListener("orientationchange", lazyLoad);
+  });
   for (i=0;i<lazyClass.length;i++){
     console.log("adding image event listener")
     lazyClass[i].addEventListener("click", function(event){
@@ -129,3 +133,8 @@ window.onload = function() {
     })
   }
 }
+// image filter
+
+// random wiggle
+
+// konami code
