@@ -1,25 +1,23 @@
 let dogBios;
 // image expander
 const dog = document.getElementsByClassName("dog");
-const lazyClass = document.getElementsByClassName('lazy')
-const dogPic = document.getElementsByClassName("pic");
-const closeBtns = document.getElementsByClassName("close")
+const lazyClass = document.getElementsByClassName('lazy');
+const dogPic = document.getElementsByClassName("dog-thumbnail");
+const closeBtns = document.getElementsByClassName("close");
 
 function expandBio(e, state) {
   let dogThumbnail = e.target
   if(state == true) {
-    dogThumbnail.parentNode.classList.remove("dog-thumbnail");
+    dogThumbnail.classList.remove("dog-thumbnail");
   }
   else {
     dogThumbnail.parentNode.classList.add("dog-thumbnail");
   }
-  /* should add something to close all other open thumbnails */
 }
 function createBio(array) {
-  console.log("created the bios")
     const dogGallery = document.getElementById("dog-gallery");
     for (i=0;i<array.length;i++){
-      let container = document.createElement("div");
+      let container = document.createElement("button");
       container.classList.add("dog-thumbnail");
       container.classList.add("dog");
 
@@ -117,17 +115,16 @@ function createBio(array) {
     document.addEventListener("scroll", lazyLoad);
     window.addEventListener("resize", lazyLoad);
     window.addEventListener("orientationchange", lazyLoad);
-
     for (i=0;i<dogPic.length;i++){
-      dogPic[i].addEventListener("click", function(event){
-        expandBio(event, true)
-      })
-    }
-    for (i=0;i<closeBtns.length;i++) {
-      closeBtns[i].addEventListener("click", function(event){
-        expandBio(event, false)
-      })
-    }
+          dogPic[i].addEventListener("click", function(event){
+            expandBio(event, true)
+          })
+        }
+        for (i=0;i<closeBtns.length;i++) {
+          closeBtns[i].addEventListener("click", function(event){
+            expandBio(event, false)
+          })
+        }
 }
 (function fetchJSONFile() {
     console.log("calling all json")
