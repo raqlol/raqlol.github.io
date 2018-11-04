@@ -38,6 +38,9 @@ a {
   position: fixed;
   width: 100%;
   top: 0;
+  text-decoration: none;
+  letter-spacing: .2em;
+  transition: background-color 3s, font-size 3s;
 }
 
 #masthead img{
@@ -47,7 +50,7 @@ a {
 }
 /* Header Quote */
 .header-quote {
-  color: var(--color);
+  color: #fff;
   font-family: var(--font-serif);
   margin-left: auto;
   margin-right: auto;

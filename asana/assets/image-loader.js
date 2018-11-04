@@ -51,7 +51,6 @@ function createBio(array) {
       container.appendChild(bio)
       dogGallery.appendChild(container)
     }
-    addLL()
 }
 (function fetchJSONFile() {
     var httpRequest = new XMLHttpRequest();
