@@ -1,12 +1,22 @@
 let dogBios;
+// image expander
+const dog = document.getElementsByClassName("dog");
+function expandBio(e) {
+  let dogThumbnail = e.target
+  dogThumbnail.classList.remove("dog-thumbnail")
+}
+/* load bios from json */
 function createBio(array) {
     const dogGallery = document.getElementById("dog-gallery");
-
     for (i=0;i<array.length;i++){
       let container = document.createElement("div");
       container.classList.add("dog-thumbnail");
+      container.classList.add("dog");
       let img = document.createElement("IMG");
-      img.src= array[i].image
+      img.src= "https://www.petlove.love/wp-content/uploads/2017/01/icon-logo-big.jpg"
+      img.classList.add("lazy")
+      img.setAttribute("data-src",array[i].image)
+      img.setAttribute("alt", array[i].breed)
 
       let name = document.createElement("p");
       let nameTxt = document.createTextNode(array[i].name);
@@ -57,10 +67,52 @@ function createBio(array) {
     xhr.send();
 })();
 
-// image filter
+/* adds expander click event */
+for (i=0;i<dog.length;i++){
+  dog[i].addEventListener("click", function(event){
+    expandBio(event)
+  })
+}
 
-// image expander
+//lazy load
+document.addEventListener("DOMContentLoaded", function() {
+  let lazyImages = [].slice.call(document.querySelectorAll("img.lazy"));
+  let active = false;
+
+  const lazyLoad = function() {
+    if (active === false) {
+      active = true;
+
+      setTimeout(function() {
+        lazyImages.forEach(function(lazyImage) {
+          if ((lazyImage.getBoundingClientRect().top <= window.innerHeight && lazyImage.getBoundingClientRect().bottom >= 0) && getComputedStyle(lazyImage).display !== "none") {
+            lazyImage.src = lazyImage.dataset.src;
+            lazyImage.classList.remove("lazy");
+
+            lazyImages = lazyImages.filter(function(image) {
+              return image !== lazyImage;
+            });
+
+            if (lazyImages.length === 0) {
+              document.removeEventListener("scroll", lazyLoad);
+              window.removeEventListener("resize", lazyLoad);
+              window.removeEventListener("orientationchange", lazyLoad);
+            }
+          }
+        });
+
+        active = false;
+      }, 200);
+    }
+  };
+
+  document.addEventListener("scroll", lazyLoad);
+  window.addEventListener("resize", lazyLoad);
+  window.addEventListener("orientationchange", lazyLoad);
+});
+
+// image filter
 
 // random wiggle
 
-//lazy load
+// konami code
