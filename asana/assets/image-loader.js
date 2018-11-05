@@ -51,6 +51,10 @@ function createBio(array) {
       bio.classList.add("bio")
       let close = document.createElement("p");
       let closeTxt = document.createTextNode("✖");
+
+      let adoptBtn = document.createElement("button");
+
+
       close.appendChild(closeTxt);
       close.classList.add("close")
       close.setAttribute("aria-label", "close")
@@ -62,6 +66,7 @@ function createBio(array) {
       container.appendChild(gender)
       container.appendChild(breed)
       container.appendChild(bio)
+      container.appendChild(adoptBtn)
       dogGallery.appendChild(container)
     }
     /* lazy load */
