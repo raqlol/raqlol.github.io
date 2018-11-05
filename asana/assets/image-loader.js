@@ -24,7 +24,7 @@ function createBio(array) {
         imgContainer.classList.add("lazy")
       }
       else {
-        imgContainer.stle.backgroundImage = array[i].image;
+        imgContainer.style.backgroundImage = "url('" + array[i].image + "')"
       }
       imgContainer.classList.add("pic")
       imgContainer.setAttribute("data-src",array[i].image)
