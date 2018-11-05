@@ -4,7 +4,6 @@
   --font-serif: Georgia, serif;
   --color-secondary: #333;
   --color-link: #635ac7;
-
   font-family: var(--font-sans);
   font-weight: normal;
   line-height: 1.5;
@@ -18,7 +17,6 @@ html, body {
 body {
   display: flex;
   flex-direction: column;
-
 }
 a {
   color: var(--color-secondary);
@@ -27,9 +25,7 @@ main {
   flex-grow: 2;
   flex-shrink:
 }
-footer {
-  flex-grow:0;
-}
+
 /* Global Header */
 .global-header {
   padding-bottom: 2rem;
@@ -73,19 +69,16 @@ footer {
 #masthead.shrink h1 {
   font-size: 1em;
 }
-/* Global Footer */
-.global-footer {
-  color: var(--color);
-  font-family: var(--font-serif);
-  text-align: center;
-}
+
 /* gallery */
 #dog-gallery {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
 }
-/* gallery thumbnail*/
+.lazy {
+  background-image:url("https://melbournechapter.net/images/beagle-clipart-cutedog-1.png");
+}
 #dog-gallery .dog img {
   width: 100%;
   min-height:300px;
@@ -116,7 +109,7 @@ footer {
   border: 16px #333 solid;
   display: none;
 }
-button {
+.dog button {
   color:#fff;
   background-color:var(--color-link);
   border-radius: 3px;
@@ -127,7 +120,7 @@ button {
   font-size: 30px;
   padding: 10px 15px;
 }
-button:hover {
+.dog button:hover {
   background-color:var(--color-secondary);
 }
 .dog button:after {
@@ -149,11 +142,9 @@ button:hover {
   width: 100%;
   background-size: cover;
   background-position: center;
+  background-color: cadetblue;
+  transition: background-image .5s;
 }
-.lazy {
-  background-image:url("https://melbournechapter.net/images/beagle-clipart-cutedog-1.png");
-}
-/* gallery large */
 .dog img {width:auto;}
 .dog {
   position: fixed;
@@ -193,7 +184,15 @@ p.gender:after {
 p.breed:after {
   content: ". ";
 }
-
+/* Global Footer */
+.global-footer {
+  color: var(--color);
+  font-family: var(--font-serif);
+  text-align: center;
+}
+footer {
+  flex-grow:0;
+}
 @media screen and (max-width: 1366px) {
   .dog-thumbnail.dog {
     margin:10px;
@@ -206,7 +205,6 @@ p.breed:after {
   }
 }
 @media screen and (max-width: 768px) {
-
   .dog-thumbnail.dog {
     margin:10px;
     flex-basis: 210px;
@@ -232,7 +230,6 @@ p.breed:after {
   }
 }
 @media screen and (max-width: 520px) {
-
   .header-quote {
     padding: 0 20px;
   }
