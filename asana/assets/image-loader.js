@@ -1,11 +1,10 @@
 let dogBios;
-// image expander
 const dog = document.getElementsByClassName("dog");
 const lazyClass = document.getElementsByClassName('lazy');
 const dogPic = document.getElementsByClassName("pic");
 const dogThumbnail = document.getElementsByClassName("dog-thumbnail");
 const closeBtns = document.getElementsByClassName("close");
-
+// image expander
 function expandBio(e, state) {
   if(state == true) {
     e.classList.remove("dog-thumbnail");
@@ -21,7 +20,9 @@ function createBio(array) {
       container.classList.add("dog-thumbnail");
       container.classList.add("dog");
       let imgContainer = document.createElement("div");
-      imgContainer.classList.add("lazy")
+      if(i>15){
+        imgContainer.classList.add("lazy")
+      }
       imgContainer.classList.add("pic")
       imgContainer.setAttribute("data-src",array[i].image)
       imgContainer.classList.add("img-container")
