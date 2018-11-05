@@ -20,8 +20,11 @@ function createBio(array) {
       container.classList.add("dog-thumbnail");
       container.classList.add("dog");
       let imgContainer = document.createElement("div");
-      if(i>15){
+      if(i>17){
         imgContainer.classList.add("lazy")
+      }
+      else {
+        imgContainer.stle.backgroundImage = array[i].image;
       }
       imgContainer.classList.add("pic")
       imgContainer.setAttribute("data-src",array[i].image)
