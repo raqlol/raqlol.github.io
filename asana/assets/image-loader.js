@@ -9,7 +9,7 @@ const openBio = document.getElementsByClassName('open')
 // image expander
 function expandBio(e, state) {
   if(state == true) {
-    if(openBio) {
+    if(openBio[0]) {
       openBio[0].classList.add("dog-thumbnail");
       openBio[0].classList.remove("open");
     }
