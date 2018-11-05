@@ -88,7 +88,7 @@ footer {
 /* gallery thumbnail*/
 #dog-gallery .dog img {
   width: 100%;
-  min-height:300px
+  min-height:300px;
   margin:auto;
   display: block;
 }
@@ -104,6 +104,18 @@ footer {
   z-index: 1;
   transition: width 0s;
 }
+.close {
+  color: #fff;
+  position: absolute;
+  top: -22px;
+  right: 10px;
+  font-size: 2em;
+  line-height: 0;
+  width: 0;
+  text-indent: -11px;
+  border: 16px #333 solid;
+  display: none;
+}
 .dog-thumbnail .close, .dog-thumbnail .age, .dog-thumbnail .gender, .dog-thumbnail .size, .dog-thumbnail .bio, .dog-thumbnail .breed {
   display: none;
 }
@@ -111,6 +123,9 @@ footer {
   width: 100%;
   overflow:hidden;
   margin-bottom:10px;
+  height:60px;
+  background-size: cover;
+  background-position: center;
 }
 .dog-thumbnail.dog .img-container {
   height: 300px;
@@ -119,7 +134,7 @@ footer {
   background-position: center;
 }
 .lazy {
-  background-image:url("https://melbournechapter.net/images/beagle-clipart-cutedog-1.png")
+  background-image:url("https://melbournechapter.net/images/beagle-clipart-cutedog-1.png");
 }
 /* gallery large */
 .dog img {width:auto;}
@@ -141,38 +156,27 @@ footer {
 }
 .dog p {display: inline;}
 p.name:before {
-  content: "My name is "
+  content: "My name is ";
 }
 p.name:after {
-  content: ".  "
+  content: ".  ";
 }
 p.size:before {
-  content: "I'm a "
+  content: "I'm a ";
 }
 p.size:after {
-  content: " sized, "
+  content: " ";
 }
 p.age:after {
-  content: " year old, "
+  content: " year old, ";
 }
 p.gender:after {
-  content: " "
+  content: " ";
 }
 p.breed:after {
-  content: ". "
+  content: ". ";
 }
-.dog-thumbnail .close {
-  color: #fff;
-  position: absolute;
-  top: -22px;
-  right: 10px;
-  font-size: 2em;
-  line-height: 0;
-  width: 0;
-  text-indent: -11px;
-  border: 16px #333 solid;
-  display: none;
-}
+
 @media screen and (max-width: 1366px) {
   .dog-thumbnail.dog {
     margin:10px;
@@ -185,15 +189,12 @@ p.breed:after {
   }
 }
 @media screen and (max-width: 768px) {
-  .global-header {background-position: right;}
+
   .dog-thumbnail.dog {
     margin:10px;
     flex-basis: 210px;
   }
-  .img-container{
-    height: auto;
-    max-height: 500px;
-  }
+
   .dog {
     padding: 10px;
     position: relative;
@@ -211,21 +212,18 @@ p.breed:after {
     padding: 10px;
   }
 }
-
-
 @media screen and (max-width: 520px) {
-  .global-header {min-height: 350px;}
+
   .header-quote {
-    background-color: rgba(0,0,0,.4);
-    padding: 20px;
+    padding: 0 20px;
   }
-  #masthead h1 {font-size: 1em;}
+  #masthead h1 {
+    font-size: 1em;
+  }
   .img-container {
-    height: auto;
-    max-height: 500px;
+    height: 450px;
   }
   .dog-thumbnail.dog{
     width: 100%;
   }
-
 }
