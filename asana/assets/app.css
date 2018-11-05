@@ -118,6 +118,9 @@ footer {
   background-size: cover;
   background-position: center;
 }
+.lazy {
+  background-image:url("https://melbournechapter.net/images/beagle-clipart-cutedog-1.png")
+}
 /* gallery large */
 .dog img {width:auto;}
 .dog {

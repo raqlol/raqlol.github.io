@@ -2,16 +2,16 @@ let dogBios;
 // image expander
 const dog = document.getElementsByClassName("dog");
 const lazyClass = document.getElementsByClassName('lazy');
-const dogPic = document.getElementsByClassName("dog-thumbnail");
+const dogPic = document.getElementsByClassName("pic");
+const dogThumbnail = document.getElementsByClassName("dog-thumbnail");
 const closeBtns = document.getElementsByClassName("close");
 
 function expandBio(e, state) {
-  let dogThumbnail = e.target
   if(state == true) {
-    dogThumbnail.classList.remove("dog-thumbnail");
+    e.classList.remove("dog-thumbnail");
   }
   else {
-    dogThumbnail.parentNode.classList.add("dog-thumbnail");
+    e.parentNode.classList.add("dog-thumbnail");
   }
 }
 function createBio(array) {
@@ -20,38 +20,31 @@ function createBio(array) {
       let container = document.createElement("div");
       container.classList.add("dog-thumbnail");
       container.classList.add("dog");
-
       let imgContainer = document.createElement("div");
       imgContainer.classList.add("lazy")
       imgContainer.classList.add("pic")
       imgContainer.setAttribute("data-src",array[i].image)
       imgContainer.classList.add("img-container")
-
       let name = document.createElement("p");
       let nameTxt = document.createTextNode(array[i].name);
       name.appendChild(nameTxt)
       name.classList.add("name")
-
       let age = document.createElement("p");
       let ageTxt = document.createTextNode(array[i].age);
       age.appendChild(ageTxt)
       age.classList.add("age")
-
       let breed = document.createElement("p");
       let breedTxt = document.createTextNode(array[i].breed);
       breed.appendChild(breedTxt)
       breed.classList.add("breed")
-
       let gender = document.createElement("p");
       let genderTxt = document.createTextNode(array[i].gender);
       gender.appendChild(genderTxt)
       gender.classList.add("gender")
-
       let size = document.createElement("p");
       let sizeTxt = document.createTextNode(array[i].size);
       size.appendChild(sizeTxt)
       size.classList.add("size")
-
       let bio = document.createElement("p");
       let bioTxt = document.createTextNode(array[i].bio);
       bio.appendChild(bioTxt)
@@ -61,7 +54,6 @@ function createBio(array) {
       close.appendChild(closeTxt);
       close.classList.add("close")
       close.setAttribute("aria-label", "close")
-
       container.appendChild(close)
       container.appendChild(imgContainer)
       container.appendChild(name)
@@ -69,8 +61,6 @@ function createBio(array) {
       container.appendChild(age)
       container.appendChild(gender)
       container.appendChild(breed)
-
-
       container.appendChild(bio)
       dogGallery.appendChild(container)
     }
@@ -87,7 +77,7 @@ function createBio(array) {
               lazyImage.getBoundingClientRect().bottom >= 0 &&
               getComputedStyle(lazyImage).display !== "none"
             ) {
-              lazyImage.style.backgroundImage = lazyImage.dataset.src;
+              lazyImage.style.backgroundImage = "url('" + lazyImage.dataset.src + "')"
               lazyImage.classList.remove("lazy");
               lazyImages = lazyImages.filter(function(image) {
                 return image !== lazyImage;
@@ -108,14 +98,19 @@ function createBio(array) {
     window.addEventListener("orientationchange", lazyLoad);
     for (i=0;i<dogPic.length;i++){
         dogPic[i].addEventListener("click", function(event){
-          expandBio(event, true)
+          expandBio(event.target.parentNode, true)
         })
       }
-      for (i=0;i<closeBtns.length;i++) {
-        closeBtns[i].addEventListener("click", function(event){
-          expandBio(event, false)
+    for (i=0;i<dogThumbnail.length;i++){
+        dogThumbnail[i].addEventListener("click", function(event){
+          expandBio(event.target, true)
         })
       }
+    for (i=0;i<closeBtns.length;i++) {
+      closeBtns[i].addEventListener("click", function(event){
+        expandBio(event.target, false)
+      })
+    }
 }
 (function fetchJSONFile() {
     console.log("calling all json")
