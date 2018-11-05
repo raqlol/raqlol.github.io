@@ -18,7 +18,7 @@ function expandBio(e, state) {
   }
   else {
     e.parentNode.classList.add("dog-thumbnail");
-    e.classList.remove("open");
+    e.parentNode.classList.remove("open");
   }
 }
 function createImg(array, i){
