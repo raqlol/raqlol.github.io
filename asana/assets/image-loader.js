@@ -17,18 +17,14 @@ function expandBio(e, state) {
 function createBio(array) {
     const dogGallery = document.getElementById("dog-gallery");
     for (i=0;i<array.length;i++){
-      let container = document.createElement("button");
+      let container = document.createElement("div");
       container.classList.add("dog-thumbnail");
       container.classList.add("dog");
 
       let imgContainer = document.createElement("div");
-      let img = document.createElement("IMG");
-      img.src= "https://melbournechapter.net/images/beagle-clipart-cutedog-1.png"
-      img.classList.add("lazy")
-      img.classList.add("pic")
-      img.setAttribute("data-src",array[i].image)
-      img.setAttribute("alt", array[i].breed)
-      imgContainer.appendChild(img)
+      imgContainer.classList.add("lazy")
+      imgContainer.classList.add("pic")
+      imgContainer.setAttribute("data-src",array[i].image)
       imgContainer.classList.add("img-container")
 
       let name = document.createElement("p");
@@ -64,6 +60,7 @@ function createBio(array) {
       let closeTxt = document.createTextNode("✖");
       close.appendChild(closeTxt);
       close.classList.add("close")
+      close.setAttribute("aria-label", "close")
 
       container.appendChild(close)
       container.appendChild(imgContainer)
@@ -77,14 +74,11 @@ function createBio(array) {
       container.appendChild(bio)
       dogGallery.appendChild(container)
     }
-  console.log("done with bios")
-  let lazyImages = [].slice.call(document.querySelectorAll("img.lazy"));
+    /* lazy load */
+  let lazyImages = [].slice.call(document.querySelectorAll("div.lazy"));
     let active = false;
-    console.log(lazyImages);
     const lazyLoad = function() {
-      console.log("lazyloading func");
       if (active === false) {
-        console.log("if");
         active = true;
         setTimeout(function() {
           lazyImages.forEach(function(lazyImage) {
@@ -93,15 +87,12 @@ function createBio(array) {
               lazyImage.getBoundingClientRect().bottom >= 0 &&
               getComputedStyle(lazyImage).display !== "none"
             ) {
-              console.log("if again");
-              lazyImage.src = lazyImage.dataset.src;
+              lazyImage.style.backgroundImage = lazyImage.dataset.src;
               lazyImage.classList.remove("lazy");
-
               lazyImages = lazyImages.filter(function(image) {
                 return image !== lazyImage;
               });
               if (lazyImages.length === 0) {
-                console.log("nothing there");
                 document.removeEventListener("scroll", lazyLoad);
                 window.removeEventListener("resize", lazyLoad);
                 window.removeEventListener("orientationchange", lazyLoad);
@@ -109,22 +100,22 @@ function createBio(array) {
             }
           });
           active = false;
-        }, 200);
+        }, 100);
       }
     };
     document.addEventListener("scroll", lazyLoad);
     window.addEventListener("resize", lazyLoad);
     window.addEventListener("orientationchange", lazyLoad);
     for (i=0;i<dogPic.length;i++){
-          dogPic[i].addEventListener("click", function(event){
-            expandBio(event, true)
-          })
-        }
-        for (i=0;i<closeBtns.length;i++) {
-          closeBtns[i].addEventListener("click", function(event){
-            expandBio(event, false)
-          })
-        }
+        dogPic[i].addEventListener("click", function(event){
+          expandBio(event, true)
+        })
+      }
+      for (i=0;i<closeBtns.length;i++) {
+        closeBtns[i].addEventListener("click", function(event){
+          expandBio(event, false)
+        })
+      }
 }
 (function fetchJSONFile() {
     console.log("calling all json")
