@@ -9,8 +9,10 @@ const openBio = document.getElementsByClassName('open')
 // image expander
 function expandBio(e, state) {
   if(state == true) {
-    openBio[0].classList.add("dog-thumbnail");
-    openBio[0].classList.remove("open");
+    if(openBio) {
+      openBio[0].classList.add("dog-thumbnail");
+      openBio[0].classList.remove("open");
+    }
     e.classList.remove("dog-thumbnail");
     e.classList.add("open");
   }
@@ -134,13 +136,11 @@ function createBio(array) {
     }
 }
 (function fetchJSONFile() {
-    console.log("calling all json")
     var httpRequest = new XMLHttpRequest();
     let xhr = new XMLHttpRequest();
     xhr.onreadystatechange = function() {
         if (xhr.readyState === 4) {
             if (xhr.status === 200) {
-              console.log("success")
                 dogBios = (JSON.parse(xhr.responseText)).dogs
                 createBio(dogBios);
             }
@@ -148,11 +148,4 @@ function createBio(array) {
     };
     xhr.open('GET', "https://raqlol.github.io/asana/assets/data/dogs.json", true);
     xhr.send();
-  console.log("done")
 })();
-
-// image filter
-
-// random wiggle
-
-// konami code
