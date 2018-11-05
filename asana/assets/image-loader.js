@@ -13,22 +13,27 @@ function expandBio(e, state) {
     e.parentNode.classList.add("dog-thumbnail");
   }
 }
+function createImg(array, i){
+  let imgContainer = document.createElement("div");
+  if(i>17){
+    imgContainer.classList.add("lazy")
+  }
+  else {
+    imgContainer.style.backgroundImage = "url('" + array[i].image + "')"
+  }
+  imgContainer.classList.add("pic")
+  imgContainer.setAttribute("data-src",array[i].image)
+  imgContainer.classList.add("img-container")
+  return imgContainer
+}
+/* see above for all created parts */
 function createBio(array) {
     const dogGallery = document.getElementById("dog-gallery");
     for (i=0;i<array.length;i++){
       let container = document.createElement("div");
       container.classList.add("dog-thumbnail");
       container.classList.add("dog");
-      let imgContainer = document.createElement("div");
-      if(i>17){
-        imgContainer.classList.add("lazy")
-      }
-      else {
-        imgContainer.style.backgroundImage = "url('" + array[i].image + "')"
-      }
-      imgContainer.classList.add("pic")
-      imgContainer.setAttribute("data-src",array[i].image)
-      imgContainer.classList.add("img-container")
+
       let name = document.createElement("p");
       let nameTxt = document.createTextNode(array[i].name);
       name.appendChild(nameTxt)
@@ -63,7 +68,7 @@ function createBio(array) {
       close.classList.add("close")
       close.setAttribute("aria-label", "close")
       container.appendChild(close)
-      container.appendChild(imgContainer)
+      container.appendChild(createImg(array, i))
       container.appendChild(name)
       container.appendChild(size)
       container.appendChild(age)
