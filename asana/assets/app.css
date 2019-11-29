@@ -1,21 +1,46 @@
 /* Globals */
 :root {
+<<<<<<< HEAD
   --font-sans: "Helvetica Neue", Helvetica, Arial, sans-serif;
   --font-serif: Georgia, serif;
   --color-secondary: #333;
   --color-link: #635ac7;
 
+=======
+  --font-sans: 'Raleway', sans-serif;
+  --font-serif: Georgia, serif;
+  --color-secondary: #333;
+  --color-link: #635ac7;
+>>>>>>> d08a8d9cf16a8978b0eea31256b49a488eeb0d35
   font-family: var(--font-sans);
   font-weight: normal;
   line-height: 1.5;
 }
 
+<<<<<<< HEAD
 body {
   margin: 0;
 }
 
 a {
   color: var(--color-link);
+=======
+html, body {
+  margin: 0;
+  height: 100%;
+  width:100%;
+}
+body {
+  display: flex;
+  flex-direction: column;
+}
+a {
+  color: var(--color-secondary);
+}
+main {
+  flex-grow: 2;
+  flex-shrink:
+>>>>>>> d08a8d9cf16a8978b0eea31256b49a488eeb0d35
 }
 
 /* Global Header */
@@ -24,19 +49,229 @@ a {
   padding-top: 2rem;
   text-align: center;
 }
+<<<<<<< HEAD
 
 /* Header Quote */
 .header-quote {
   color: var(--color);
+=======
+#masthead {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  text-decoration: none;
+  letter-spacing: .2em;
+  background-color:none;
+  transition: background-color 1s;
+  z-index: 20;
+}
+#masthead h1 {
+  font-size: 2.5em;
+  transition: font-size 3s;
+}
+#masthead img{
+  height: 40px;
+  width: 52px;
+  align-self: center;
+}
+/* Header Quote */
+.header-quote {
+>>>>>>> d08a8d9cf16a8978b0eea31256b49a488eeb0d35
   font-family: var(--font-serif);
   margin-left: auto;
   margin-right: auto;
   max-width: 460px;
+<<<<<<< HEAD
 }
 
+=======
+  margin-top: 100px;
+}
+.shrink#masthead {
+  background:var(--color-secondary);
+  color: #fff;
+}
+#masthead.shrink h1 {
+  font-size: 1em;
+}
+
+/* gallery */
+#dog-gallery {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+.lazy {
+  background-image:url("https://melbournechapter.net/images/beagle-clipart-cutedog-1.png");
+}
+#dog-gallery .dog img {
+  width: 100%;
+  min-height:300px;
+  margin:auto;
+  display: block;
+}
+.dog-thumbnail.dog {
+  margin: 20px;
+  width:250px;
+  flex-grow:1;
+  flex-shrink:1;
+  flex-basis: 350px;
+  position: static;
+  transform: translate(0%,0%);
+  padding: 10px;
+  z-index: 1;
+  transition: width 0s;
+}
+.close {
+  color: #fff;
+  position: absolute;
+  top: -22px;
+  right: 10px;
+  font-size: 2em;
+  line-height: 0;
+  width: 0;
+  text-indent: -11px;
+  border: 16px #333 solid;
+  display: none;
+}
+.dog button {
+  color:#fff;
+  background-color:var(--color-link);
+  border-radius: 3px;
+  border: none;
+  display: block;
+  margin-left: auto;
+  font-weight: bold;
+  font-size: 30px;
+  padding: 10px 15px;
+}
+.dog button:hover {
+  background-color:var(--color-secondary);
+}
+.dog button:after {
+  content: "ADOPT ME";
+}
+.dog-thumbnail.dog  button, .dog-thumbnail .close, .dog-thumbnail .age, .dog-thumbnail .gender, .dog-thumbnail .size, .dog-thumbnail .bio, .dog-thumbnail .breed {
+  display: none;
+}
+.img-container {
+  width: 100%;
+  overflow:hidden;
+  margin-bottom:10px;
+  height:600px;
+  background-size: cover;
+  background-position: center;
+}
+.dog-thumbnail.dog .img-container {
+  height: 300px;
+  width: 100%;
+  background-size: cover;
+  background-position: center;
+  background-color: cadetblue;
+  transition: background-image .5s;
+}
+.dog img {width:auto;}
+.dog {
+  position: fixed;
+  top:50%;
+  left:50%;
+  transform: translate(-50%,-50%);
+  background: #fff;
+  border: #666 5px solid;
+  border-radius: 10px;
+  padding: 20px;
+  z-index: 10;
+  width: calc(100% - 100px);
+  transition: width 2s;
+  max-width: 1000px;
+  max-height: calc(100% -  180px);
+  overflow: hidden;
+}
+.dog p {display: inline;}
+p.name:before {
+  content: "My name is ";
+}
+p.name:after {
+  content: ".  ";
+}
+p.size:before {
+  content: "I'm a ";
+}
+p.size:after {
+  content: " ";
+}
+p.age:after {
+  content: " year old, ";
+}
+p.gender:after {
+  content: " ";
+}
+p.breed:after {
+  content: ". ";
+}
+>>>>>>> d08a8d9cf16a8978b0eea31256b49a488eeb0d35
 /* Global Footer */
 .global-footer {
   color: var(--color);
   font-family: var(--font-serif);
   text-align: center;
 }
+<<<<<<< HEAD
+=======
+footer {
+  flex-grow:0;
+}
+@media screen and (max-width: 1366px) {
+  .dog-thumbnail.dog {
+    margin:10px;
+    flex-grow: 1;
+    flex-shrink: 1;
+    flex-basis: 300px;
+  }
+  .img-container{
+    height: 480px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .dog-thumbnail.dog {
+    margin:10px;
+    flex-basis: 210px;
+  }
+  .img-container {
+    height: 550px;
+  }
+  .dog {
+    padding: 10px;
+    position: relative;
+    left:0;
+    transform: none;
+    margin:10px 20px;
+    width: auto;
+  }
+  #dog-gallery div:not(.dog-thumbnail).dog{
+    width: 100%;
+    margin:10px;
+    position: relative;
+    left: 0;
+    transform: none;
+    padding: 10px;
+  }
+}
+@media screen and (max-width: 520px) {
+  .header-quote {
+    padding: 0 20px;
+  }
+  #masthead h1 {
+    font-size: 1em;
+  }
+  .img-container {
+    height: 450px;
+  }
+  .dog-thumbnail.dog{
+    width: 100%;
+  }
+}
+>>>>>>> d08a8d9cf16a8978b0eea31256b49a488eeb0d35
