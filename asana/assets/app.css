@@ -1,14 +1,30 @@
 /* Globals */
 :root {
+<<<<<<< HEAD
+  --font-sans: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  --font-serif: Georgia, serif;
+  --color-secondary: #333;
+  --color-link: #635ac7;
+
+=======
   --font-sans: 'Raleway', sans-serif;
   --font-serif: Georgia, serif;
   --color-secondary: #333;
   --color-link: #635ac7;
+>>>>>>> d08a8d9cf16a8978b0eea31256b49a488eeb0d35
   font-family: var(--font-sans);
   font-weight: normal;
   line-height: 1.5;
 }
 
+<<<<<<< HEAD
+body {
+  margin: 0;
+}
+
+a {
+  color: var(--color-link);
+=======
 html, body {
   margin: 0;
   height: 100%;
@@ -24,6 +40,7 @@ a {
 main {
   flex-grow: 2;
   flex-shrink:
+>>>>>>> d08a8d9cf16a8978b0eea31256b49a488eeb0d35
 }
 
 /* Global Header */
@@ -32,6 +49,12 @@ main {
   padding-top: 2rem;
   text-align: center;
 }
+<<<<<<< HEAD
+
+/* Header Quote */
+.header-quote {
+  color: var(--color);
+=======
 #masthead {
   display: flex;
   flex-wrap: wrap;
@@ -56,10 +79,15 @@ main {
 }
 /* Header Quote */
 .header-quote {
+>>>>>>> d08a8d9cf16a8978b0eea31256b49a488eeb0d35
   font-family: var(--font-serif);
   margin-left: auto;
   margin-right: auto;
   max-width: 460px;
+<<<<<<< HEAD
+}
+
+=======
   margin-top: 100px;
 }
 .shrink#masthead {
@@ -184,12 +212,15 @@ p.gender:after {
 p.breed:after {
   content: ". ";
 }
+>>>>>>> d08a8d9cf16a8978b0eea31256b49a488eeb0d35
 /* Global Footer */
 .global-footer {
   color: var(--color);
   font-family: var(--font-serif);
   text-align: center;
 }
+<<<<<<< HEAD
+=======
 footer {
   flex-grow:0;
 }
@@ -243,3 +274,4 @@ footer {
     width: 100%;
   }
 }
+>>>>>>> d08a8d9cf16a8978b0eea31256b49a488eeb0d35

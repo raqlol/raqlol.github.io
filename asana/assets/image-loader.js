@@ -1,3 +1,25 @@
+<<<<<<< HEAD
+function createBio(elements) {
+    elements = JSON.parse(elements);
+    console.log(elements)
+    const dogGallery = document.getElementById("dog-gallery");
+    elements.forEach(funciton (element) {
+        console.log(elements)
+    });
+}
+var xhr = new XMLHttpRequest();
+xhr.onload = createBio;
+xhr.open("GET", "data/dogs.json", true);
+xhr.send();
+
+// image filter
+
+// image expander
+
+// random wiggle
+
+//lazy load
+=======
 let dogBios;
 const dog = document.getElementsByClassName("dog");
 const lazyClass = document.getElementsByClassName('lazy');
@@ -149,3 +171,4 @@ function createBio(array) {
     xhr.open('GET', "https://raqlol.github.io/asana/assets/data/dogs.json", true);
     xhr.send();
 })();
+>>>>>>> d08a8d9cf16a8978b0eea31256b49a488eeb0d35
