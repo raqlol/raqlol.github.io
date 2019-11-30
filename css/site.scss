@@ -25,10 +25,10 @@ a {
 }
 #home-link {
   position: fixed;
-  top: 0;
-  left: 0;
-  height: 100px;
-  width: 100px;
+  top: 10px;
+  left: 10px;
+  height: 40px;
+  width: 40px;
   background: url("/images/home.svg");
 }
 #home-section {
@@ -64,11 +64,11 @@ a {
       justify-content: center;
       list-style: none;
       li {
-        flex-grow: 0;
+        flex-grow: 1;
         flex-shrink:1;
         flex-basis: 200px;
         text-align: center;
-        margin: 10px 10px 0 10px;
+        margin: 10px 0px 40px;
         padding: 15px;
         background-color: rgba(0,0,0,.5);
         a {
@@ -79,4 +79,7 @@ a {
       }
     }
   }
+}
+#provident {
+  padding: 10px;
 }
