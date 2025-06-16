@@ -1,56 +1,32 @@
-/* Reset basic styles */
-* {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Photo Gallery</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header>
+    <h1>Call for artists</h1>
+    <p>Mother</p>
+    <p>Fall 2025</p>
+    <p>San Francisco, CA</p>
+  </header>
 
-body {
-  font-family: Arial, sans-serif;
-  background-color: #f9f9f9;
-  color: #333;
-  line-height: 1.6;
-  padding: 20px;
-}
+  <main class="gallery-container">
+    <div class="gallery">
+      <img src="https://via.placeholder.com/300" alt="Photo 1" />
+      <img src="https://via.placeholder.com/300" alt="Photo 2" />
+      <img src="https://via.placeholder.com/300" alt="Photo 3" />
+      <img src="https://via.placeholder.com/300" alt="Photo 4" />
+      <img src="https://via.placeholder.com/300" alt="Photo 5" />
+      <img src="https://via.placeholder.com/300" alt="Photo 6" />
+    </div>
+  </main>
 
-header {
-  text-align: center;
-  margin-bottom: 30px;
-}
-
-h1 {
-  font-size: 2rem;
-  color: #444;
-}
-
-.gallery-container {
-  display: flex;
-  justify-content: center;
-}
-
-.gallery {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-  gap: 15px;
-  max-width: 1000px;
-  width: 100%;
-}
-
-.gallery img {
-  width: 100%;
-  height: auto;
-  border-radius: 8px;
-  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-  transition: transform 0.2s;
-}
-
-.gallery img:hover {
-  transform: scale(1.03);
-}
-
-footer {
-  text-align: center;
-  margin-top: 40px;
-  font-size: 0.9rem;
-  color: #777;
-}
+  <footer>
+    <p>&copy; 2025 Your Name</p>
+  </footer>
+</body>
+</html>
