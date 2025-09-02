@@ -3,30 +3,307 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Photo Gallery</title>
-  <link rel="stylesheet" href="styles.css" />
+  <title>Raquel Lowell Portfolio - Web Design and Development, Branding, Content Strategy</title>
+  <style>
+    /* ---- Global Styles ---- */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Helvetica Neue', Arial, sans-serif;
+      line-height: 1.6;
+      color: #222;
+      background: #fafafa;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    h1, h2, h3 {
+      margin-bottom: 1rem;
+    }
+
+    section {
+      padding: 80px 20px;
+      max-width: 1200px;
+      margin: auto;
+    }
+
+    /* ---- Navbar ---- */
+    header {
+      position: fixed;
+      width: 100%;
+      background: #fff;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+      z-index: 1000;
+    }
+
+    nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      max-width: 1200px;
+      margin: auto;
+      padding: 15px 20px;
+    }
+
+    nav .logo {
+      font-size: 1.5rem;
+      font-weight: bold;
+      color: #333;
+    }
+
+    nav ul {
+      display: flex;
+      gap: 20px;
+      list-style: none;
+    }
+
+    nav li a:hover {
+      color: #0077ff;
+    }
+
+    /* ---- Hero ---- */
+    .hero {
+      height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      background: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)),
+        url('https://picsum.photos/1600/900?random=5') center/cover no-repeat;
+      color: #fff;
+    }
+
+    .hero h1 {
+      font-size: 3rem;
+    }
+
+    .hero p {
+      margin-top: 15px;
+      font-size: 1.2rem;
+    }
+
+    /* ---- About ---- */
+    .about {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 40px;
+      align-items: center;
+    }
+
+    .about img {
+      width: 100%;
+      border-radius: 10px;
+    }
+
+    /* ---- Portfolio ---- */
+    .portfolio {
+      text-align: center;
+    }
+
+    .filter-buttons {
+      margin-bottom: 30px;
+    }
+
+    .filter-buttons button {
+      margin: 0 10px;
+      padding: 10px 20px;
+      border: none;
+      background: #0077ff;
+      color: #fff;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    .filter-buttons button.active {
+      background: #005fcc;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+      gap: 20px;
+    }
+
+    .grid-item {
+      background: #fff;
+      border-radius: 10px;
+      overflow: hidden;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      transition: transform 0.3s;
+    }
+
+    .grid-item:hover {
+      transform: translateY(-5px);
+    }
+
+    .grid-item img {
+      width: 100%;
+      display: block;
+    }
+
+    /* ---- Contact ---- */
+    .contact form {
+      display: grid;
+      gap: 15px;
+      max-width: 600px;
+      margin: auto;
+    }
+
+    .contact input,
+    .contact textarea {
+      padding: 12px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      font-size: 1rem;
+      width: 100%;
+    }
+
+    .contact button {
+      padding: 12px;
+      border: none;
+      background: #0077ff;
+      color: #fff;
+      font-size: 1rem;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    .contact button:hover {
+      background: #005fcc;
+    }
+
+    /* ---- Footer ---- */
+    footer {
+      text-align: center;
+      padding: 20px;
+      background: #333;
+      color: #fff;
+      margin-top: 40px;
+    }
+
+    /* ---- Responsive ---- */
+    @media(max-width: 768px) {
+      .about {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
 </head>
 <body>
+  <!-- Header / Navbar -->
   <header>
-    <h1>Call for artists</h1>
-    <p>Mother</p>
-    <p>Fall 2025</p>
-    <p>San Francisco, CA</p>
+    <nav>
+      <div class="logo">MyPortfolio</div>
+      <ul>
+        <li><a href="#hero">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#portfolio">Portfolio</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
   </header>
 
-  <main class="gallery-container">
-    <div class="gallery">
-      <img src="https://via.placeholder.com/300" alt="Photo 1" />
-      <img src="https://via.placeholder.com/300" alt="Photo 2" />
-      <img src="https://via.placeholder.com/300" alt="Photo 3" />
-      <img src="https://via.placeholder.com/300" alt="Photo 4" />
-      <img src="https://via.placeholder.com/300" alt="Photo 5" />
-      <img src="https://via.placeholder.com/300" alt="Photo 6" />
+  <!-- Hero -->
+  <section class="hero" id="hero">
+    <div>
+      <h1>Raquel Lowell</h1>
+      <p>Crafting visual stories through bold and thoughtful design.</p>
     </div>
-  </main>
+  </section>
 
+  <!-- About -->
+  <section id="about">
+    <div class="about">
+      <img src="https://picsum.photos/500/500?random=1" alt="Designer portrait">
+      <div>
+        <h2>Branding, Creative Direction, and Content Strategy</h2>
+        <p>
+          I’m a passionate creative leader with experience in branding, web design, and content strategy.  
+          My work blends creativity and strategy to bring ideas to life and help businesses communicate effectively. 
+          When I’m not designing, you’ll find me sketching, painting, or exploring new art mediums.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Portfolio -->
+  <section id="portfolio" class="portfolio">
+    <h2>Portfolio</h2>
+    <div class="filter-buttons">
+      <button class="active" data-filter="all">All</button>
+      <button data-filter="branding">Branding</button>
+      <button data-filter="web">Web Design/Development</button>
+      <button data-filter="content">Content Strategy</button>
+    </div>
+    <div class="grid">
+      <div class="grid-item" data-category="branding"><img src="" alt=""></div>
+      <div class="grid-item" data-category="web"><img src="" alt=""></div>
+      <div class="grid-item" data-category="illustration"><img src="" alt=""></div>
+      <div class="grid-item" data-category="branding"><img src="" alt=""></div>
+      <div class="grid-item" data-category="web"><img src="" alt=""></div>
+      <div class="grid-item" data-category="illustration"><img src="" alt=""></div>
+    </div>
+  </section>
+
+  <!-- Contact -->
+  <section id="contact" class="contact">
+    <h2>Connect</h2>
+    <form id="contactForm">
+      <input type="text" placeholder="Your Name" required>
+      <input type="email" placeholder="Your Email" required>
+      <textarea rows="5" placeholder="Your Message" required></textarea>
+      <button type="submit">Send Message</button>
+    </form>
+  </section>
+
+  <!-- Footer -->
   <footer>
-    <p>&copy; 2025 Your Name</p>
+    <p></p>
   </footer>
+
+  <script>
+    // ---- Smooth Scrolling ----
+    document.querySelectorAll('nav a').forEach(anchor => {
+      anchor.addEventListener('click', function(e) {
+        e.preventDefault();
+        const target = document.querySelector(this.getAttribute('href'));
+        target.scrollIntoView({ behavior: 'smooth' });
+      });
+    });
+
+    // ---- Portfolio Filter ----
+    const buttons = document.querySelectorAll('.filter-buttons button');
+    const items = document.querySelectorAll('.grid-item');
+
+    buttons.forEach(button => {
+      button.addEventListener('click', () => {
+        buttons.forEach(btn => btn.classList.remove('active'));
+        button.classList.add('active');
+        const filter = button.getAttribute('data-filter');
+
+        items.forEach(item => {
+          if (filter === 'all' || item.getAttribute('data-category') === filter) {
+            item.style.display = 'block';
+          } else {
+            item.style.display = 'none';
+          }
+        });
+      });
+    });
+
+    // ---- Contact Form (basic demo only) ----
+    document.getElementById('contactForm').addEventListener('submit', e => {
+      e.preventDefault();
+      alert('Message sent! (Demo only)');
+      e.target.reset();
+    });
+  </script>
 </body>
 </html>
