@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Project Title — My Portfolio</title>
+  <style>
+    /* Basic reset & typography */
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+    body {
+      font-family: Arial, sans-serif;
+      line-height: 1.5;
+      color: #333;
+      background-color: #fff;
+    }
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+    header, footer {
+      padding: 2rem;
+      text-align: center;
+      background-color: #f8f8f8;
+    }
+    main {
+      max-width: 960px;
+      margin: 0 auto;
+      padding: 2rem 1rem;
+    }
+
+    /* Project hero / title section */
+    .project-header {
+      margin-bottom: 2rem;
+    }
+    .project-header h1 {
+      font-size: 2.5rem;
+      margin-bottom: 0.5rem;
+    }
+    .project-header p {
+      font-size: 1.1rem;
+      color: #666;
+    }
+
+    /* Gallery grid */
+    .project-gallery {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      grid-gap: 1.5rem;
+    }
+    .project-item {
+      position: relative;
+      overflow: hidden;
+    }
+    .project-item img {
+      display: block;
+      width: 100%;
+      height: auto;
+      object-fit: cover;
+      transition: transform 0.3s ease;
+    }
+    .project-item:hover img {
+      transform: scale(1.05);
+    }
+    .project-item .description {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      background: rgba(0, 0, 0, 0.6);
+      color: #fff;
+      padding: 1rem;
+      opacity: 0;
+      transition: opacity 0.3s ease;
+    }
+    .project-item:hover .description {
+      opacity: 1;
+    }
+
+    /* Back link or navigation */
+    .project-nav {
+      margin-top: 2rem;
+      text-align: center;
+    }
+    .project-nav a {
+      color: #007bff;
+      font-size: 1rem;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h2><a href="/">My Portfolio</a></h2>
+  </header>
+
+  <main>
+    <section class="project-header">
+      <h1>Project Name</h1>
+      <p>A short introduction or subtitle / summary about the project, its goals, medium, or year.</p>
+    </section>
+
+    <section class="project-gallery">
+      <!-- Repeat this block for each image + description -->
+      <div class="project-item">
+        <img src="path/to/image1.jpg" alt="Description (for accessibility)" />
+        <div class="description">
+          <h3>Image Title or Caption</h3>
+          <p>Here’s a fuller description of what this image shows, context, techniques used, or any relevant commentary.</p>
+        </div>
+      </div>
+
+      <div class="project-item">
+        <img src="path/to/image2.jpg" alt="Another image alt text" />
+        <div class="description">
+          <h3>Another Caption</h3>
+          <p>Description text for the second image. You can adjust length as needed.</p>
+        </div>
+      </div>
+
+      <!-- add more .project-item blocks as needed -->
+    </section>
+
+    <div class="project-nav">
+      <p><a href="/projects">← Back to all projects</a></p>
+    </div>
+  </main>
+
+  <footer>
+    <p>© 2025 Your Name / Studio</p>
+  </footer>
+</body>
+</html>
