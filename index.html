@@ -10,6 +10,7 @@
       margin: 0;
       padding: 0;
       box-sizing: border-box;
+      letter-spacing: 1px;
     }
     body {
       font-family: 'Helvetica Neue', Arial, sans-serif;
@@ -47,11 +48,12 @@
       max-width: 1200px;
       margin: auto;
       padding: 15px 20px;
+      color: rosybrown;
     }
 
     nav .logo {
       font-size: 2rem;
-      font-weight: bold;
+      font-weight: 300;
       color: #fff;
     }
 
@@ -62,7 +64,7 @@
     }
 
     nav li a:hover {
-      color: #0077ff;
+      color: red;
     }
 
     /* ---- Hero ---- */
@@ -76,16 +78,17 @@
       align-items: center;
       justify-content: left;
       text-align: left;
-      background: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)),
-        url('https://raqlol.com/images/bg.png') center/cover no-repeat;
-      color: #fff;
+      background: linear-gradient(rgba(0,0,0,0.8), rgba(0,0,0,0.6)),
+        url('https://raqlol.com/images/bg.png') center/cover no-repeat color: #fff;
     }
     .hero h1 {
       font-size: 2rem;
-      font-weight: 400;
+      font-weight: 300;
     }
     .hero div {
-      max-width: 75%;
+      max-width: 1200px;
+      margin: auto;
+      width: 75%;
     }
     .hero p {
       margin-top: 15px;
@@ -190,7 +193,10 @@
       color: #fff;
       margin-top: 40px;
     }
-
+header.scrolled-black {
+      background: #000 !important;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+    }
     /* ---- Responsive ---- */
     @media(max-width: 768px) {
       .about {
@@ -228,7 +234,7 @@
   <section class="hero" id="hero">
     <div>
       <h1>Crafting visual stories with strategic designs.</h1>
-      <p>Branding, Websites, Web Accessibility, SEO&nbsp;Strategy & Experiental Environments. </p>
+      <p>Branding, Art Direction, Websites, Web&nbsp;Accessibility, Content Strategy & Experiental Environments. </p>
     </div>
   </section>
 
@@ -265,16 +271,9 @@
       <div class="grid-item" data-category="web"><img src="/images/icon-ct-site.jpg" alt=""></div>
     </div>
   </section>
-
-  <!-- Contact -->
-  <section id="contact" class="contact">
-    <h2>Connect</h2>
-    <a href="https://www.instagram.com/raquel_lowell_/">Instagram</a>
-  </section>
-
   <!-- Footer -->
-  <footer>
-    <p></p>
+  <footer id="contact" class="contact">
+    <p><a href="https://www.instagram.com/raquel_lowell_/">Instagram</a></p>
   </footer>
 
   <script>
@@ -305,13 +304,6 @@
           }
         });
       });
-    });
-
-    // ---- Contact Form (basic demo only) ----
-    document.getElementById('contactForm').addEventListener('submit', e => {
-      e.preventDefault();
-      alert('Message sent! (Demo only)');
-      e.target.reset();
     });
   </script>
 </body>
