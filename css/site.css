@@ -46,6 +46,8 @@ header.portfolio nav ul a {
   padding: 20px 40px;
   display: block;
   border: 1px solid #cb1515;
+  transform: none;
+  -webkit-transform: none;
 }
 header.portfolio nav ul a:hover {
   color: black;
