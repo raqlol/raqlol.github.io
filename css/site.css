@@ -53,6 +53,7 @@ header.portfolio nav ul a:hover {
   color: black;
 }
 header:not(.portfolio) nav a {
+  margin-left: 30px;
   border: solid #cb1515;
   border-width: 0 20px 20px 0;
   display: inline-block;
@@ -274,6 +275,10 @@ ul li a {
     grid-area: span 5/span 2;
   }
 }
+#work {
+  margin-top: 100px;
+}
+
 @media screen and (min-width: 1600px) {
   .container {
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
