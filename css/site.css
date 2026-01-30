@@ -53,7 +53,7 @@ header.portfolio nav ul a:hover {
   color: black;
 }
 header:not(.portfolio) nav a {
-  margin-left: 30px;
+  margin-left: 22px;
   border: solid #cb1515;
   border-width: 0 20px 20px 0;
   display: inline-block;
