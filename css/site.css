@@ -13,7 +13,7 @@ header {
   display: flex;
   flex-wrap: wrap;
   background-color: white;
-  width: auto;
+  width: 100%;
   z-index: 1;
   position: fixed;
 }
@@ -38,7 +38,7 @@ header nav ul {
   padding: 0;
   list-style: none;
 }
-header nav ul li:first-child {
+header nav ul li {
   margin-right: 20px;
 }
 header nav a {
@@ -46,7 +46,6 @@ header nav a {
   font-size: 1rem;
   text-decoration: none;
   padding: 20px 10px;
-  border-radius: 15px 0 15px 15px;
   background-color: rgba(72, 41, 134, 0.3);
   transition-duration: 1s;
 }
@@ -81,13 +80,18 @@ main:before {
   border-top: 60px solid white;
   content: "";
   margin-bottom: 20px;
+  position: fixed;
+  z-index: 0;
+}
+main > p {
+  margin: 20px;
 }
 
 h1 {
   text-transform: uppercase;
   font-size: 2rem;
   font-family: "Libre Baskerville", serif;
-  margin: 0 20px;
+  margin: 100px 20px 0 20px;
   width: 100%;
 }
 h1 span {
@@ -112,8 +116,7 @@ h3 {
 }
 
 .container {
-  flex: 1 0 100%;
-  margin-top: 20px;
+  margin: 20px;
 }
 .container .icon {
   display: block;
@@ -121,6 +124,8 @@ h3 {
   background-image: var(--background);
   background-size: cover;
   background-position: center;
+  height: 300px;
+  width: 100%;
 }
 .container .icon img {
   width: 100%;
@@ -217,9 +222,6 @@ h3 {
   }
 }
 @media screen and (min-width: 900px) {
-  main:before {
-    width: 100%;
-  }
   main .container .icon {
     flex-basis: 33%;
   }
