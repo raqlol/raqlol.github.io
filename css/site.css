@@ -9,6 +9,12 @@ html, body {
   scroll-behavior: smooth;
 }
 
+a {
+  color: #482986;
+  font-weight: bold;
+  text-decoration: none;
+}
+
 header {
   display: flex;
   flex-wrap: wrap;
