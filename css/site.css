@@ -19,9 +19,10 @@ header {
 }
 header div {
   margin: 20px 20px 0px 20px;
+  align-self: end;
 }
 header div p {
-  margin: 10px 0;
+  margin: 10px 0 0 0;
 }
 header div p:first-child {
   font-family: "Libre Baskerville", serif;
@@ -31,7 +32,8 @@ header div p:first-child {
 }
 header nav {
   flex: 1 1 100%;
-  margin: 20px;
+  margin: 20px 20px 28px;
+  align-self: end;
 }
 header nav ul {
   display: flex;
@@ -39,7 +41,7 @@ header nav ul {
   list-style: none;
 }
 header nav ul li {
-  margin-right: 20px;
+  margin-right: 10px;
 }
 header nav a {
   color: #000;
@@ -51,7 +53,8 @@ header nav a {
 }
 header nav a:hover {
   font-weight: bold;
-  background-color: transparent;
+  color: white;
+  background-color: #482986;
 }
 header nav a:focus {
   font-weight: bold;
@@ -116,7 +119,11 @@ h3 {
 }
 
 .container {
-  margin: 20px;
+  margin: 20px 0;
+  width: 100%;
+}
+.container .portfolio {
+  height: 350px;
 }
 .container .icon {
   display: block;
@@ -124,28 +131,19 @@ h3 {
   background-image: var(--background);
   background-size: cover;
   background-position: center;
-  height: 300px;
   width: 100%;
 }
 .container .icon img {
   width: 100%;
   height: auto;
 }
-.container .icon:first-child {
-  border-top-left-radius: 40px;
-}
 .container .icon:first-child:hover span:after {
   background-color: #482986;
   content: "";
-  border-top-left-radius: 40px;
-}
-.container .icon:last-child {
-  border-bottom-right-radius: 40px;
 }
 .container .icon:last-child:hover span:after {
   background-color: #482986;
   content: "";
-  border-bottom-right-radius: 40px;
 }
 .container .icon:hover span:after {
   background-color: #482986;
@@ -187,9 +185,14 @@ h3 {
 .container .item-mobile img {
   height: 500px;
   width: auto;
-  margin: 20px auto;
-  margin-bottom: 30px;
+  margin: 20px;
   display: block;
+}
+.container .item-tablet img {
+  width: auto;
+  margin: 20px;
+  display: block;
+  height: 500px;
 }
 
 @media screen and (min-width: 575px) {
@@ -199,8 +202,8 @@ h3 {
     justify-content: space-between;
   }
   header div {
-    width: 500px;
-    margin: 20px;
+    width: 360px;
+    margin: 20px 0 20px 20px;
   }
   header nav ul {
     justify-content: flex-end;
@@ -220,6 +223,10 @@ h3 {
     width: 50%;
     flex: 1 1 50%;
   }
+  main .container .icon.item-full {
+    width: 100%;
+    flex: 1 1 100%;
+  }
 }
 @media screen and (min-width: 900px) {
   main .container .icon {
@@ -228,7 +235,6 @@ h3 {
 }
 @media screen and (min-width: 1200px) {
   main .container .icon {
-    height: 360px;
     flex-basis: 25%;
   }
   main .container .icon:first-child {
@@ -237,4 +243,41 @@ h3 {
   main .container .icon:last-child {
     flex-basis: 50%;
   }
-}/*# sourceMappingURL=site-np.css.map */
+  main .container .copy {
+    flex-basis: 35%;
+    margin-top: 0;
+    order: -1;
+  }
+  main .container .item-mobile {
+    flex-basis: 33%;
+  }
+  main .container .item-tablet {
+    text-align: center;
+    flex-basis: 50%;
+  }
+  main .container .item-tablet img {
+    max-width: 570px;
+  }
+  main .container .item-full {
+    flex-basis: 100%;
+  }
+}
+@media screen and (min-width: 1600px) {
+  main:before {
+    border-right: 1200px solid transparent;
+    border-top: 50px solid white;
+  }
+  main {
+    top: 100px;
+  }
+  main .container .item-mobile {
+    flex-basis: 15%;
+  }
+  main .container .item-tablet {
+    text-align: center;
+    flex-basis: 20%;
+  }
+  main .container .icon:first-child {
+    margin-bottom: 20px;
+  }
+}/*# sourceMappingURL=site.css.map */
