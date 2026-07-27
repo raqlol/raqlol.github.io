@@ -15,24 +15,25 @@ a {
 }
 
 header {
+  padding: 20px;
   background-color: #000;
   display: flex;
   flex-wrap: wrap;
   width: 100%;
-  z-index: 1;
+  z-index: 1000;
   position: fixed;
 }
 header p {
+  margin: 0;
   font-family: "PT Serif", serif;
   color: #fff;
   font-size: 1.5rem;
-  margin: 0 30px;
   align-self: center;
   flex: 1 0 200px;
 }
 header nav {
   flex: 1 1 100%;
-  margin: 20px 0 28px;
+  margin: 20px 0 0;
   align-self: end;
 }
 header nav ul {
@@ -41,13 +42,13 @@ header nav ul {
   list-style: none;
 }
 header nav ul li {
-  margin-right: 30px;
+  margin-right: 18px;
 }
 header nav a {
   color: #fff;
   font-size: 1rem;
   text-decoration: none;
-  padding: 20px 30px;
+  padding: 10px;
   background-color: #000;
   transition-duration: 1s;
   border: 1px solid white;
@@ -82,7 +83,7 @@ h1 {
   font-size: 4rem;
   font-weight: 100;
   font-family: "PT Serif", serif;
-  margin: 100px 20px 0 20px;
+  margin: 100px 0 0;
   width: 100%;
 }
 h1 span {
@@ -120,6 +121,8 @@ h3 {
   background-image: var(--background);
   background-size: cover;
   background-position: center;
+  margin-bottom: 20px;
+  position: relative;
   width: 100%;
 }
 .container .icon img {
@@ -127,10 +130,6 @@ h3 {
   height: auto;
 }
 .container .icon:first-child:hover span:after {
-  background-color: #8f8b85;
-  content: "";
-}
-.container .icon:last-child:hover span:after {
   background-color: #8f8b85;
   content: "";
 }
@@ -146,26 +145,24 @@ h3 {
 }
 .container .icon span:after {
   height: 100%;
-  background-color: #8f8b85;
+  background-color: #000;
   width: 100%;
   display: block;
   opacity: 0.8;
-  margin: 0px 0px 0px 30px;
   content: none;
   position: relative;
-  left: -30px;
   z-index: 100;
   transition: background 1s ease;
 }
 .container .icon span:before {
   opacity: 1;
   font-weight: 100;
-  padding: 0 20px;
   font-size: 2rem;
   color: white;
   position: absolute;
   top: 50%;
-  transform: translateY(-50%);
+  left: 50%;
+  transform: translate(-50%, -50%);
   z-index: 101;
   width: calc(100% - 40px);
   text-align: center;
